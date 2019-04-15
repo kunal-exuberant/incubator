@@ -1,10 +1,10 @@
 package likedriving.design.CallCenterSimulation;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class CallProcessingQueues {
-    List<Call> waiting = new ArrayList<>();
-    List<Call> executing = new ArrayList<>();
-    List<Call> completed = new ArrayList<>();
+    static Queue<Call> waiting = new LinkedList<>();
+    static Queue<Call> executing = new LinkedList<>();
+    static Queue<Call> completed = new LinkedList<>();
 }

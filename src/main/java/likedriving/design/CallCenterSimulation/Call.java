@@ -6,4 +6,10 @@ public class Call {
     CallStatus status;
     Level ableToAttend;
     Employee assignedEmployee;
+    public Call(int id, int durationInMinutes, Level ableToAttend){
+
+        this.id = id;
+        this.durationInMinutes = durationInMinutes;
+        this.ableToAttend = ableToAttend;
+    }
 }

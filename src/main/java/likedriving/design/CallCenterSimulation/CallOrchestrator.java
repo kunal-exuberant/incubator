@@ -3,7 +3,6 @@ package likedriving.design.CallCenterSimulation;
 import org.junit.Test;
 
 import static java.lang.Thread.sleep;
-import static org.mockito.Mockito.mock;
 
 public class CallOrchestrator {
 

@@ -1,4 +1,4 @@
-package likedriving.TechStacks;
+package likedriving.TechStacks.Redis;
 
 public class RedisClient {
 

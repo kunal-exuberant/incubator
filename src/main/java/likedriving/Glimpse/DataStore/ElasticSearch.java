@@ -1,3 +1,4 @@
+/*
 package likedriving.Glimpse.DataStore;
 
 import org.elasticsearch.action.search.SearchType;
@@ -44,3 +45,4 @@ public class ElasticSearch {
     }
 
 }
+*/

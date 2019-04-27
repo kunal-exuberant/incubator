@@ -1,0 +1,22 @@
+{
+  "id": 1,
+  "text" : "What is the capital of India?",
+  "questionType" : "SINGLE_CORRECT_ANSWER",
+  "description": "none",
+  "options": [
+    {
+      "id": 1,
+      "text": "New Delhi"
+    },
+    {
+      "id": 2,
+      "text": "Mumbai"
+    }
+  ],
+  "answer":[
+    {
+      "id": 1,
+      "text": "New Delhi"
+    }
+  ]
+}

@@ -1,0 +1,619 @@
+Andhra Pradesh
+	constituencyCount: 25
+	constituencyList:
+		Araku
+		Srikakulam
+		Vizianagaram
+		Visakhapatnam
+		Anakapalli
+		Kakinada
+		Amalapuram
+		Rajahmundry
+		Narasapuram
+		Eluru
+		Machilipatnam	   
+		Vijayawada
+		Guntur
+		Narasaraopet
+		Bapatla
+		Ongole
+		Nandyal
+		Kurnool
+		Anantapur
+		Hindupur
+		Kadapa
+		Nellore
+		Tirupati
+		Rajampet
+		Chittoor
+Arunachal Pradesh
+	constituencyCount: 2
+	constituencyList: [Arunachal West, Arunachal East]
+Assam
+	constituencyCount: 14
+	constituencyList:
+		Karimganj
+		Silchar
+		Autonomous District
+		Dhubri
+		Kokrajhar
+		Barpeta
+		Gauhati
+		Mangaldoi
+		Tezpur
+		Nowgong
+		Kaliabor
+		Jorhat
+		Dibrugarh
+		Lakhimpur
+Bihar
+	constituencyCount: 40
+	constituencyList:
+      	Valmiki Nagar
+      	Paschim Champaran
+      	Purvi Champaran
+      	Sheohar
+      	Sitamarhi
+      	Madhubani
+      	Jhanjharpur
+ 	  	Supaul
+ 	  	Araria
+ 	  	Kishanganj
+ 	  	Katihar
+ 	  	Purnia
+ 	  	Madhepura
+	 	Darbhanga
+ 	  	Muzaffarpur
+ 	  	Vaishali
+ 	  	Gopalganj
+ 	  	Siwan
+ 	  	Maharajganj
+ 	  	Saran
+ 	  	Hajipur
+ 	  	Ujiarpur
+ 	  	Samastipur
+ 	  	Begusarai
+ 	  	Khagaria
+ 	  	Bhagalpur
+ 	  	Banka
+ 	  	Munger
+ 	  	Nalanda
+ 	  	Patna Sahib
+ 	  	Pataliputra
+ 	  	Arrah
+ 	  	Buxar
+ 	  	Sasaram
+ 	  	Karakat
+ 	  	Jahanabad
+ 	  	Aurangabad
+ 	  	Gaya
+ 	  	Nawada
+ 	  	Jamui
+Chhattisgarh
+	constituencyCount: 11
+	constituencyList:
+      Sarguja
+      Raigarh
+      Janjgir
+      Korba
+      Bilaspur
+      Rajnandgaon
+      Durg
+      Raipur
+      Mahasamund
+      Bastar
+      Kanker
+Goa
+	constituencyCount: 2
+constituencyList:
+    North Goa
+    South Goa
+Gujarat (26)
+	constituencyCount: 25
+	constituencyList:
+		Kachchh
+		Banaskantha
+		Patan
+		Mahesana
+		Sabarkantha
+		Gandhinagar
+		Ahmedabad East
+		Ahmedabad West
+		Surendranagar
+		Rajkot
+		Porbandar
+		Jamnagar
+		Junagadh
+		Amreli
+		Bhavnagar
+		Anand
+		Kheda
+		Panchmahal
+		Dahod
+		Vadodara
+		Chhota Udaipur
+		Bharuch
+		Bardoli
+		Surat
+		Navsari
+		Valsad
+Haryana (10)
+	constituencyCount: 25
+	constituencyList:
+	 	Ambala
+	 	Kurukshetra
+	 	Sirsa
+	 	Hissar
+	 	Karnal
+	 	Sonipat
+	 	Rohtak
+	 	Bhiwani–Mahendragarh
+	 	Gurgaon
+	 	Faridabad
+Himachal Pradesh
+	constituencyCount: 4
+	constituencyList:
+		Kangra
+		Mandi
+		Hamirpur
+		Shimla
+Jammu and Kashmir
+	constituencyCount: 6
+	constituencyList:
+		Baramulla
+		Srinagar
+		Anantnag
+		Ladakh
+		Udhampur
+		Jammu
+Jharkhand
+	constituencyCount: 14
+	constituencyList:
+		Rajmahal
+		Dumka
+		Godda
+		Chatra
+		Kodarma
+		Giridih
+		Dhanbad
+		Ranchi
+		Jamshedpur
+		Singhbhum
+		Khunti
+		Lohardaga
+		Palamau
+		Hazaribagh
+Karnataka
+	constituencyCount: 28
+	constituencyList:
+		Chikkodi
+		Belagavi
+		Bagalkot
+		Bijapur
+		Kalaburagi
+		Raichur
+		Bidar
+		Koppal
+		Bellary
+		Haveri
+		Dharwad
+		Uttara Kannada
+		Davanagere
+		Shimoga
+		Udupi Chikmagalur
+		Hassan
+		Dakshina Kannada
+		Chitradurga
+		Tumkur
+		Mandya
+		Mysore
+		Chamarajanagar
+		Bangalore Rural
+		Bangalore North
+		Bangalore Central
+		Bangalore South
+		Chikballapur
+		Kolar
+
+Kerala
+	constituencyCount: 20
+	constituencyList:
+		Kasaragod
+		Kannur
+		Vatakara
+		Wayanad
+		Kozhikode
+		Malappuram
+		Ponnani
+		Palakkad
+		Alathur
+		Thrissur
+		Chalakudy
+		Ernakulam
+		Idukki
+		Kottayam
+		Alappuzha
+		Mavelikara
+		Pathanamthitta
+		Kollam
+		Attingal
+		Thiruvananthapuram
+
+Madhya Pradesh
+	constituencyCount: 29
+	constituencyList:
+	  Morena
+	  Bhind
+	  Gwalior
+	  Guna
+	  Sagar
+	  Tikamgarh
+	  Damoh
+	  Khajuraho
+	  Satna
+	  Rewa
+	  Sidhi
+	  Shahdol
+	  Jabalpur
+	  Mandla
+	  Balaghat
+	  Chhindwara
+	  Hoshangabad
+	  Vidisha
+	  Bhopal
+	  Rajgarh
+	  Dewas
+	  Ujjain
+	  Mandsaur
+	  Ratlam
+	  Dhar
+	  Indore
+	  Khargone
+	  Khandwa
+	  Betul
+Maharashtra
+	constituencyCount: 48
+	constituencyList:
+	  Nandurbar
+	  Dhule
+	  Jalgaon
+	  Raver
+	  Buldhana
+	  Akola
+	  Amravati
+	  Wardha
+	  Ramtek
+	  Nagpur
+	  Bhandara–Gondiya
+	  Gadchiroli–Chimur
+	  Chandrapur
+	  Yavatmal–Washim
+	  Hingoli
+	  Nanded
+	  Parbhani
+	  Jalna
+	  Aurangabad
+	  Dindori
+	  Nashik
+	  Palghar
+	  Bhiwandi
+	  Kalyan
+	  Thane
+	  Mumbai North
+	  Mumbai North West
+	  Mumbai North East
+	  Mumbai North Central
+	  Mumbai South Central
+	  Mumbai South
+	  Raigad
+	  Maval
+	  Pune
+	  Baramati
+	  Shirur
+	  Ahmednagar
+	  Shirdi
+	  Beed
+	  Osmanabad
+	  Latur
+	  Solapur
+	  Madha
+	  Sangli
+	  Satara
+	  Ratnagiri–Sindhudurg
+	  Kolhapur
+	  Hatkanangle
+
+Manipur
+	constituencyCount: 2
+	constituencyList:
+	    Inner Manipur
+	    Outer Manipur
+Meghalaya
+	constituencyCount: 2
+	constituencyList:
+	    Shillong
+	    Tura
+Mizoram
+	constituencyCount: 1
+	constituencyList:
+    	Mizoram
+Nagaland
+	constituencyCount: 1
+	constituencyList:
+    	Nagaland
+
+Odisha (21)
+	constituencyCount: 21
+	constituencyList:
+		Bargarh
+		Sundargarh
+		Sambalpur
+		Keonjhar
+		Mayurbhanj
+		Balasore
+		Bhadrak
+		Jajpur
+		Dhenkanal
+		Bolangir
+		Kalahandi
+		Nabarangpur
+		Kandhamal
+		Cuttack
+		Kendrapara
+		Jagatsinghpur
+		Puri
+		Bhubaneswar
+		Aska
+		Berhampur
+		Koraput
+Punjab
+	constituencyCount: 13
+	constituencyList:
+		Gurdaspur
+		Amritsar
+		Khadoor Sahib
+		Jalandhar
+		Hoshiarpur
+		Anandpur Sahib
+		Ludhiana
+		Fatehgarh Sahib
+		Faridkot
+		Firozpur
+		Bathinda
+		Sangrur
+		Patiala
+Rajasthan (25)
+	constituencyCount: 25
+	constituencyList:
+		Ganganagar
+		Bikaner
+		Churu
+		Jhunjhunu
+		Sikar
+		Jaipur Rural
+		Jaipur
+		Alwar
+		Bharatpur
+		Karauli–Dholpur
+		Dausa
+		Tonk–Sawai Madhopur
+		Ajmer
+		Nagaur
+		Pali
+		Jodhpur
+		Barmer
+		Jalore
+		Udaipur
+		Banswara
+		Chittorgarh
+		Rajsamand
+		Bhilwara
+		Kota
+		Jhalawar–Baran
+Sikkim
+	constituencyCount: 1
+	constituencyList:
+    	Sikkim
+Tamil Nadu
+	constituencyCount: 39
+	constituencyList:
+	    Thiruvallur
+	    Chennai North
+	    Chennai South
+	    Chennai Central
+	    Sriperumbudur
+	    Kancheepuram
+	    Arakkonam
+	    Vellore
+	    Krishnagiri
+	    Dharmapuri
+	    Tiruvannamalai
+	    Arani
+	    Villupuram
+	    Kallakurichi
+	    Salem
+	    Namakkal
+	    Erode
+	    Tiruppur
+	    Nilgiris
+	    Coimbatore
+	    Pollachi
+	    Dindigul
+	    Karur
+	    Tiruchirappalli
+	    Perambalur
+	    Cuddalore
+	    Chidambaram
+	    Mayiladuturai
+	    Nagapattinam
+	    Thanjavur
+	    Sivaganga
+	    Madurai
+	    Theni
+	    Virudhunagar
+	    Ramanathapuram
+	    Thoothukudi
+	    Tenkasi
+	    Tirunelveli
+	    Kanyakumari
+Telangana (17)
+	constituencyCount: 17
+	constituencyList:
+		Adilabad
+		Peddapalle
+		Karimnagar
+		Nizamabad
+		Zahirabad
+		Medak
+		Malkajgiri
+		Secunderabad
+		Hyderabad
+		Chevella
+		Mahbubnagar
+		Nagarkurnool
+		Nalgonda
+		Bhongir
+		Warangal
+		Mahabubabad
+		Khammam
+Tripura
+	constituencyCount: 25
+	constituencyList:
+	    Tripura West
+    	Tripura East
+Uttar Pradesh
+	constituencyCount: 80
+	constituencyList:
+		Saharanpur
+		Kairana
+		Muzaffarnagar
+		Bijnor
+		Nagina
+		Moradabad
+		Rampur
+		Sambhal
+		Amroha
+		Meerut
+		Baghpat
+		Ghaziabad
+		Gautam Buddha Nagar
+		Bulandshahr
+		Aligarh
+		Hathras
+		Mathura
+		Agra
+		Fatehpur Sikri
+		Firozabad
+		Mainpuri
+		Etah
+		Badaun
+		Aonla
+		Bareilly
+		Pilibhit
+		Shahjahanpur
+		Kheri
+		Dhaurahra
+		Sitapur
+		Hardoi
+		Misrikh
+		Unnao
+		Mohanlalganj
+		Lucknow
+		Rae Bareli
+		Amethi
+		Sultanpur
+		Pratapgarh
+		Farrukhabad
+		Etawah
+		Kannauj
+		Kanpur Urban
+		Akbarpur
+		Jalaun
+		Jhansi
+		Hamirpur
+		Banda
+		Fatehpur
+		Kaushambi
+		Phulpur
+		Allahabad
+		Barabanki
+		Faizabad
+		Ambedkar Nagar
+		Bahraich
+		Kaiserganj
+		Shrawasti
+		Gonda
+		Domariyaganj
+		Basti
+		Sant Kabir Nagar
+		Maharajganj
+		Gorakhpur
+		Kushi Nagar
+		Deoria
+		Bansgaon
+		Lalganj
+		Azamgarh
+		Ghosi
+		Salempur
+		Ballia
+		Jaunpur
+		Machhlishahr
+		Ghazipur
+		Chandauli
+		Varanasi
+		Bhadohi
+		Mirzapur
+		Robertsganj
+Uttarakhand (5)
+	constituencyCount: 5
+	constituencyList:
+	    Tehri Garhwal
+	    Garhwal
+	    Almora
+	    Nainital–Udhamsingh Nagar
+	    Haridwar
+West Bengal
+	constituencyCount: 42
+	constituencyList:
+		Cooch Behar
+		Alipurduars
+		Jalpaiguri
+		Darjeeling
+		Raiganj
+		Balurghat
+		Maldaha Uttar
+		Maldaha Dakshin
+		Jangipur
+		Baharampur
+		Murshidabad
+		Krishnanagar
+		Ranaghat
+		Bangaon
+		Barrackpur
+		Dum Dum
+		Barasat
+		Basirhat
+		Jaynagar
+		Mathurapur
+		Diamond Harbour
+		Jadavpur
+		Kolkata Dakshin
+		Kolkata Uttar
+		Howrah
+		Uluberia
+		Srerampur
+		Hooghly
+		Arambag
+		Tamluk
+		Kanthi
+		Ghatal
+		Jhargram
+		Medinipur
+		Purulia
+		Bankura
+		Bishnupur
+		Bardhaman Purba
+		Bardhaman–Durgapur
+		Asansol
+		Bolpur
+		Birbhum

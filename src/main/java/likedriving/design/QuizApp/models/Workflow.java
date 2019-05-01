@@ -6,7 +6,7 @@ public class Workflow {
 
     private int noOfQuestions = 3;
 
-    void execute(Quiz quiz) throws FileNotFoundException, Exception {
+    public void execute(Quiz quiz) throws FileNotFoundException, Exception {
         User user = quiz.getUser();
 
         int questionCounter = 0;

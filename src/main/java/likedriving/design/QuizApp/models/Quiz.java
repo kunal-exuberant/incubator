@@ -7,7 +7,7 @@ public class Quiz implements IQuiz {
 
     private List<Question> questionStore;
 
-    Quiz(){
+    public Quiz(){
         questionStore = initQuestionStore();
     }
 

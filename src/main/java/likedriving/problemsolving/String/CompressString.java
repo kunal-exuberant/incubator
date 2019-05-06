@@ -1,4 +1,4 @@
-package likedriving.problemsolving;
+package likedriving.problemsolving.String;
 
 public class CompressString {
 

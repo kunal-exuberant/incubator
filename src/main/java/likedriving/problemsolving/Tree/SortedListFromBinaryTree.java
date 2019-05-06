@@ -1,7 +1,5 @@
-package likedriving.problemsolving;
+package likedriving.problemsolving.Tree;
 
-
-import java.util.Arrays;
 
 class TreeNode{
     int data;

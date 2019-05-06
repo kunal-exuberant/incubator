@@ -1,5 +1,7 @@
 package likedriving.CitizenIssues;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import likedriving.CitizenIssues.models.Constituency;
 import likedriving.CitizenIssues.models.ElectoralIssue;
 import org.elasticsearch.client.Client;
@@ -21,7 +23,7 @@ public class ConstituencyResources {
     TransportClient client = null;
 
     @Test
-    public void createIssueInConstituency() {
+    public void createIssueInConstituency() throws JsonProcessingException{
 
         ElectoralIssue issue = new ElectoralIssue();
 
@@ -70,10 +72,11 @@ public class ConstituencyResources {
                 .setSource(putJsonDocument(id, name)).execute().actionGet();
     }
 
-    public void inputDocument(Client client, Constituency constituency){
+    public void  inputDocument(Client client, Constituency constituency) throws JsonProcessingException {
+        ObjectMapper objectMapper = new ObjectMapper();
+        String constituencyStr = objectMapper.writeValueAsString(constituency);
         client.prepareIndex("test", "constituency")
-                .setSource(constituency.getId(), constituency.getName(),
-                        constituency.getIssue().get(0).getTitle(), constituency.getIssue().get(0).getTitle()).execute().actionGet();
+                .setSource(constituency.getId(), constituency.getName(),  constituencyStr, constituency.getIssue().get(0).getTitle()).execute().actionGet();
     }
 
 }

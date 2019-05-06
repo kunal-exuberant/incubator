@@ -1,9 +1,10 @@
-package likedriving.problemsolving;
+package likedriving.problemsolving.Tree;
 
+import likedriving.problemsolving.TreeNode;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static likedriving.problemsolving.SortedListFromBinaryTree.init;
+import static likedriving.problemsolving.Tree.SortedListFromBinaryTree.init;
 
 public class TotalPathstoSumInTree {
 

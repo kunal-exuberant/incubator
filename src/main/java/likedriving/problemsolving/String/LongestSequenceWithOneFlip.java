@@ -1,4 +1,4 @@
-package likedriving.problemsolving;
+package likedriving.problemsolving.String;
 
 import org.junit.Assert;
 import org.junit.Test;

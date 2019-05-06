@@ -1,5 +1,6 @@
-package likedriving.TechStacks.ApacheStorm;
 
+package likedriving.TechStacks.ApacheStorm;
+/*
 import org.apache.storm.task.OutputCollector;
 import org.apache.storm.task.TopologyContext;
 import org.apache.storm.topology.IRichBolt;
@@ -47,3 +48,4 @@ public class SimpleBolt implements IRichBolt {
         return null;
     }
 }
+*/

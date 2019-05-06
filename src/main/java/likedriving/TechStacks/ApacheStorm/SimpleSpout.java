@@ -1,5 +1,6 @@
-package likedriving.TechStacks.ApacheStorm;
 
+package likedriving.TechStacks.ApacheStorm;
+/*
 import org.apache.storm.spout.SpoutOutputCollector;
 import org.apache.storm.task.TopologyContext;
 import org.apache.storm.topology.IRichSpout;
@@ -69,3 +70,4 @@ class SimpleSpout implements IRichSpout {
         return null;
     }
 }
+*/

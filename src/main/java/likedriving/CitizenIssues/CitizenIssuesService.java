@@ -1,6 +1,7 @@
 package likedriving.CitizenIssues;
 
 import io.dropwizard.Application;
+import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 
@@ -13,6 +14,8 @@ public class CitizenIssuesService extends Application<CitizenIssuesConfig> {
     @Override
     public void initialize(Bootstrap bootstrap) {
         System.out.println("Inside initialize method");
+        bootstrap.addBundle(new AssetsBundle("/assets", "/", "client/index.html"));
+        //bootstrap.addBundle(new RequestContextBundle("/*"));
     }
 
     @Override

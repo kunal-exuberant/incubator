@@ -1,13 +1,10 @@
 package likedriving.design.WebCrawler;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-@AllArgsConstructor
-@NoArgsConstructor
-@Data
 public class Link extends AbstractExtractedTag{
+
+    public Link(){
+        super();
+    }
 
     @Override
     public String process(String text) {

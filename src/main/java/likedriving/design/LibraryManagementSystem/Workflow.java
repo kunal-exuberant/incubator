@@ -2,6 +2,7 @@ package likedriving.design.LibraryManagementSystem;
 
 import likedriving.design.LibraryManagementSystem.Exceptions.EntityNotFoundException;
 import likedriving.design.LibraryManagementSystem.Exceptions.LendingLimitException;
+import likedriving.design.LibraryManagementSystem.Exceptions.UnableToPlaceOrder;
 import likedriving.design.LibraryManagementSystem.dataStores.BookStore;
 import likedriving.design.LibraryManagementSystem.dataStores.BookToUserStore;
 import likedriving.design.LibraryManagementSystem.dataStores.OrderStore;
@@ -81,7 +82,7 @@ public class Workflow {
         System.out.println("users add successfully");
     }
 
-    void lendBooks(Scanner sc) throws EntityNotFoundException {
+    void lendBooks(Scanner sc) throws EntityNotFoundException, UnableToPlaceOrder {
         System.out.println("Lending books to the user");
         System.out.println("Enter the user id who wants to lend: ");
         Long userId = Long.valueOf(-1);

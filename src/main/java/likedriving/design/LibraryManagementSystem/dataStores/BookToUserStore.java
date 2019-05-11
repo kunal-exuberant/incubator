@@ -9,7 +9,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Singleton
-
 public class BookToUserStore{
     @Singleton
     private Map<Book, User> bookToUserStore = new HashMap<>();

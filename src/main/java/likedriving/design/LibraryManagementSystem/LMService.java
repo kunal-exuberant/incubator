@@ -1,11 +1,12 @@
 package likedriving.design.LibraryManagementSystem;
 
 import likedriving.design.LibraryManagementSystem.Exceptions.EntityNotFoundException;
+import likedriving.design.LibraryManagementSystem.Exceptions.UnableToPlaceOrder;
 
 import java.util.Scanner;
 
 public class LMService {
-    public static void main(String[] args) throws EntityNotFoundException {
+    public static void main(String[] args) throws EntityNotFoundException, UnableToPlaceOrder {
 
         System.out.println("Hi, Welcome to Library Management System");
         System.out.println("Following are various functions you can perform, please chose one of them");

@@ -1,5 +1,6 @@
 package likedriving.CitizenIssues;
 
+import com.hubspot.dropwizard.guice.GuiceBundle;
 import io.dropwizard.Application;
 import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.setup.Bootstrap;
@@ -16,6 +17,11 @@ public class CitizenIssuesService extends Application<CitizenIssuesConfig> {
         System.out.println("Inside initialize method");
         bootstrap.addBundle(new AssetsBundle("/assets", "/", "client/index.html"));
         //bootstrap.addBundle(new RequestContextBundle("/*"));
+
+        GuiceBundle guiceBundle = GuiceBundle.newBuilder()
+                .addModule(new CitizenIssuesModule())
+                .build();
+        bootstrap.addBundle(guiceBundle);
     }
 
     @Override

@@ -13,7 +13,6 @@ public class Bid{
         this.options = options;
     }
 
-
     public void modifyStake(User user) {
 
     }

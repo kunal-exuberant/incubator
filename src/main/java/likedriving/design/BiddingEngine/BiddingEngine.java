@@ -6,12 +6,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BiddingEngine implements BiddingInterface{
-    List<Bid> runningBids = new ArrayList<>();
+     List<Bid> runningBids = new ArrayList<>();
 
-    private int lastBidId = 0;
+    private static int lastBidId = 0;
 
     @Synchronized
-    public int getNextBidId(){
+    public static int getNextBidId(){
         return lastBidId+1;
     }
 

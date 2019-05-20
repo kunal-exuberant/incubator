@@ -1,0 +1,112 @@
+
+
+Goal -
+
+Design Combo Offers
+
+To create a system to support combo offer in Flipkart ecosystem.
+
+
+Description -
+
+So, there are n numbers of listings in Flipkart.
+Offer creator should be able to create a combo offer for selling various products together.
+
+Combo can be created with 2 products, 3 products to any number of products. For the shake of simplicity lets limit the number of product to max 5 till now.
+
+
+Various discount structures to support are -
+
+1. Final price of combo offer (p1+p2+p3 at Rs 400)
+2. Combo at 10 % discount (p1+p2 at 10% off)
+3. Lump sum offer on combo (Rs 100 of on p1 and p2 combo)
+4. Item level SP
+
+
+
+********************************************************************************************************************************************************************************************************************************************************************
+
+Modeling -
+
+Given -
+
+1. ListingIds for flipkart offer with price attributes.
+
+
+Scoping -
+
+1. Definition
+1.1 Segmentation
+1.2 Disbursal
+
+2. Realization
+2.1 Combo Store - offer to listing mapping
+
+3. Serving
+
+3.1 Discovery
+    Given a combo Id, serve the combo offer
+3.2 Disbursal
+    Given the cart context, return the computed selling price
+
+
+Scoped Out -
+    1. Customer
+    2. Order
+    3. Lifecycle of offer
+    4. OptIn/optOut
+    5.
+
+
+************************************************************************************************************************************************************************************
+
+Components -
+
+1. Zulu
+2. Cart
+3. Combo Offer Store
+
+************************************************************************************************************
+
+Entities -
+
+
+Zulu
+    - listingIds
+    - price
+
+Cart
+    - List<ListingIds>
+    - total sellingPrice
+
+    CartImpl
+        - Add products to card
+
+ComboStore
+    - List<Offer>
+
+    comboStoreImpl
+        - add item to store
+        - getAll
+        -
+
+ListingId
+    - id
+
+Offer
+    - id
+    - List<ListingId>
+    - disbursalRule
+
+OfferCreationImpl
+    - createOffer
+
+WorkFlow
+    - createCombo
+    - buyCombo
+
+
+
+
+
+

@@ -14,13 +14,13 @@ import java.util.List;
 public class Offer implements IOffer {
 
     private int id = 0;
-    private List<ListingId> listingIdList;
+    private List<String> productGroups;
     private DisbursalRule disbursalRule;
 
-    @Override
-    public void createOffer(List<ListingId> listingIds, DisbursalRule disbursalRule) {
-        this.id = getId();
-        this.listingIdList = listingIds;
+
+    public Offer(List<String> productGroups, DisbursalRule disbursalRule) {
+        this.id = getId()+1;
+        this.productGroups = productGroups;
         this.disbursalRule = disbursalRule;
     }
 }

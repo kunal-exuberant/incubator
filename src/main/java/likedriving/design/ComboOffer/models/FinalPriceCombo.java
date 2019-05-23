@@ -9,6 +9,6 @@ public class FinalPriceCombo extends DisbursalRule {
 
     private int finalPrice;
     public FinalPriceCombo() {
-        super(DisbursalType.FINAL_PRICE_COMBO);
+        //super(DisbursalType.FINAL_PRICE_COMBO);
     }
 }

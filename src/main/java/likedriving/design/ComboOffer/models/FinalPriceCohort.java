@@ -10,8 +10,8 @@ import java.util.Map;
 @Data
 public class FinalPriceCohort extends DisbursalRule{
     public FinalPriceCohort(){
-        super(DisbursalType.FINAL_PRICE_COHORT);
+        //super(DisbursalType.FINAL_PRICE_COHORT);
     }
 
-    private Map<ListingId, Price> finalPrice = new HashMap<>();
+    private Map<String, Price> finalPrice = new HashMap<>();
 }

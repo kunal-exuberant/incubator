@@ -1,9 +1,11 @@
-package likedriving.design.Chess;
+package likedriving.design.Chess.Pieces;
+
+import likedriving.design.Chess.*;
 
 public class Rook extends Piece{
 
-    public Rook(Color color){
-        super(PieceType.ROOK, color);
+    public Rook(Color color, Board board){
+        super(PieceType.ROOK, color, board);
     }
 
     @Override
@@ -27,5 +29,10 @@ public class Rook extends Piece{
     @Override
     public void computePossibleNextPositions(Position position) {
 
+    }
+
+    @Override
+    public boolean canAttack() {
+        return false;
     }
 }

@@ -1,4 +1,4 @@
-package likedriving.design.Chess;
+package likedriving.design.Chess.Pieces;
 
 public enum PieceType {
     KING,

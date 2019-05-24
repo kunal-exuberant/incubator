@@ -1,5 +1,6 @@
-package likedriving.design.Chess;
+package likedriving.design.Chess.Pieces;
 
+import likedriving.design.Chess.*;
 import lombok.Data;
 
 import java.util.ArrayList;
@@ -14,16 +15,23 @@ public abstract class Piece {
 
     private Color color;
 
+    private DirectionOfAttack directionOfAttack;
+
     private PieceType pieceType;
 
     private Position currentPosition;
 
+    private Board board;
+
     private List<Position> possibleNextPositions = new ArrayList<>();
 
-    public Piece(PieceType pieceType, Color color){
+    public Piece(PieceType pieceType, Color color, Board board){
         this.id = pieceId++;
         this.pieceType = pieceType;
         this.color = color;
+        this.board = board;
+        this.directionOfAttack = DirectionOfAttack.INCREASING;
+        if(color == Color.BLACK) this.directionOfAttack = DirectionOfAttack.DECREASING;
     }
 
     @Override
@@ -48,5 +56,13 @@ public abstract class Piece {
         }
         return true;
     }
+
+    public boolean isOpponent(Piece piece){
+        return this.getColor() != piece.getColor();
+    }
+
+    public abstract boolean canAttack();
+
+    public abstract void move();
 
 }

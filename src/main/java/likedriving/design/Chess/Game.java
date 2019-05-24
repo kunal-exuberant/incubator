@@ -2,7 +2,7 @@ package likedriving.design.Chess;
 
 public class Game {
 
-    private Piece [] pieces = new Piece[32];
+
 
     void start(){
         Player player1 = new Player(Color.WHITE);

@@ -1,5 +1,7 @@
 package likedriving.design.Chess;
 
+import likedriving.design.Chess.Pieces.Piece;
+import likedriving.design.Chess.Pieces.PieceType;
 import lombok.Data;
 import org.junit.Test;
 
@@ -10,6 +12,14 @@ public class Board {
 
     public Cell getCell(Position position){
         return board[position.getX()][position.getY()];
+    }
+
+    public Cell getCell(byte x, byte y){
+        return board[x][y];
+    }
+
+    public Piece getPiece(byte x, byte y){
+       return this.getCell(x,y).getPiecePlaced();
     }
 
     public void initializeTheBoard(Player[] players){
@@ -26,49 +36,49 @@ public class Board {
                 if(i ==0 || i == 7){
                     board[i][j].setAvailable(false);
                     if(j == 0) {
-                        piece = player.getPieces().get(PieceType.ROOK).get(0);
+                        piece = player.getMyPieces().get(PieceType.ROOK).get(0);
                         piece.setCurrentPosition(new Position(i,j));
                         board[i][j].setPiecePlaced(piece);
                     }
                     else if(j == 7) {
-                        piece = player.getPieces().get(PieceType.ROOK).get(1);
+                        piece = player.getMyPieces().get(PieceType.ROOK).get(1);
                         piece.setCurrentPosition(new Position(i,j));
                         board[i][j].setPiecePlaced(piece);
                     }
                     else if(j == 1) {
-                        piece = player.getPieces().get(PieceType.KNIGHT).get(0);
+                        piece = player.getMyPieces().get(PieceType.KNIGHT).get(0);
                         piece.setCurrentPosition(new Position(i,j));
                         board[i][j].setPiecePlaced(piece);
                     }
                     else if(j == 6) {
-                        piece = player.getPieces().get(PieceType.KNIGHT).get(1);
+                        piece = player.getMyPieces().get(PieceType.KNIGHT).get(1);
                         piece.setCurrentPosition(new Position(i,j));
                         board[i][j].setPiecePlaced(piece);
                     }
                     else if(j == 2) {
-                        piece = player.getPieces().get(PieceType.BISHOP).get(0);
+                        piece = player.getMyPieces().get(PieceType.BISHOP).get(0);
                         piece.setCurrentPosition(new Position(i,j));
                         board[i][j].setPiecePlaced(piece);
                     }
                     else if(j == 5) {
-                        piece = player.getPieces().get(PieceType.BISHOP).get(1);
+                        piece = player.getMyPieces().get(PieceType.BISHOP).get(1);
                         piece.setCurrentPosition(new Position(i,j));
                         board[i][j].setPiecePlaced(piece);
                     }
                     else if(j == 3) {
-                        piece = player.getPieces().get(PieceType.QUEEN).get(0);
+                        piece = player.getMyPieces().get(PieceType.QUEEN).get(0);
                         piece.setCurrentPosition(new Position(i,j));
                         board[i][j].setPiecePlaced(piece);
                     }
                     else if(j == 4) {
-                        piece = player.getPieces().get(PieceType.KING).get(0);
+                        piece = player.getMyPieces().get(PieceType.KING).get(0);
                         piece.setCurrentPosition(new Position(i,j));
                         board[i][j].setPiecePlaced(piece);
                     }
                 }
                 else if(i ==1 || i == 6){
                     board[i][j].setAvailable(false);
-                    piece = player.getPieces().get(PieceType.PAWN).get(j);
+                    piece = player.getMyPieces().get(PieceType.PAWN).get(j);
                     piece.setCurrentPosition(new Position(i,j));
                     board[i][j].setPiecePlaced(piece);
                 }

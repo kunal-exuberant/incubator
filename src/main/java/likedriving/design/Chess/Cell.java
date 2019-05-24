@@ -1,5 +1,6 @@
 package likedriving.design.Chess;
 
+import likedriving.design.Chess.Pieces.Piece;
 import lombok.Data;
 
 @Data

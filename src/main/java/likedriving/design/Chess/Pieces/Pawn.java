@@ -34,7 +34,7 @@ public class Pawn extends Piece{
     }
 
     @Override
-    public boolean canAttack() {
+    public boolean canAttack(Board board) {
 
         switch (this.getDirectionOfAttack()) {
             case INCREASING:

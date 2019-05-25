@@ -1,20 +1,30 @@
 package likedriving.design.Chess;
 
+import org.junit.Test;
+
 public class Game {
 
-
+    private Board board;
 
     void start(){
-        Player player1 = new Player(Color.WHITE);
-        Player player2 = new Player(Color.BLACK);
-
-        player1.play();
+        board = new Board();
+        Player player = new Player(Color.WHITE);
+        Player [] players = player.createPlayers();
+        player.assignPieces(board);
+        board.initializeTheBoard(players);
+        players[0].play();
 
 /*        while(!checkTerminalCondition()){
 
             System.out.println("Next move");
 
         }*/
+    }
+
+
+    @Test
+    public void startTest(){
+        start();
     }
 
     boolean checkTerminalCondition(Player player){

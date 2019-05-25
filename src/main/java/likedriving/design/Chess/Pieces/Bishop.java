@@ -21,7 +21,12 @@ public class Bishop extends Piece{
     }
 
     @Override
-    public boolean canAttack() {
+    public boolean canAttack(Board board) {
         return false;
+    }
+
+    @Override
+    public void move() {
+
     }
 }

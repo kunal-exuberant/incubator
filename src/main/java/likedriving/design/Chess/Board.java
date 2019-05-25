@@ -1,11 +1,13 @@
 package likedriving.design.Chess;
 
+import com.google.inject.Singleton;
 import likedriving.design.Chess.Pieces.Piece;
 import likedriving.design.Chess.Pieces.PieceType;
 import lombok.Data;
 import org.junit.Test;
 
 @Data
+@Singleton
 public class Board {
 
     private Cell [] [] board = new Cell[8][8];
@@ -96,10 +98,8 @@ public class Board {
 
     @Test
     public void printBoardTest(){
-        Player [] players = new Player[2];
-        players[0] = new Player(Color.BLACK);
-        players[1] = new Player(Color.WHITE);
-        initializeTheBoard(players);
+        Player player = new Player(Color.BLACK, this);
+        initializeTheBoard(player.createPlayers());
         printBoard();
     }
 }

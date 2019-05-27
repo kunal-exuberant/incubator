@@ -29,13 +29,12 @@ public class Player {
     //private Piece [] pieces = new Piece[32];
 
     public void assignPieces(Board board){
-        myPieces.put(PieceType.ROOK, Arrays.asList(new Rook(color, board), new Rook(color, board)));
-        myPieces.put(PieceType.KNIGHT, Arrays.asList(new Knight(color, board), new Knight(color, board)));
-        myPieces.put(PieceType.BISHOP, Arrays.asList(new Bishop(color, board), new Bishop(color, board)));
-        myPieces.put(PieceType.QUEEN, Arrays.asList(new Queen(color, board)));
-        myPieces.put(PieceType.KING, Arrays.asList(new King(color, board)));
-        myPieces.put(PieceType.PAWN, Arrays.asList(new Pawn(color, board), new Pawn(color, board), new Pawn(color, board), new Pawn(color, board),
-                new Pawn(color, board), new Pawn(color, board), new Pawn(color, board), new Pawn(color, board)));
+        myPieces.put(PieceType.ROOK, PieceFactory.getAllPieces(PieceType.ROOK, color, board));
+        myPieces.put(PieceType.KNIGHT,  PieceFactory.getAllPieces(PieceType.KNIGHT, color, board));
+        myPieces.put(PieceType.BISHOP,  PieceFactory.getAllPieces(PieceType.BISHOP, color, board));
+        myPieces.put(PieceType.QUEEN,  PieceFactory.getAllPieces(PieceType.QUEEN, color, board));
+        myPieces.put(PieceType.KING,  PieceFactory.getAllPieces(PieceType.KING, color, board));
+        myPieces.put(PieceType.PAWN,  PieceFactory.getAllPieces(PieceType.PAWN, color, board));
     }
 
     public void printMyPiecesPosition(){

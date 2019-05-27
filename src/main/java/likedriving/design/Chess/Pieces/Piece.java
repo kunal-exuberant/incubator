@@ -25,11 +25,10 @@ public abstract class Piece {
 
     private List<Position> possibleNextPositions = new ArrayList<>();
 
-    public Piece(PieceType pieceType, Color color, Board board){
+    public Piece(PieceType pieceType, Color color){
         this.id = pieceId++;
         this.pieceType = pieceType;
         this.color = color;
-        this.board = board;
         this.directionOfAttack = DirectionOfAttack.INCREASING;
         if(color == Color.BLACK) this.directionOfAttack = DirectionOfAttack.DECREASING;
     }

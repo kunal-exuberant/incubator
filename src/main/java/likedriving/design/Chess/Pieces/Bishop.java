@@ -6,8 +6,8 @@ import likedriving.design.Chess.Position;
 
 public class Bishop extends Piece{
 
-    public Bishop(Color color, Board board){
-        super(PieceType.BISHOP, color, board);
+    public Bishop(Color color){
+        super(PieceType.BISHOP, color);
     }
 
     @Override

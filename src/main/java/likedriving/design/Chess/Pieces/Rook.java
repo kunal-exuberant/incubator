@@ -4,8 +4,8 @@ import likedriving.design.Chess.*;
 
 public class Rook extends Piece{
 
-    public Rook(Color color, Board board){
-        super(PieceType.ROOK, color, board);
+    public Rook(Color color){
+        super(PieceType.ROOK, color);
     }
 
     @Override

@@ -6,8 +6,8 @@ import likedriving.design.Chess.Position;
 
 public class Knight extends Piece{
 
-    public Knight(Color color, Board board){
-        super(PieceType.KNIGHT, color, board);
+    public Knight(Color color){
+        super(PieceType.KNIGHT, color);
     }
 
     @Override

@@ -4,13 +4,21 @@ import likedriving.design.Chess.Board;
 import likedriving.design.Chess.Cell;
 import likedriving.design.Chess.Color;
 import likedriving.design.Chess.Position;
-
 import java.util.Optional;
 
 public class Pawn extends Piece{
 
-    public Pawn(Color color, Board board){
-        super(PieceType.PAWN, color, board);
+    private Pawn(Color color){
+        super(PieceType.PAWN, color);
+    }
+
+    private static Pawn pawn = null;
+
+    static Piece getInstance(Color color){
+        if(pawn == null){
+            pawn = new Pawn(color);
+        }
+        return pawn;
     }
 
     @Override

@@ -1,12 +1,8 @@
 package likedriving.design.Chess.Pieces;
 
-import likedriving.design.Chess.Board;
 import likedriving.design.Chess.Color;
 
-import java.util.AbstractMap;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public final class PieceFactory {
 
@@ -22,33 +18,57 @@ public final class PieceFactory {
         pieceCountMap.put(PieceType.KING, (byte)1);
     }
 
-    private static Piece buildPiece(PieceType pieceType, Color color, Board board){
+    private static Piece buildPiece(PieceType pieceType, Color color){
         switch (pieceType){
             case PAWN:
-                return new Pawn(color, board);
+                return Pawn.getInstance(color);
             case BISHOP:
-                return new Bishop(color, board);
+                return new Bishop(color);
             case ROOK:
-                return new Rook(color, board);
+                return new Rook(color);
             case KNIGHT:
-                return new King(color, board);
+                return new King(color);
             case QUEEN:
-                return new Queen(color, board);
+                return new Queen(color);
             case KING:
-                return new Knight(color, board);
+                return new Knight(color);
             default:
                 throw new IllegalArgumentException("Unknown piece type");
         }
     }
 
-    public static List<Piece> getAllPieces(PieceType pieceType, Color color, Board board) {
-        List<Piece> pieces = new ArrayList<>();
-        byte pieceCount = pieceCountMap.get(pieceType);
-        while (pieceCount >= 0){
-            pieces.add(buildPiece(pieceType, color, board));
-            pieceCount--;
-        }
+    public static Piece [] getAllPieces() {
+        Piece [] pieces = new Piece[32];
+
+            int i=0;
+            for(Color color: Color.values()) {
+                for (PieceType pieceType : PieceType.values()) {
+                    byte pieceCount = pieceCountMap.get(pieceType);
+                    while (pieceCount >= 0) {
+                        pieces[i] = buildPiece(pieceType, Color.values()[i%2]);
+                        pieceCount--;
+                    }
+                    i++;
+                }
+            }
         return pieces;
+    }
+
+    public static Map<PieceKey, List<Piece>> getPieceMap() {
+        Map<PieceKey, List<Piece>> pieceMap = new HashMap<>();
+
+        for(Color color: Color.values()) {
+            for (PieceType pieceType : PieceType.values()) {
+                byte pieceCount = pieceCountMap.get(pieceType);
+                List<Piece> pieces = new ArrayList<>();
+                while (pieceCount > 0) {
+                    pieces.add(buildPiece(pieceType, color));
+                    pieceCount--;
+                }
+                pieceMap.put(new PieceKey(color, pieceType), pieces);
+            }
+        }
+        return pieceMap;
     }
 
 }

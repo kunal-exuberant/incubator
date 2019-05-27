@@ -10,8 +10,8 @@ public class Game {
         board = new Board();
         Player player = new Player(Color.WHITE);
         Player [] players = player.createPlayers();
-        player.assignPieces(board);
-        board.initializeTheBoard(players);
+        //player.assignPieces(board);
+        //board.initializeTheBoard(players);
         players[0].play();
 
 /*        while(!checkTerminalCondition()){

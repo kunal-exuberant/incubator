@@ -1,94 +1,65 @@
 package likedriving.design.Chess;
 
+import com.fasterxml.jackson.databind.util.ArrayIterator;
 import com.google.inject.Singleton;
 import likedriving.design.Chess.Pieces.Piece;
+import likedriving.design.Chess.Pieces.PieceKey;
+import likedriving.design.Chess.Pieces.PieceStore;
 import likedriving.design.Chess.Pieces.PieceType;
 import lombok.Data;
 import org.junit.Test;
+
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 @Data
 @Singleton
 public class Board {
 
-    private Cell [] [] board = new Cell[8][8];
+    private static Cell [][] board = new Cell[8][8];
 
-    public Cell getCell(Position position){
+    private Map<PieceKey, List<Piece>> pieceMap = null;
+
+    public static Cell getCell(Position position){
         return board[position.getX()][position.getY()];
     }
 
-    public Cell getCell(byte x, byte y){
+    public static Cell getCell(byte x, byte y){
         return board[x][y];
     }
 
-    public Piece getPiece(byte x, byte y){
-       return this.getCell(x,y).getPiecePlaced();
+    public static Piece getPiece(byte x, byte y){
+       return getCell(x,y).getPiecePlaced();
     }
 
-    public void initializeTheBoard(Player[] players){
-        Piece piece;
-        for(byte i=0; i<8; i++){
-            for(byte j=0; j<8;j++) {
-                board[i][j] = new Cell(new Position((byte) i, (byte) j));
-                Color color = Color.BLACK;
-                Player player = players[0];
-                if(i == 0 || i == 1) {
-                    color = color.WHITE;
-                    player = players[1];
-                }
-                if(i ==0 || i == 7){
-                    board[i][j].setAvailable(false);
-                    if(j == 0) {
-                        piece = player.getMyPieces().get(PieceType.ROOK).get(0);
-                        piece.setCurrentPosition(new Position(i,j));
-                        board[i][j].setPiecePlaced(piece);
-                    }
-                    else if(j == 7) {
-                        piece = player.getMyPieces().get(PieceType.ROOK).get(1);
-                        piece.setCurrentPosition(new Position(i,j));
-                        board[i][j].setPiecePlaced(piece);
-                    }
-                    else if(j == 1) {
-                        piece = player.getMyPieces().get(PieceType.KNIGHT).get(0);
-                        piece.setCurrentPosition(new Position(i,j));
-                        board[i][j].setPiecePlaced(piece);
-                    }
-                    else if(j == 6) {
-                        piece = player.getMyPieces().get(PieceType.KNIGHT).get(1);
-                        piece.setCurrentPosition(new Position(i,j));
-                        board[i][j].setPiecePlaced(piece);
-                    }
-                    else if(j == 2) {
-                        piece = player.getMyPieces().get(PieceType.BISHOP).get(0);
-                        piece.setCurrentPosition(new Position(i,j));
-                        board[i][j].setPiecePlaced(piece);
-                    }
-                    else if(j == 5) {
-                        piece = player.getMyPieces().get(PieceType.BISHOP).get(1);
-                        piece.setCurrentPosition(new Position(i,j));
-                        board[i][j].setPiecePlaced(piece);
-                    }
-                    else if(j == 3) {
-                        piece = player.getMyPieces().get(PieceType.QUEEN).get(0);
-                        piece.setCurrentPosition(new Position(i,j));
-                        board[i][j].setPiecePlaced(piece);
-                    }
-                    else if(j == 4) {
-                        piece = player.getMyPieces().get(PieceType.KING).get(0);
-                        piece.setCurrentPosition(new Position(i,j));
-                        board[i][j].setPiecePlaced(piece);
-                    }
-                }
-                else if(i ==1 || i == 6){
-                    board[i][j].setAvailable(false);
-                    piece = player.getMyPieces().get(PieceType.PAWN).get(j);
-                    piece.setCurrentPosition(new Position(i,j));
-                    board[i][j].setPiecePlaced(piece);
+
+    public static void initializeTheBoard() {
+        for (byte i = 0; i < 8; i++) {
+            for (byte j = 0; j < 8; j++) {
+                board[i][j] = new Cell(new Position((byte) i, (byte) j), Color.values()[(i+j)%2]);
+            }
+        }
+    }
+
+    private static Iterator<Cell> getIterator(){
+         return new ArrayIterator(board);
+    }
+
+    public static void deployPieces(){
+
+        for(Color color: Color.values()){
+            for(PieceType pieceType: PieceType.values()){
+                for(Piece piece: PieceStore.get(color, pieceType)){
+                    piece.setCurrentPosition(PiecePosition.getPosition(piece).next());
+                    Board.getIterator().next().setPiecePlaced(piece);
                 }
             }
         }
     }
 
-    public void printBoard(){
+
+    public static void printBoard(){
         for(int i=0; i<8; i++) {
             for (int j = 0; j < 8; j++) {
                 System.out.println(board[i][j]);
@@ -98,8 +69,11 @@ public class Board {
 
     @Test
     public void printBoardTest(){
-        Player player = new Player(Color.BLACK, this);
-        initializeTheBoard(player.createPlayers());
+        initializeTheBoard();
         printBoard();
+        deployPieces();
+        System.out.println("piece placed at this location: "+getPiece((byte)0,(byte)5));
+        System.out.println("Color of this cell "+getCell((byte)0,(byte)0).getColor());
+        System.out.println("Color of this cell "+getCell((byte)0,(byte)1).getColor());
     }
 }

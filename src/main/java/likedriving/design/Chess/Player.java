@@ -28,15 +28,6 @@ public class Player {
     private Map<PieceType, List<Piece>> myPieces = new HashMap<>();
     //private Piece [] pieces = new Piece[32];
 
-    public void assignPieces(Board board){
-        myPieces.put(PieceType.ROOK, PieceFactory.getAllPieces(PieceType.ROOK, color, board));
-        myPieces.put(PieceType.KNIGHT,  PieceFactory.getAllPieces(PieceType.KNIGHT, color, board));
-        myPieces.put(PieceType.BISHOP,  PieceFactory.getAllPieces(PieceType.BISHOP, color, board));
-        myPieces.put(PieceType.QUEEN,  PieceFactory.getAllPieces(PieceType.QUEEN, color, board));
-        myPieces.put(PieceType.KING,  PieceFactory.getAllPieces(PieceType.KING, color, board));
-        myPieces.put(PieceType.PAWN,  PieceFactory.getAllPieces(PieceType.PAWN, color, board));
-    }
-
     public void printMyPiecesPosition(){
 
         for(Map.Entry<PieceType, List<Piece>> pieceEntry: myPieces.entrySet()){
@@ -61,7 +52,7 @@ public class Player {
     public void printPlayerPosition(){
         Board board = new Board();
         Player [] players = createPlayers();
-        board.initializeTheBoard(createPlayers());
+        //board.initializeTheBoard(createPlayers());
 
         System.out.println("\nPlayer 1 piece deployement\n");
         players[0].printMyPiecesPosition();

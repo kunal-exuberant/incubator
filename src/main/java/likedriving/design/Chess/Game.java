@@ -4,18 +4,16 @@ import org.junit.Test;
 
 public class Game {
 
-    private Board board;
-
     void start(){
-        board = new Board();
-        Player player = new Player(Color.WHITE);
-        Player [] players = player.createPlayers();
-        //player.assignPieces(board);
-        //board.initializeTheBoard(players);
+        Board.initializeTheBoard();
+        Board.deployPieces();
+        Board.printBoard();
+
+        Player [] players = Players.getPlayers();
         players[0].play();
 
-/*        while(!checkTerminalCondition()){
-
+/*      while(!checkTerminalCondition()){
+            players[0].play();
             System.out.println("Next move");
 
         }*/
@@ -31,8 +29,6 @@ public class Game {
 
      /*   switch (){
             case CHECK_MATE:
-
-
 
                 break;
 

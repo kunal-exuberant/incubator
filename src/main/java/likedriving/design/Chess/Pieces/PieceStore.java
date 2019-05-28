@@ -1,6 +1,7 @@
 package likedriving.design.Chess.Pieces;
 
 import likedriving.design.Chess.Color;
+import org.junit.Test;
 
 import java.util.List;
 import java.util.Map;
@@ -26,5 +27,13 @@ public class PieceStore {
     public static List<Piece> get(Color color, PieceType pieceType){
         getPieceMap();
         return pieceMap.get(new PieceKey(color, pieceType));
+    }
+
+    @Test
+    public void piecePositionTest(){
+        getPieceMap();
+        for(Map.Entry pp :pieceMap.entrySet()){
+            System.out.println(pp.getValue());
+        }
     }
 }

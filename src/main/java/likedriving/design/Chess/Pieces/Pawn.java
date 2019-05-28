@@ -8,17 +8,8 @@ import java.util.Optional;
 
 public class Pawn extends Piece{
 
-    private Pawn(Color color){
+    public Pawn(Color color){
         super(PieceType.PAWN, color);
-    }
-
-    private static Pawn pawn = null;
-
-    static Piece getInstance(Color color){
-        if(pawn == null){
-            pawn = new Pawn(color);
-        }
-        return pawn;
     }
 
     @Override
@@ -42,7 +33,7 @@ public class Pawn extends Piece{
     }
 
     @Override
-    public boolean canAttack(Board board) {
+    public boolean canAttack() {
 
         switch (this.getDirectionOfAttack()) {
             case INCREASING:

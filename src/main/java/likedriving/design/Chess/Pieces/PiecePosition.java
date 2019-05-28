@@ -1,8 +1,8 @@
-package likedriving.design.Chess;
+package likedriving.design.Chess.Pieces;
 
-import likedriving.design.Chess.Pieces.Piece;
-import likedriving.design.Chess.Pieces.PieceKey;
-import likedriving.design.Chess.Pieces.PieceType;
+import likedriving.design.Chess.Color;
+import likedriving.design.Chess.Position;
+import org.junit.Test;
 
 import java.util.*;
 
@@ -10,7 +10,7 @@ public class PiecePosition {
     private static Map<PieceKey, List<Position>> piecePosition = null;
 
     static {
-        piecePosition = new HashMap<>();
+        piecePosition = new LinkedHashMap<>();
         piecePosition.put(new PieceKey(Color.WHITE, PieceType.ROOK),
                 Arrays.asList(new Position((byte)0,(byte)0), new Position((byte)0,(byte)7)));
         piecePosition.put(new PieceKey(Color.BLACK, PieceType.ROOK),
@@ -63,7 +63,24 @@ public class PiecePosition {
         return piecePosition.get(new PieceKey(color, pieceType));
     }
 
+    public static List<Position> get(Piece piece){
+        return piecePosition.get(new PieceKey(piece.getColor(), piece.getPieceType()));
+    }
+
     public static Iterator<Position> getPosition(Piece piece){
         return PiecePosition.get(piece.getColor(), piece.getPieceType()).iterator();
+    }
+
+    @Test
+    public void piecePositionTest(){
+        for(Map.Entry pp :piecePosition.entrySet()){
+            System.out.println(pp.getKey());
+        }
+        System.out.println(piecePosition.get(new PieceKey(Color.BLACK, PieceType.PAWN)));
+        System.out.println(piecePosition.get(new PieceKey(Color.WHITE, PieceType.PAWN)));
+        System.out.println(piecePosition.get(new PieceKey(Color.BLACK, PieceType.KING)));
+        System.out.println(piecePosition.get(new PieceKey(Color.WHITE, PieceType.KING)));
+        System.out.println(piecePosition.get(new PieceKey(Color.BLACK, PieceType.QUEEN)));
+        System.out.println(piecePosition.get(new PieceKey(Color.WHITE, PieceType.BISHOP)));
     }
 }

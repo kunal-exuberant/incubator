@@ -60,7 +60,7 @@ public abstract class Piece {
         return this.getColor() != piece.getColor();
     }
 
-    public abstract boolean canAttack(Board board);
+    public abstract boolean canAttack();
 
     public abstract void move();
 

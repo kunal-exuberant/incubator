@@ -32,7 +32,7 @@ public class Rook extends Piece{
     }
 
     @Override
-    public boolean canAttack(Board board) {
+    public boolean canAttack() {
         return false;
     }
 

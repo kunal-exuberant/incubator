@@ -21,7 +21,7 @@ public final class PieceFactory {
     private static Piece buildPiece(PieceType pieceType, Color color){
         switch (pieceType){
             case PAWN:
-                return Pawn.getInstance(color);
+                return new Pawn(color);
             case BISHOP:
                 return new Bishop(color);
             case ROOK:
@@ -55,7 +55,7 @@ public final class PieceFactory {
     }
 
     public static Map<PieceKey, List<Piece>> getPieceMap() {
-        Map<PieceKey, List<Piece>> pieceMap = new HashMap<>();
+        Map<PieceKey, List<Piece>> pieceMap = new LinkedHashMap<>();
 
         for(Color color: Color.values()) {
             for (PieceType pieceType : PieceType.values()) {
@@ -70,5 +70,4 @@ public final class PieceFactory {
         }
         return pieceMap;
     }
-
 }

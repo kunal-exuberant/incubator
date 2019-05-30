@@ -15,14 +15,20 @@ import java.util.Iterator;
 @Singleton
 public class Board {
 
-    private static Cell [][] board = new Cell[8][8];
+    private static Cell [][] board = new Cell[Constants.EIGHT][Constants.EIGHT];
 
     public static Cell getCell(Position position){
         return board[position.getX()][position.getY()];
     }
 
-    public static Cell getCell(byte x, byte y){
-        return board[x][y];
+    public static boolean exists(int x, int y){
+        return x >=0 && x < Constants.EIGHT && y >=0 && y<Constants.EIGHT;
+    };
+
+    public static Cell getCell(int x, int y){
+        System.out.println(x+" "+y);
+        if(exists(x,y)) return board[x][y];
+        throw new IllegalArgumentException("This position does not exist on the board");
     }
 
     public static Piece getPiece(byte x, byte y){

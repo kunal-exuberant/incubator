@@ -1,0 +1,7 @@
+Objective of this application is to create a file based storage rotating menu
+which server the various menu today options in the sorted order.
+
+1. Catelog of various menu items.
+2. Sorts the catelog in least recently cooked order
+3. Provides capability to add items to the list.
+4. update the list with which has been cooked recently

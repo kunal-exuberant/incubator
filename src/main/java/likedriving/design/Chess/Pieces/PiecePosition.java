@@ -13,32 +13,20 @@ public class PiecePosition {
         piecePosition = new LinkedHashMap<>();
         piecePosition.put(new PieceKey(Color.WHITE, PieceType.ROOK),
                 Arrays.asList(new Position((byte)0,(byte)0), new Position((byte)0,(byte)7)));
-        piecePosition.put(new PieceKey(Color.BLACK, PieceType.ROOK),
-                Arrays.asList(new Position((byte)7,(byte)0), new Position((byte)7,(byte)7)));
 
         piecePosition.put(new PieceKey(Color.WHITE, PieceType.KNIGHT),
                 Arrays.asList(new Position((byte)0,(byte)1), new Position((byte)0,(byte)6)));
-        piecePosition.put(new PieceKey(Color.BLACK, PieceType.KNIGHT),
-                Arrays.asList(new Position((byte)7,(byte)1), new Position((byte)7,(byte)6)));
 
         piecePosition.put(new PieceKey(Color.WHITE, PieceType.BISHOP),
                 Arrays.asList(new Position((byte)0,(byte)2), new Position((byte)0,(byte)5)));
-        piecePosition.put(new PieceKey(Color.BLACK, PieceType.BISHOP),
-                Arrays.asList(new Position((byte)7,(byte)2), new Position((byte)7,(byte)5)));
 
         piecePosition.put(new PieceKey(Color.WHITE, PieceType.KING),
                 Arrays.asList(new Position((byte)0,(byte)3)));
 
-        piecePosition.put(new PieceKey(Color.BLACK, PieceType.KING),
-                Arrays.asList(new Position((byte)7,(byte)4)));
-
         piecePosition.put(new PieceKey(Color.WHITE, PieceType.QUEEN),
                 Arrays.asList(new Position((byte)0,(byte)4)));
 
-        piecePosition.put(new PieceKey(Color.BLACK, PieceType.QUEEN),
-                Arrays.asList(new Position((byte)7,(byte)3)));
-
-        piecePosition.put(new PieceKey(Color.BLACK, PieceType.PAWN),
+        piecePosition.put(new PieceKey(Color.WHITE, PieceType.PAWN),
                 Arrays.asList(new Position((byte)1,(byte)0),
                         new Position((byte)1,(byte)1),
                         new Position((byte)1,(byte)2),
@@ -48,7 +36,22 @@ public class PiecePosition {
                         new Position((byte)1,(byte)6),
                         new Position((byte)1,(byte)7)));
 
-        piecePosition.put(new PieceKey(Color.WHITE, PieceType.PAWN),
+        piecePosition.put(new PieceKey(Color.BLACK, PieceType.ROOK),
+                Arrays.asList(new Position((byte)7,(byte)0), new Position((byte)7,(byte)7)));
+
+        piecePosition.put(new PieceKey(Color.BLACK, PieceType.KNIGHT),
+                Arrays.asList(new Position((byte)7,(byte)1), new Position((byte)7,(byte)6)));
+
+        piecePosition.put(new PieceKey(Color.BLACK, PieceType.BISHOP),
+                Arrays.asList(new Position((byte)7,(byte)2), new Position((byte)7,(byte)5)));
+
+        piecePosition.put(new PieceKey(Color.BLACK, PieceType.KING),
+                Arrays.asList(new Position((byte)7,(byte)4)));
+
+        piecePosition.put(new PieceKey(Color.BLACK, PieceType.QUEEN),
+                Arrays.asList(new Position((byte)7,(byte)3)));
+
+        piecePosition.put(new PieceKey(Color.BLACK, PieceType.PAWN),
                 Arrays.asList(new Position((byte)6,(byte)0),
                         new Position((byte)6,(byte)1),
                         new Position((byte)6,(byte)2),

@@ -21,7 +21,9 @@ public abstract class Piece {
 
     private Position currentPosition;
 
-    private Board board;
+    private Cell currentCell;
+
+    private Navigation navigation = new Navigation(this);
 
     private List<Position> possibleNextPositions = new ArrayList<>();
 

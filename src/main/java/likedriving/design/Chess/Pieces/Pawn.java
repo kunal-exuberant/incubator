@@ -1,9 +1,7 @@
 package likedriving.design.Chess.Pieces;
 
-import likedriving.design.Chess.Board;
-import likedriving.design.Chess.Cell;
-import likedriving.design.Chess.Color;
-import likedriving.design.Chess.Position;
+import likedriving.design.Chess.*;
+
 import java.util.Optional;
 
 public class Pawn extends Piece{
@@ -35,81 +33,45 @@ public class Pawn extends Piece{
     @Override
     public boolean canAttack() {
 
-        switch (this.getDirectionOfAttack()) {
-            case INCREASING:
-                if (this.getBoard().getCell(this.getCurrentPosition().getX(), (byte) (this.getCurrentPosition().getY() + 1)).isAvailable()) {
-                    return true;
-                }
-                else if (this.isOpponent(this.getBoard().getPiece((byte) (this.getCurrentPosition().getX() - 1), (byte) (this.getCurrentPosition().getY() + 1)))
-                        || this.isOpponent(this.getBoard().getPiece((byte) (this.getCurrentPosition().getX() + 1), (byte) (this.getCurrentPosition().getY() + 1)))) {
-                    return true;
-                }
-                else {
-                    System.out.println("Error case in deciding can attack");
-                }
-            break;
-
-            case DECREASING:
-                if (this.getBoard().getCell(this.getCurrentPosition().getX(), (byte) (this.getCurrentPosition().getY() - 1)).isAvailable()) {
-                    return true;
-                }
-                else if (this.isOpponent(this.getBoard().getPiece((byte) (this.getCurrentPosition().getX() - 1), (byte) (this.getCurrentPosition().getY() - 1)))
-                        || this.isOpponent(this.getBoard().getPiece((byte) (this.getCurrentPosition().getX() + 1), (byte) (this.getCurrentPosition().getY() - 1)))) {
-                    return true;
-                }
-                else{
-                    System.out.println("Error case in deciding can attack");
-                }
-            break;
+        if (getNavigation().nextPosition().isAvailable()) {
+            return true;
         }
-        System.out.println("Error case in deciding can attack");
+        else if (isOpponent((getNavigation().nextLeftPosition()).getPiecePlaced())){
+            return true;
+        }
+        else if (isOpponent((getNavigation().nextRightPosition()).getPiecePlaced())) {
+            return true;
+        }
+        else {
+            //Use Logger to log the error
+            System.out.println("Error case in deciding can attack");
+        }
         return false;
     }
 
     @Override
     public void move() {
         System.out.println(this.getPieceType()+" "+"is moving unit distance");
-        Position newPosition = null;
+        Cell newCell = null;
         Piece capturedPiece;
 
-        switch (this.getDirectionOfAttack()) {
-            case INCREASING:
-                if (this.isOpponent(this.getBoard().getPiece((byte) (this.getCurrentPosition().getX() - 1), (byte) (this.getCurrentPosition().getY() + 1)))){
-                    capturedPiece = this.getBoard().getPiece((byte) (this.getCurrentPosition().getX() - 1), (byte) (this.getCurrentPosition().getY() + 1));
-                    newPosition = new Position((byte) (this.getCurrentPosition().getX() - 1), (byte) (this.getCurrentPosition().getY() + 1));
-                }
-                else if(this.isOpponent(this.getBoard().getPiece((byte) (this.getCurrentPosition().getX() + 1), (byte) (this.getCurrentPosition().getY() + 1)))) {
-                    capturedPiece = this.getBoard().getPiece((byte) (this.getCurrentPosition().getX() + 1), (byte) (this.getCurrentPosition().getY() + 1));
-                    newPosition = new Position((byte) (this.getCurrentPosition().getX() + 1), (byte) (this.getCurrentPosition().getY() + 1));
-                }
-                else if (this.getBoard().getCell(this.getCurrentPosition().getX(), (byte) (this.getCurrentPosition().getY() + 1)).isAvailable()) {
-                    newPosition = new Position(this.getCurrentPosition().getX(), (byte) (this.getCurrentPosition().getY() + 1));
-                }
-                else {
-                    System.out.println("Error case in deciding can attack");
-                }
-                break;
 
-            case DECREASING:
-                if (this.isOpponent(this.getBoard().getPiece((byte) (this.getCurrentPosition().getX() - 1), (byte) (this.getCurrentPosition().getY() - 1)))) {
-                    capturedPiece = this.getBoard().getPiece((byte) (this.getCurrentPosition().getX() - 1), (byte) (this.getCurrentPosition().getY() - 1));
-                    newPosition = new Position((byte) (this.getCurrentPosition().getX() - 1), (byte) (this.getCurrentPosition().getY() - 1));
-                }
-                else if(this.isOpponent(this.getBoard().getPiece((byte) (this.getCurrentPosition().getX() + 1), (byte) (this.getCurrentPosition().getY() - 1)))){
-                    capturedPiece = this.getBoard().getPiece((byte) (this.getCurrentPosition().getX() + 1), (byte) (this.getCurrentPosition().getY() - 1));
-                    newPosition = new Position((byte) (this.getCurrentPosition().getX() + 1), (byte) (this.getCurrentPosition().getY() - 1));
-                }
-                else if (this.getBoard().getCell(this.getCurrentPosition().getX(), (byte) (this.getCurrentPosition().getY() - 1)).isAvailable()) {
-                    newPosition = new Position(this.getCurrentPosition().getX(), (byte) (this.getCurrentPosition().getY() - 1));
-                }
-                else{
-                    System.out.println("Error case in deciding can attack");
-                }
-                break;
+            if ((getNavigation().nextLeftPosition()).getPiecePlaced() != null
+                    && isOpponent(getNavigation().nextLeftPosition().getPiecePlaced())) {
+                newCell = getNavigation().nextLeftPosition();
+            } else if ((getNavigation().nextRightPosition()).getPiecePlaced() != null
+                    && isOpponent((getNavigation().nextRightPosition()).getPiecePlaced())) {
+                newCell = getNavigation().nextRightPosition();
+            } else if (getNavigation().nextPosition().isAvailable()) {
+                newCell = getNavigation().nextPosition();
+            } else {
+                System.out.println("Error case in deciding can attack");
+            }
+
+            if (Optional.ofNullable(newCell).isPresent()) {
+                this.setCurrentCell(newCell);
+                newCell.setPiecePlaced(this);
+                // Add the logic of Captured piece if moved to an opponent cell
+            }
         }
-        if(Optional.ofNullable(newPosition).isPresent()) {
-            this.setCurrentPosition(newPosition);
-            this.getBoard().getCell(newPosition).setPiecePlaced(this);
-        }
-    }
 }

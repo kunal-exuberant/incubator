@@ -29,7 +29,7 @@ public class CookedItemStore extends FileActions implements MenuOperations{
 
     @Override
     public void commit() throws IOException{
-        write(cookedItemStore);
+        write();
     }
 
     public void write() throws IOException{

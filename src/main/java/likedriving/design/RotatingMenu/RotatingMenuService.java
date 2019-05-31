@@ -1,7 +1,9 @@
 package likedriving.design.RotatingMenu;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Scanner;
+import java.util.Stack;
 
 public class RotatingMenuService {
 
@@ -11,6 +13,10 @@ public class RotatingMenuService {
         MenuItemStore menuItemStore = new MenuItemStore();
         CookedItemStore cookedItemStore = new CookedItemStore();
         SortedItemStore sortedItemStore = new SortedItemStore();
+
+        if(MenuItem.getMenuItemId() == 0){
+            MenuItem.setMenuItemId(menuItemStore.generateMenuItemId());
+        }
         boolean exitApp = false;
 
         System.out.println("Welcome to Rotating menu app ...!");
@@ -28,32 +34,41 @@ public class RotatingMenuService {
             switch (sc.nextInt()){
                 case 1:
                     System.out.println("Please enter a menu item to add: ");
-                    String itemName = sc.next();
+                    sc.nextLine();
+                    String itemName = sc.nextLine();
                     MenuItem menuItem = new MenuItem(itemName);
                     menuItemStore.add(menuItem);
                     menuItemStore.commit();
                     break;
                 case 2:
                     System.out.println("Please chose a cooked item id from following list to add: ");
-                   menuItemStore.display();
+                    menuItemStore.display();
                     int itemId = sc.nextInt();
-                    CookedItem cookedItem = new CookedItem(menuItemStore.get(itemId));
-                    cookedItemStore.add(cookedItem);
-                    cookedItemStore.commit();
+                    menuItem = menuItemStore.get(itemId);
+                    if(menuItem != null) {
+                        CookedItem cookedItem = new CookedItem(menuItem);
+                        cookedItemStore.add(cookedItem);
+                        cookedItemStore.commit();
+                    }
+                    else {
+                        System.out.println("This menu item does not exist in our menu list");
+                    }
                     break;
                 case 3:
-  /*                  System.out.println("Please enter a menu item to add: ");
-                    String itemName = sc.next();
-                    MenuItem menuItem = new MenuItem(itemName);
-                    menuItemStore.add(menuItem);
-                    menuItemStore.commit();*/
+                  System.out.println("sorting ... ");
+                  List<MenuItem> menuItemList = menuItemStore.populate();
+                  Stack<CookedItem> cookedItemStack = cookedItemStore.readCookedItem(menuItemList);
+                  while (!cookedItemStack.empty()){
+                      CookedItem cookedItem = cookedItemStack.pop();
+                      System.out.println(cookedItem);
+                      sortedItemStore.add(cookedItem);
+                  }
+                    sortedItemStore.commit();
                     break;
                 case 4:
-/*                    System.out.println("Please enter a menu item to add: ");
-                    String itemName = sc.next();
-                    MenuItem menuItem = new MenuItem(itemName);
-                    menuItemStore.add(menuItem);
-                    menuItemStore.commit();*/
+                  System.out.println("Printing the sorted menu suggestion for today: ");
+                    menuItemList = menuItemStore.populate();
+                    sortedItemStore.display1(menuItemList);
                     break;
                 case 5:
                     System.out.println("Exiting the app ...");

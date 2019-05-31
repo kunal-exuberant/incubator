@@ -6,13 +6,17 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MenuItemStore extends FileActions implements MenuOperations{
+public class MenuItemStore extends FileActions implements MenuOperations {
 
     private static String fileUrl = "/Users/kunalsingh.k/likedriving/src/main/java/likedriving/design/RotatingMenu/data/menuItems.txt";
     private List<MenuItem> menuItemStore = new ArrayList<>();
 
     public MenuItemStore() throws IOException {
         super(fileUrl);
+    }
+
+    public int generateMenuItemId() throws IOException{
+        return getLastMenuItemId();
     }
 
     @Override
@@ -44,7 +48,7 @@ public class MenuItemStore extends FileActions implements MenuOperations{
     public String stringify(List<MenuItem> menuItems){
         String menuItemString = "";
         for(MenuItem menuItem: menuItems) {
-            menuItemString += menuItem.toString()+"\n";
+            menuItemString += "\n" + menuItem.toString();
         }
         return menuItemString;
     }

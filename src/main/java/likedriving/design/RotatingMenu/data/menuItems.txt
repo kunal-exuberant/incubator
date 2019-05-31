@@ -1,4 +1,10 @@
 1 chilli
 2 choole
 3 samose
-1 Rajma
+4 panner
+5 arhar
+6 choolele
+7 halwa
+8 gajar
+9 soyabean
+10 chai

@@ -1,12 +1,16 @@
 package likedriving.design.RotatingMenu;
 
+import lombok.Data;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+@Data
 public class SortedItemStore extends FileActions implements MenuOperations{
 
     private static String fileUrl = "/Users/kunalsingh.k/likedriving/src/main/java/likedriving/design/RotatingMenu/data/sortedItems.txt";
@@ -30,8 +34,12 @@ public class SortedItemStore extends FileActions implements MenuOperations{
 
     public void display1(List<MenuItem> menuItems) throws IOException {
         List<CookedItem> sortedItemList = read1(menuItems);
+
+        String pattern = "dd MMM";
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+
         for(CookedItem cookedItem: sortedItemList) {
-            System.out.println(cookedItem.getMenuItem().getName()+" "+ new Date(cookedItem.getTimestamp()));
+            System.out.print("\n"+cookedItem.getMenuItem().getName()+" last cooked on "+ simpleDateFormat.format(new Date(cookedItem.getTimestamp())));
         }
     }
 

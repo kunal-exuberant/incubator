@@ -42,7 +42,7 @@ public class CookedItemStore extends FileActions implements MenuOperations{
     public String stringify(List<CookedItem> cookedItems){
         String cookedItemString = "";
         for(CookedItem cookedItem: cookedItems) {
-            cookedItemString += cookedItem.toString()+"\n";
+            cookedItemString += "\n"+cookedItem.toString();
         }
         return cookedItemString;
     }

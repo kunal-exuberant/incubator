@@ -1,10 +1,9 @@
-1 chilli
-2 choole
-3 samose
-4 panner
-5 arhar
-6 choolele
-7 halwa
-8 gajar
-9 soyabean
-10 chai
+
+1 chilli panner
+2 gobi paratha
+3 paneer do payaja
+4 soyabean potato
+5 paneer
+6 cecerc
+7 mushroom masala
+8 rajma chawal

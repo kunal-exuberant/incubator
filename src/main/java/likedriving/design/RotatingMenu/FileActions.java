@@ -64,9 +64,8 @@ public class FileActions implements FileOperations {
         return sortedItemList;
     }
 
-
     public Stack<CookedItem> readCookedItem(List<MenuItem> menuItems) throws IOException {
-        this.sc = new Scanner(new File(fileUrl));
+        this.sc = new Scanner(file);
         Stack<CookedItem> cookedItemStack = new Stack<>();
         int cookedItemId = 0;
         long timestamp = 0;
@@ -108,7 +107,7 @@ public class FileActions implements FileOperations {
 
         while (sc.hasNext()) {
             if (sc.hasNextInt() && itemId == Integer.parseInt(sc.next())) {
-                fileContent = sc.next();
+                fileContent = sc.nextLine();
                 return new MenuItem(itemId, fileContent);
             }else {
                 sc.next();
@@ -119,7 +118,6 @@ public class FileActions implements FileOperations {
 
     public List<MenuItem> populate() throws IOException {
         this.sc = new Scanner(file);
-        String fileContent ="";
         int menuItemId = 0;
         String menuItemName = "";
         List<MenuItem> menuItems = new ArrayList<>();
@@ -127,14 +125,13 @@ public class FileActions implements FileOperations {
             if (sc.hasNextInt()) {
                 menuItemId = sc.nextInt();
             }else {
-                menuItemName = sc.next();
+                menuItemName = sc.nextLine();
             }
             if(menuItemId != 0 && menuItemName != ""){
                 menuItems.add(new MenuItem(menuItemId, menuItemName));
                 menuItemId = 0;
                 menuItemName = "";
             }
-
         }
         return menuItems;
     }

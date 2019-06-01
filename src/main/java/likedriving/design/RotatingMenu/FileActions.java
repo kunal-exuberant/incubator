@@ -3,7 +3,6 @@ package likedriving.design.RotatingMenu;
 import lombok.NoArgsConstructor;
 
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +23,7 @@ public class FileActions implements FileOperations {
 
     @Override
     public Object read() throws IOException {
-        this.sc = new Scanner(new File(fileUrl));
+        this.sc = new Scanner(file);
         String fileContent ="";
 
         while(sc.hasNext()){
@@ -94,13 +93,6 @@ public class FileActions implements FileOperations {
     }
 
     @Override
-    public void write(Object tuples) throws IOException{
-        FileWriter fileWriter = new FileWriter(new File(fileUrl), true);
-        fileWriter.append((String)tuples.toString());
-        fileWriter.close();
-    }
-
-    @Override
     public MenuItem scan(int itemId) throws IOException {
         this.sc = new Scanner(file);
         String fileContent ="";
@@ -139,7 +131,7 @@ public class FileActions implements FileOperations {
     @Override
     public int getLastMenuItemId() throws IOException {
         int itemId = 0;
-        this.sc = new Scanner(new File(fileUrl));
+        this.sc = new Scanner(file);
 
         while (sc.hasNextLine()) {
             if (sc.hasNextInt()) {

@@ -1,31 +1,33 @@
 package likedriving.design.Chess;
 
-import org.junit.Test;
-
 public class Game {
 
-    void start(){
+    void start() throws InterruptedException{
         Board.initializeTheBoard();
         Board.deployPieces();
         Board.printBoard();
 
         Player [] players = Players.getPlayers();
-        players[0].play();
 
-/*      while(!checkTerminalCondition()){
-            players[0].play();
-            System.out.println("Next move");
-
-        }*/
+        int moveCounter = 1;
+        while(checkTerminalCondition()){
+            players[(moveCounter+1) %2].play();
+            if(moveCounter%2 == 0){
+                Thread.sleep(3000);
+            }
+            moveCounter++;
+        }
     }
 
-
-    @Test
-    public void startTest(){
-        start();
+    public static void main(String[] args) {
+        try {
+            new Game().start();
+        }catch (InterruptedException e){
+            System.out.println("Game thread interrupted "+ e);
+        }
     }
 
-    boolean checkTerminalCondition(Player player){
+    boolean checkTerminalCondition(){
 
      /*   switch (){
             case CHECK_MATE:
@@ -37,6 +39,6 @@ public class Game {
 
             default:
         }*/
-        return false;
+        return true;
     }
 }

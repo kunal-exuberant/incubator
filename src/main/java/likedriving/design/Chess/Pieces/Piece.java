@@ -21,9 +21,7 @@ public abstract class Piece {
 
     private Position currentPosition;
 
-    private Cell currentCell;
-
-    private Navigation navigation = new Navigation(this);
+    private boolean isCaptured = false;
 
     private List<Position> possibleNextPositions = new ArrayList<>();
 

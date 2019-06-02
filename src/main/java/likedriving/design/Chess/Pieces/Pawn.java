@@ -33,45 +33,56 @@ public class Pawn extends Piece{
     @Override
     public boolean canAttack() {
 
-        if (getNavigation().nextPosition().isAvailable()) {
+        if (Navigation.next(getCurrentPosition(), getDirectionOfAttack()) != null && Navigation.next(getCurrentPosition(), getDirectionOfAttack()).isAvailable()) {
             return true;
         }
-        else if (isOpponent((getNavigation().nextLeftPosition()).getPiecePlaced())){
+        else if (Navigation.nextLeftPosition(getCurrentPosition(), getDirectionOfAttack())!= null && isOpponent((Navigation.nextLeftPosition(getCurrentPosition(), getDirectionOfAttack())).getPiecePlaced())){
             return true;
         }
-        else if (isOpponent((getNavigation().nextRightPosition()).getPiecePlaced())) {
+        else if (Navigation.nextRightPosition(getCurrentPosition(), getDirectionOfAttack()) != null && isOpponent((Navigation.nextRightPosition(getCurrentPosition(), getDirectionOfAttack())).getPiecePlaced())) {
             return true;
         }
         else {
             //Use Logger to log the error
-            System.out.println("Error case in deciding can attack");
+            System.out.println("Error in deciding can attack, bz this pieces has reached a position from where it cannot move.");
+            return false;
         }
-        return false;
     }
 
     @Override
     public void move() {
-        System.out.println(this.getPieceType()+" "+"is moving unit distance");
+        //System.out.println(this.getPieceType()+ ": "+ this.getId() +" "+"is moving unit distance");
         Cell newCell = null;
-        Piece capturedPiece;
+        Piece capturedPiece = null;
 
-
-            if ((getNavigation().nextLeftPosition()).getPiecePlaced() != null
-                    && isOpponent(getNavigation().nextLeftPosition().getPiecePlaced())) {
-                newCell = getNavigation().nextLeftPosition();
-            } else if ((getNavigation().nextRightPosition()).getPiecePlaced() != null
-                    && isOpponent((getNavigation().nextRightPosition()).getPiecePlaced())) {
-                newCell = getNavigation().nextRightPosition();
-            } else if (getNavigation().nextPosition().isAvailable()) {
-                newCell = getNavigation().nextPosition();
-            } else {
-                System.out.println("Error case in deciding can attack");
-            }
-
-            if (Optional.ofNullable(newCell).isPresent()) {
-                this.setCurrentCell(newCell);
-                newCell.setPiecePlaced(this);
-                // Add the logic of Captured piece if moved to an opponent cell
-            }
+        if (Navigation.nextLeftPosition(getCurrentPosition(), getDirectionOfAttack()) != null && (Navigation.nextLeftPosition(getCurrentPosition(), getDirectionOfAttack())).getPiecePlaced() != null
+                && isOpponent(Navigation.nextLeftPosition(getCurrentPosition(), getDirectionOfAttack()).getPiecePlaced())) {
+            newCell = Navigation.nextLeftPosition(getCurrentPosition(), getDirectionOfAttack());
+            capturedPiece = newCell.getPiecePlaced();
         }
+        else if (Navigation.nextRightPosition(getCurrentPosition(), getDirectionOfAttack()) != null && (Navigation.nextRightPosition(getCurrentPosition(), getDirectionOfAttack())).getPiecePlaced() != null
+                && isOpponent((Navigation.nextRightPosition(getCurrentPosition(), getDirectionOfAttack())).getPiecePlaced())) {
+            newCell = Navigation.nextRightPosition(getCurrentPosition(), getDirectionOfAttack());
+            capturedPiece = newCell.getPiecePlaced();
+        }
+        else if (Navigation.next(getCurrentPosition(), getDirectionOfAttack()) != null && Navigation.next(getCurrentPosition(), getDirectionOfAttack()).isAvailable()) {
+            newCell = Navigation.next(getCurrentPosition(), getDirectionOfAttack());
+        } else {
+            System.out.println("Error case in deciding can attack");
+        }
+
+        if (Optional.ofNullable(newCell).isPresent()) {
+            System.out.print("to "+newCell.getPosition());
+            Board.getCell(this.getCurrentPosition()).setPiecePlaced(null);
+            Board.getCell(this.getCurrentPosition()).setAvailable(true);
+
+            this.setCurrentPosition(newCell.getPosition());
+            newCell.setPiecePlaced(this);
+            // Add the logic of Captured piece if moved to an opponent cell
+        }
+        if(capturedPiece != null){
+            capturedPiece.setCaptured(true);
+            System.out.println(" and has captured "+ capturedPiece.getPieceType()+" "+capturedPiece.getId());
+        }
+    }
 }

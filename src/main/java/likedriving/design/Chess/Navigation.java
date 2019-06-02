@@ -1,21 +1,11 @@
 package likedriving.design.Chess;
-import likedriving.design.Chess.Pieces.Piece;
-
 import java.util.logging.Logger;
 
-public class Navigation implements Moves{
+public class Navigation{
 
-    private Piece piece;
+    public static Cell next(Position currentPosition, DirectionOfAttack direction) {
 
-    public Navigation(Piece piece){
-        this.piece = piece;
-    }
-
-    @Override
-    public Cell nextPosition() {
-        Position currentPosition = piece.getCurrentPosition();
-
-        switch (piece.getDirectionOfAttack()) {
+        switch (direction) {
             case INCREASING:
                 return Board.getCell(currentPosition.getX() + 1, currentPosition.getY());
             case DECREASING:
@@ -26,11 +16,48 @@ public class Navigation implements Moves{
         }
     }
 
-    @Override
-    public Cell nextRightPosition() {
-        Position currentPosition = piece.getCurrentPosition();
+    public static Cell previous(Position currentPosition, DirectionOfAttack direction) {
 
-        switch (piece.getDirectionOfAttack()) {
+        switch (direction) {
+            case INCREASING:
+                return Board.getCell(currentPosition.getX() - 1, currentPosition.getY());
+            case DECREASING:
+                return Board.getCell(currentPosition.getX() + 1, currentPosition.getY());
+            default:
+                Logger.getLogger(Navigation.class.getName()).severe("Direction of attack other than increasing or decresing");
+                throw new IllegalArgumentException("Direction of attack other than increasing or decresing");
+        }
+    }
+
+    public static Cell left(Position currentPosition, DirectionOfAttack direction) {
+
+        switch (direction) {
+            case INCREASING:
+                return Board.getCell(currentPosition.getX(), currentPosition.getY()-1);
+            case DECREASING:
+                return Board.getCell(currentPosition.getX(), currentPosition.getY()+1);
+            default:
+                Logger.getLogger(Navigation.class.getName()).severe("Direction of attack other than increasing or decresing");
+                throw new IllegalArgumentException("Direction of attack other than increasing or decresing");
+        }
+    }
+
+    public static Cell right(Position currentPosition, DirectionOfAttack direction) {
+
+        switch (direction) {
+            case INCREASING:
+                return Board.getCell(currentPosition.getX(), currentPosition.getY()+1);
+            case DECREASING:
+                return Board.getCell(currentPosition.getX(), currentPosition.getY()-1);
+            default:
+                Logger.getLogger(Navigation.class.getName()).severe("Direction of attack other than increasing or decresing");
+                throw new IllegalArgumentException("Direction of attack other than increasing or decresing");
+        }
+    }
+
+    public static Cell nextRightPosition(Position currentPosition, DirectionOfAttack direction) {
+
+        switch (direction) {
             case INCREASING:
                 return Board.getCell(currentPosition.getX() + 1, currentPosition.getY()+1);
             case DECREASING:
@@ -41,11 +68,9 @@ public class Navigation implements Moves{
         }
     }
 
-    @Override
-    public Cell nextLeftPosition() {
-        Position currentPosition = piece.getCurrentPosition();
+    public static Cell nextLeftPosition(Position currentPosition, DirectionOfAttack direction) {
 
-        switch (piece.getDirectionOfAttack()) {
+        switch (direction) {
             case INCREASING:
                 return Board.getCell(currentPosition.getX() + 1, currentPosition.getY()-1);
             case DECREASING:
@@ -55,6 +80,4 @@ public class Navigation implements Moves{
                 throw new IllegalArgumentException("Direction of attack other than increasing or decresing");
         }
     }
-
-
 }

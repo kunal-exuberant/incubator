@@ -5,4 +5,6 @@ public interface ProblemStoreInterface {
     void markAsSolved(Problem problem);
     void markAsUnsolved(Problem problem);
     void deleteProblem(Problem problem);
+
+    void save();
 }

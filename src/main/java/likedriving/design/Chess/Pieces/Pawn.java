@@ -11,23 +11,9 @@ public class Pawn extends Piece{
     }
 
     @Override
-    public boolean canMoveTo(Position nextPosition) {
-        Board board = new Board();
-        Cell nextCell = board.getCell(nextPosition);
-        Position currentPosition = this.getCurrentPosition();
-        if(isMyPiecePresent(nextCell)){
-            return false;
-        }
-        else if(nextCell.isAvailable() && nextPosition.getY() == currentPosition.getY()+1
-                && nextPosition.getX() == nextPosition.getX()){
-            return true;
-        }
-        return true;
-    }
-
-    @Override
-    public void computePossibleNextPositions(Position position) {
-
+    public Direction[] myMoveOrder() {
+        Direction [] directions = {Direction.NEXT, Direction.LEFT, Direction.RIGHT, Direction.PREVIOUS};
+        return directions;
     }
 
     @Override
@@ -82,7 +68,7 @@ public class Pawn extends Piece{
         }
         if(capturedPiece != null){
             capturedPiece.setCaptured(true);
-            System.out.println(" and has captured "+ capturedPiece.getPieceType()+" "+capturedPiece.getId());
+            System.out.println(" and has captured "+ capturedPiece.getPieceType()+"-"+capturedPiece.getId());
         }
     }
 }

@@ -1,7 +1,7 @@
 package likedriving.design.Chess.Pieces;
 
 import likedriving.design.Chess.Color;
-import likedriving.design.Chess.Position;
+import likedriving.design.Chess.Direction;
 
 public class King extends Piece{
 
@@ -10,13 +10,9 @@ public class King extends Piece{
     }
 
     @Override
-    public boolean canMoveTo(Position nextPosition) {
-        return false;
-    }
-
-    @Override
-    public void computePossibleNextPositions(Position position) {
-
+    protected Direction[] myMoveOrder(){
+        Direction [] directions = {Direction.NEXT, Direction.LEFT, Direction.RIGHT, Direction.PREVIOUS};
+        return directions;
     }
 
     @Override

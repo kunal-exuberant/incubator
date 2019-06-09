@@ -42,6 +42,58 @@ public class Navigation{
         }
     }
 
+    public static Cell diagonalLeft(Position currentPosition, DirectionOfAttack direction) {
+
+        switch (direction) {
+            case INCREASING:
+                return Board.getCell(currentPosition.getX()+1, currentPosition.getY()-1);
+            case DECREASING:
+                return Board.getCell(currentPosition.getX()-1, currentPosition.getY()+1);
+            default:
+                Logger.getLogger(Navigation.class.getName()).severe("Direction of attack other than increasing or decresing");
+                throw new IllegalArgumentException("Direction of attack other than increasing or decresing");
+        }
+    }
+
+    public static Cell diagonalLeftBack(Position currentPosition, DirectionOfAttack direction) {
+
+        switch (direction) {
+            case INCREASING:
+                return Board.getCell(currentPosition.getX()-1, currentPosition.getY()-1);
+            case DECREASING:
+                return Board.getCell(currentPosition.getX()+1, currentPosition.getY()+1);
+            default:
+                Logger.getLogger(Navigation.class.getName()).severe("Direction of attack other than increasing or decresing");
+                throw new IllegalArgumentException("Direction of attack other than increasing or decresing");
+        }
+    }
+
+    public static Cell diagonalRightBack(Position currentPosition, DirectionOfAttack direction) {
+
+        switch (direction) {
+            case INCREASING:
+                return Board.getCell(currentPosition.getX()-1, currentPosition.getY()+1);
+            case DECREASING:
+                return Board.getCell(currentPosition.getX()+1, currentPosition.getY()-1);
+            default:
+                Logger.getLogger(Navigation.class.getName()).severe("Direction of attack other than increasing or decresing");
+                throw new IllegalArgumentException("Direction of attack other than increasing or decresing");
+        }
+    }
+
+    public static Cell diagonalRight(Position currentPosition, DirectionOfAttack direction) {
+
+        switch (direction) {
+            case INCREASING:
+                return Board.getCell(currentPosition.getX()+1, currentPosition.getY()+1);
+            case DECREASING:
+                return Board.getCell(currentPosition.getX()-1, currentPosition.getY()-1);
+            default:
+                Logger.getLogger(Navigation.class.getName()).severe("Direction of attack other than increasing or decresing");
+                throw new IllegalArgumentException("Direction of attack other than increasing or decresing");
+        }
+    }
+
     public static Cell right(Position currentPosition, DirectionOfAttack direction) {
 
         switch (direction) {

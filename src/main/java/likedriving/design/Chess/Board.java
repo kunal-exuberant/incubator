@@ -69,8 +69,10 @@ public class Board {
 
         for(int i=0; i<pieceList.size(); i++){
             for(int j=i; j<positionList.size(); j++){
+                System.out.println("^^^"+pieceList.get(i));
                 pieceList.get(i).setCurrentPosition(positionList.get(j));
                 board[positionList.get(j).getX()][positionList.get(j).getY()].setPiecePlaced(pieceList.get(i));
+                board[positionList.get(j).getX()][positionList.get(j).getY()].setAvailable(false);
                 break;
             }
         }
@@ -89,7 +91,10 @@ public class Board {
         initializeTheBoard();
         printBoard();
         deployPieces();
-        System.out.println("piece placed at this location: "+getPiece((byte)0,(byte)5));
+        System.out.println("piece placed at this location: "+getPiece((byte)0,(byte)6));
+        System.out.println("piece placed at this location: "+getPiece((byte)0,(byte)1));
+        System.out.println("piece placed at this location: "+getPiece((byte)7,(byte)6));
+        System.out.println("piece placed at this location: "+getPiece((byte)7,(byte)1));
         System.out.println("Color of this cell "+getCell((byte)0,(byte)0).getColor());
         System.out.println("Color of this cell "+getCell((byte)0,(byte)1).getColor());
     }

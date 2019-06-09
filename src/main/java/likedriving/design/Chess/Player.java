@@ -24,14 +24,22 @@ public class Player {
 
     public List<Piece> getMyPieces(){
         List<Piece> myPieces = new ArrayList<>();
+        List<Piece> myCapturedPieces = new ArrayList<>();
         for (Map.Entry<PieceKey, List<Piece>> pieceEntry : PieceStore.getPieceMap().entrySet()) {
             if (pieceEntry.getKey().getColor() == getColor()) {
                 for (Piece piece : pieceEntry.getValue()) {
                     if(!piece.isCaptured()) {
                         myPieces.add(piece);
+                    }else {
+                        myCapturedPieces.add(piece);
                     }
+
                 }
             }
+        }
+        if(myCapturedPieces.size() > 0) {
+            System.out.print("My " + myCapturedPieces.size() + " pieces captured: ");
+            myCapturedPieces.forEach(p -> System.out.print(p.getPieceType() + "-" + p.getId()+", "));
         }
         return myPieces;
     }
@@ -44,10 +52,10 @@ public class Player {
 
     void play(){
         System.out.println("\n\n"+color +" is playing ...");
-        System.out.println("Lost: "+ (16 - getMyPieces().size()) + " pieces");
+        //System.out.println("Lost: "+ (16 - getMyPieces().size()) + " pieces");
         Piece selectedPiece = selectPiece();
         if(selectedPiece != null){
-            System.out.print(selectedPiece.getId()+" "+selectedPiece.getPieceType() +" is attacking");
+            System.out.print("\n"+selectedPiece.getPieceType() + "-"+selectedPiece.getId()+" "+" is attacking");
             System.out.print(" from " + selectedPiece.getCurrentPosition());
             selectedPiece.move();
         }else{
@@ -68,17 +76,17 @@ public class Player {
     // Randomly select one piece out of many pieces to move
     public Piece selectPiece(){
         List<Piece> eligiblePieces = eligibleToMove();
-            try {
-                Random random = new Random();
-                return eligiblePieces.get(random.nextInt(eligiblePieces.size()));
+        try {
+            Random random = new Random();
+            return eligiblePieces.get(random.nextInt(eligiblePieces.size()));
+        }
+        catch (IllegalArgumentException e){
+            if(eligiblePieces.size() == 0) {
+                System.out.println(color +" has no pieces to move");
+            }else {
+                System.out.println("Unable to select eligible pieces");
             }
-            catch (IllegalArgumentException e){
-                if(eligiblePieces.size() == 0) {
-                    System.out.println(color +" has no pieces to move");
-                }else {
-                    System.out.println("Unable to select eligible pieces");
-                }
-                return null;
-            }
+            return null;
+        }
     }
 }

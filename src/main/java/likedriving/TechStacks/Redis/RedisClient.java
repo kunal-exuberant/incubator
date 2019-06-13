@@ -95,7 +95,7 @@ public class RedisClient {
 
         String key = "techStacks";
 
-        String [] values = {"Java", "Redis", "Elastic Search", "Kafka", "Apache Storm"};
+        String [] values = {"JavaFundamentals", "Redis", "Elastic Search", "Kafka", "Apache Storm"};
 
         jedis.sadd(key, values);
 

@@ -11,26 +11,6 @@ public class Pawn extends Piece{
     }
 
     @Override
-    public boolean canMoveTo(Position nextPosition) {
-        Board board = new Board();
-        Cell nextCell = board.getCell(nextPosition);
-        Position currentPosition = this.getCurrentPosition();
-        if(isMyPiecePresent(nextCell)){
-            return false;
-        }
-        else if(nextCell.isAvailable() && nextPosition.getY() == currentPosition.getY()+1
-                && nextPosition.getX() == nextPosition.getX()){
-            return true;
-        }
-        return true;
-    }
-
-    @Override
-    public void computePossibleNextPositions(Position position) {
-
-    }
-
-    @Override
     public boolean canAttack() {
 
         if (getNavigation().nextPosition().isAvailable()) {

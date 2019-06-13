@@ -1,8 +1,8 @@
-package likedriving.Java;
+package likedriving.JavaFundamentals;
 
 
 /*
-1. Java implictly assumes call to cuurent object when called without this reference
+1. JavaFundamentals implictly assumes call to cuurent object when called without this reference
 2. Static member methods cannot access non static members - both methods or fields
 3. Instance or non static member methods can access both static member methods as well as non static members
  */

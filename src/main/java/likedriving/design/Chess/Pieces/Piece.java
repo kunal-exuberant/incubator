@@ -47,10 +47,6 @@ public abstract class Piece {
         this.currentPosition = currentPosition;
     }
 
-    public abstract boolean canMoveTo(Position nextPosition);
-
-    public abstract void computePossibleNextPositions(Position position);
-
     public boolean isMyPiecePresent(Cell nextCell){
         if(!nextCell.isAvailable() && nextCell.getPiecePlaced().getColor() == this.getColor()) {
             return false;

@@ -1,4 +1,4 @@
-package likedriving.Java;
+package likedriving.JavaFundamentals;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

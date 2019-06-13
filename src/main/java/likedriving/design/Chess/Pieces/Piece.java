@@ -65,6 +65,22 @@ public abstract class Piece {
                 return Navigation.diagonalLeftBack(position, getDirectionOfAttack());
             case DIAGONAL_RIGHT_BACK:
                 return Navigation.diagonalRightBack(position, getDirectionOfAttack());
+            case JUMP_UP_LEFT:
+                return Navigation.jumpUpLeftPosition(position, getDirectionOfAttack());
+            case JUMP_UP_RIGHT:
+                return Navigation.jumpUpRightPosition(position, getDirectionOfAttack());
+            case JUMP_LEFT_UP:
+                return Navigation.jumpLeftUpPosition(position, getDirectionOfAttack());
+            case JUMP_RIGHT_UP:
+                return Navigation.jumpRightUpPosition(position, getDirectionOfAttack());
+            case JUMP_LEFT_DOWN:
+                return Navigation.jumpLeftDownPosition(position, getDirectionOfAttack());
+            case JUMP_RIGHT_DOWN:
+                return Navigation.jumpRightDownPosition(position, getDirectionOfAttack());
+            case JUMP_DOWN_LEFT:
+                return Navigation.jumpDownLeftPosition(position, getDirectionOfAttack());
+            case JUMP_DOWN_RIGHT:
+                return Navigation.jumpDownRightPosition(position, getDirectionOfAttack());
             default:
                 System.out.println("Unknown navigation direction: "+direction);
                 return null;

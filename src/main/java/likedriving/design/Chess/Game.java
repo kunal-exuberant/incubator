@@ -13,7 +13,7 @@ public class Game {
         while(checkTerminalCondition()){
             players[(moveCounter+1) %2].play();
             if(moveCounter%2 == 0){
-                //Thread.sleep(3000);
+                Thread.sleep(500);
             }
             moveCounter++;
         }

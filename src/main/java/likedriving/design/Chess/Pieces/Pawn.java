@@ -6,33 +6,36 @@ import java.util.Optional;
 
 public class Pawn extends Piece{
 
+    private Cell next = null;
+    private Cell diagonalLeft = null;
+    private Cell diagonalRight = null;
+
     public Pawn(Color color){
         super(PieceType.PAWN, color);
     }
 
     @Override
     public Direction[] myMoveOrder() {
-        Direction [] directions = {Direction.NEXT, Direction.LEFT, Direction.RIGHT, Direction.PREVIOUS};
+        Direction [] directions = {Direction.DIAGONAL_LEFT, Direction.DIAGONAL_RIGHT}; //Not adding Direction.NEXT
         return directions;
+    }
+
+    @Override
+    protected boolean canAttackHere(Cell cell){
+        return cell != null && isOpponent(cell.getPiecePlaced());
+    }
+
+    protected boolean canMoveHere(Cell cell){
+        return cell != null && cell.isAvailable();
     }
 
     @Override
     public boolean canAttack() {
 
-        if (Navigation.next(getCurrentPosition(), getDirectionOfAttack()) != null && Navigation.next(getCurrentPosition(), getDirectionOfAttack()).isAvailable()) {
-            return true;
-        }
-        else if (Navigation.nextLeftPosition(getCurrentPosition(), getDirectionOfAttack())!= null && isOpponent((Navigation.nextLeftPosition(getCurrentPosition(), getDirectionOfAttack())).getPiecePlaced())){
-            return true;
-        }
-        else if (Navigation.nextRightPosition(getCurrentPosition(), getDirectionOfAttack()) != null && isOpponent((Navigation.nextRightPosition(getCurrentPosition(), getDirectionOfAttack())).getPiecePlaced())) {
-            return true;
-        }
-        else {
-            //Use Logger to log the error
-            System.out.println("Error in deciding can attack, bz this pieces has reached a position from where it cannot move.");
-            return false;
-        }
+        next = Navigation.next(getCurrentPosition(), getDirectionOfAttack());
+        diagonalLeft = Navigation.diagonalLeft(getCurrentPosition(), getDirectionOfAttack());
+        diagonalRight = Navigation.diagonalRight(getCurrentPosition(), getDirectionOfAttack());
+        return canMoveHere(next) || canAttackHere(diagonalLeft) || canAttackHere(diagonalRight);
     }
 
     @Override
@@ -41,20 +44,24 @@ public class Pawn extends Piece{
         Cell newCell = null;
         Piece capturedPiece = null;
 
-        if (Navigation.nextLeftPosition(getCurrentPosition(), getDirectionOfAttack()) != null && (Navigation.nextLeftPosition(getCurrentPosition(), getDirectionOfAttack())).getPiecePlaced() != null
-                && isOpponent(Navigation.nextLeftPosition(getCurrentPosition(), getDirectionOfAttack()).getPiecePlaced())) {
-            newCell = Navigation.nextLeftPosition(getCurrentPosition(), getDirectionOfAttack());
-            capturedPiece = newCell.getPiecePlaced();
+        for(int i=0; i< myMoveOrder().length; i++) {
+
+            Cell tempCell = navigateOneStepInMyDirection(myMoveOrder()[i], getCurrentPosition());
+
+            if (tempCell != null && isOpponent(tempCell.getPiecePlaced())) {
+                newCell = tempCell;
+                capturedPiece = newCell.getPiecePlaced();
+                break;
+            }
         }
-        else if (Navigation.nextRightPosition(getCurrentPosition(), getDirectionOfAttack()) != null && (Navigation.nextRightPosition(getCurrentPosition(), getDirectionOfAttack())).getPiecePlaced() != null
-                && isOpponent((Navigation.nextRightPosition(getCurrentPosition(), getDirectionOfAttack())).getPiecePlaced())) {
-            newCell = Navigation.nextRightPosition(getCurrentPosition(), getDirectionOfAttack());
-            capturedPiece = newCell.getPiecePlaced();
-        }
-        else if (Navigation.next(getCurrentPosition(), getDirectionOfAttack()) != null && Navigation.next(getCurrentPosition(), getDirectionOfAttack()).isAvailable()) {
-            newCell = Navigation.next(getCurrentPosition(), getDirectionOfAttack());
-        } else {
-            System.out.println("Error case in deciding can attack");
+
+        if(newCell == null) {
+            Cell tempCell = navigateOneStepInMyDirection(Direction.NEXT, getCurrentPosition());
+            if(tempCell != null && tempCell.isAvailable()){
+                newCell = tempCell;
+            }else {
+                System.out.println("Error case in deciding can attack");
+            }
         }
 
         if (Optional.ofNullable(newCell).isPresent()) {

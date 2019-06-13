@@ -58,13 +58,13 @@ public abstract class Piece {
             case PREVIOUS:
                 return  Navigation.previous(position, getDirectionOfAttack());
             case DIAGONAL_LEFT:
-                return Navigation.diagonalLeft(getCurrentPosition(), getDirectionOfAttack());
+                return Navigation.diagonalLeft(position, getDirectionOfAttack());
             case DIAGONAL_RIGHT:
-                return Navigation.diagonalRight(getCurrentPosition(), getDirectionOfAttack());
+                return Navigation.diagonalRight(position, getDirectionOfAttack());
             case DIAGONAL_LEFT_BACK:
-                return Navigation.diagonalLeftBack(getCurrentPosition(), getDirectionOfAttack());
+                return Navigation.diagonalLeftBack(position, getDirectionOfAttack());
             case DIAGONAL_RIGHT_BACK:
-                return Navigation.diagonalRightBack(getCurrentPosition(), getDirectionOfAttack());
+                return Navigation.diagonalRightBack(position, getDirectionOfAttack());
             default:
                 System.out.println("Unknown navigation direction: "+direction);
                 return null;
@@ -84,6 +84,7 @@ public abstract class Piece {
         boolean ownPiece = false;
 
         Cell updatedCell = null;
+
 
         for(int i=0; i<myMoveOrder().length; i++){
             tempCell = navigateOneStepInMyDirection(myMoveOrder()[i], getCurrentPosition());

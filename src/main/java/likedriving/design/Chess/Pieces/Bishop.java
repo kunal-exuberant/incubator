@@ -3,6 +3,7 @@ package likedriving.design.Chess.Pieces;
 import likedriving.design.Chess.Cell;
 import likedriving.design.Chess.Color;
 import likedriving.design.Chess.Direction;
+import likedriving.design.Chess.Navigation;
 
 public class Bishop extends Piece{
 
@@ -24,11 +25,11 @@ public class Bishop extends Piece{
 
     @Override
     public boolean canAttack() {
-        return false;
-       /* diagonalLeftCell = Navigation.diagonalLeft(getCurrentPosition(), getDirectionOfAttack());
+        //return false;
+        diagonalLeftCell = Navigation.diagonalLeft(getCurrentPosition(), getDirectionOfAttack());
         diagonalRightCell = Navigation.diagonalRight(getCurrentPosition(), getDirectionOfAttack());
         diagonalLeftBackCell = Navigation.diagonalLeftBack(getCurrentPosition(), getDirectionOfAttack());
         diagonalRightBackCell = Navigation.diagonalRightBack(getCurrentPosition(), getDirectionOfAttack());
         return canAttackHere(diagonalLeftCell) || canAttackHere(diagonalRightCell) || canAttackHere(diagonalLeftBackCell) || canAttackHere(diagonalRightBackCell);
-  */  }
+    }
 }

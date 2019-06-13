@@ -25,7 +25,6 @@ public class Bishop extends Piece{
 
     @Override
     public boolean canAttack() {
-        //return false;
         diagonalLeftCell = Navigation.diagonalLeft(getCurrentPosition(), getDirectionOfAttack());
         diagonalRightCell = Navigation.diagonalRight(getCurrentPosition(), getDirectionOfAttack());
         diagonalLeftBackCell = Navigation.diagonalLeftBack(getCurrentPosition(), getDirectionOfAttack());

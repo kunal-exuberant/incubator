@@ -1,9 +1,6 @@
 package likedriving.design.Chess.Pieces;
 
-import likedriving.design.Chess.Cell;
-import likedriving.design.Chess.Color;
-import likedriving.design.Chess.Direction;
-import likedriving.design.Chess.Navigation;
+import likedriving.design.Chess.*;
 
 public class Rook extends Piece{
 
@@ -29,5 +26,44 @@ public class Rook extends Piece{
     protected Direction [] myMoveOrder(){
         Direction [] directions = {Direction.NEXT, Direction.LEFT, Direction.RIGHT, Direction.PREVIOUS};
         return directions;
+    }
+
+    public boolean canMoveTo(Position position){
+
+        if(getCurrentPosition().getY() != position.getY()
+                && getCurrentPosition().getX() != position.getX()){
+            return false;
+        }
+
+        boolean reached = false;
+        if (getCurrentPosition().getX() == position.getX()) {
+
+            Direction [] possibleDirections = {Direction.LEFT, Direction.RIGHT};
+            reached = reachedPosition(position, possibleDirections);
+        }
+        else if(getCurrentPosition().getY() == position.getY()){
+            Direction [] possibleDirections = {Direction.NEXT, Direction.PREVIOUS};
+            reached = reachedPosition(position, possibleDirections);
+        }else {
+            System.out.println("unexpected case: (can move to)");
+        }
+        return reached;
+    }
+
+    private boolean reachedPosition(Position position, Direction [] possibleDirections){
+
+        for(Direction direction: possibleDirections) {
+
+            System.out.println("Both are on same horizontal line");
+            Cell tempCell = navigateOneStepInMyDirection(direction, getCurrentPosition());
+            while (tempCell != null && tempCell.isAvailable()
+                    && !tempCell.getPosition().equals(position)) {
+                tempCell = navigateOneStepInMyDirection(direction, tempCell.getPosition());
+            }
+            if (tempCell != null && tempCell.getPosition().equals(position)) {
+                return true;
+            }
+        }
+        return false;
     }
 }

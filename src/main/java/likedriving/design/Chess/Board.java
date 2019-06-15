@@ -16,10 +16,25 @@ import java.util.List;
 @Singleton
 public class Board {
 
+    private static Cell [][] lastState;
+
     private static Cell [][] board = new Cell[Constants.EIGHT][Constants.EIGHT];
 
     public static Cell getCell(Position position){
         return board[position.getX()][position.getY()];
+    }
+
+    public static void undoLastMove(){
+        if(lastState == null){
+            System.out.println("Last state not available");
+            return;
+        }
+        board = lastState;
+        lastState = null;
+    }
+
+    public static void storeLastState(){
+        lastState = board;
     }
 
     public static boolean exists(int x, int y){

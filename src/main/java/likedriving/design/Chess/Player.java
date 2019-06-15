@@ -3,23 +3,71 @@ package likedriving.design.Chess;
 import likedriving.design.Chess.Pieces.Piece;
 import likedriving.design.Chess.Pieces.PieceKey;
 import likedriving.design.Chess.Pieces.PieceStore;
+import likedriving.design.Chess.Pieces.PieceType;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Data
 @NoArgsConstructor
 public class Player {
     private String id;
     private Color color;
-    private Player [] players = new Player[2];
 
     public Player(Color color){
         this.color = color;
+    }
+
+    public boolean isCheckMate(Player opponent){
+        if(isMyKingBeUnderThreat(opponent)){
+            List<Piece> myPieces = getMyPieces().stream()
+                    .filter(piece -> piece.canAttack()).collect(Collectors.toList());
+
+            for(Piece piece: myPieces){
+                for(Cell newCell: piece.getPossibleMoves()){
+                    Board.storeLastState();
+                    if(!newCell.isAvailable()) {
+                        Utils.logPieceStatus(newCell.getPiecePlaced());
+                    }
+                    piece.logUpdatedPosition(newCell);
+                    if(!isMyKingBeUnderThreat(opponent)){
+                        System.out.println("King is saved, Not a checkmate");
+                        return false;
+                    }
+                    else {
+                        System.out.println("King is still under threat, reverting to old position, " +
+                                "will try other moves");
+                        Board.undoLastMove();
+                    }
+                }
+            }
+            return true;
+        }
+        return false;
+    }
+
+    private boolean isMyKingBeUnderThreat(Player opponent){
+        if(getMyKing().isPresent()) {
+            return opponentCanCapture(opponent, getMyKing().get().getCurrentPosition());
+        }
+        System.out.println("Illegal Game: King not present in the game, should have been terminated");
+        return false;
+    }
+
+    private Optional<Piece> getMyKing(){
+        return getMyPieces().stream().filter(piece -> piece.getPieceType() == PieceType.KING).findFirst();
+    }
+
+    private boolean opponentCanCapture(Player opponent, Position myKingsPosition){
+        List<Piece> opponentPieces = opponent.getMyPieces();
+        for(Piece piece: opponentPieces) {
+            if(piece.canMoveTo(myKingsPosition)){
+                return true;
+            }
+        }
+        return false;
     }
 
     public List<Piece> getMyPieces(){
@@ -53,13 +101,29 @@ public class Player {
     void play(){
         System.out.println("\n\n"+color +" is playing ...");
         //System.out.println("Lost: "+ (16 - getMyPieces().size()) + " pieces");
-        Piece selectedPiece = selectPiece();
-        if(selectedPiece != null){
-            System.out.print("\n"+selectedPiece.getPieceType() + "-"+selectedPiece.getId()+" "+" is attacking");
-            System.out.print(" from " + selectedPiece.getCurrentPosition());
-            selectedPiece.move();
-        }else{
-            System.out.println("No piece selected to attack");
+
+        while (true) {
+            Piece selectedPiece = selectPiece();
+            if (selectedPiece != null) {
+                System.out.print("\n" + selectedPiece.getPieceType() + "-" + selectedPiece.getId() + " " + " is attacking");
+                System.out.print(" from " + selectedPiece.getCurrentPosition());
+
+                Board.storeLastState();
+                selectedPiece.move();
+
+                if (isMyKingBeUnderThreat(Game.getOpponent(this))) {
+                    System.out.println("King is still under threat, reverting my move, " +
+                            "will try other moves");
+                    Board.undoLastMove();
+                }
+                else {
+                    System.out.println("Piece moved");
+                    break;
+                }
+            } else {
+                System.out.println("No piece selected to attack");
+                break;
+            }
         }
     }
 

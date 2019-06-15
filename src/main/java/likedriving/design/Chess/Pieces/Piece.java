@@ -3,6 +3,9 @@ package likedriving.design.Chess.Pieces;
 import likedriving.design.Chess.*;
 import lombok.Data;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static likedriving.design.Chess.Utils.logPieceStatus;
 
 @Data
@@ -16,47 +19,52 @@ public abstract class Piece {
     private Position currentPosition;
     private boolean isCaptured = false;
 
-    public Piece(PieceType pieceType, Color color){
+    public Piece(PieceType pieceType, Color color) {
         this.id = pieceId++;
         this.pieceType = pieceType;
         this.color = color;
         this.directionOfAttack = DirectionOfAttack.INCREASING;
-        if(color == Color.BLACK) this.directionOfAttack = DirectionOfAttack.DECREASING;
+        if (color == Color.BLACK) this.directionOfAttack = DirectionOfAttack.DECREASING;
     }
 
     protected abstract Direction[] myMoveOrder();
+
     public abstract boolean canAttack();
 
-    protected boolean isMyPiecePresent(Cell nextCell){
-        if(!nextCell.isAvailable() && nextCell.getPiecePlaced().getColor() == this.getColor()) {
+    protected boolean isMyPiecePresent(Cell nextCell) {
+        if (!nextCell.isAvailable() && nextCell.getPiecePlaced().getColor() == this.getColor()) {
             return false;
         }
         return true;
     }
 
-    protected boolean isOpponent(Piece piece){
-        if(piece == null) return false;
+    public boolean canMoveTo(Position position) {
+        return false;
+    }
+
+    protected boolean isOpponent(Piece piece) {
+        if (piece == null) return false;
         return this.getColor() != piece.getColor();
     }
 
-    protected boolean canAttackHere(Cell cell){
+    protected boolean canAttackHere(Cell cell) {
         return cell != null && (cell.isAvailable() || isOpponent(cell.getPiecePlaced()));
     }
 
-    protected boolean canCapture(Cell cell){
+    protected boolean canCapture(Cell cell) {
         return isOpponent(cell.getPiecePlaced());
     }
 
-    protected Cell navigateOneStepInMyDirection(Direction direction, Position position){
-        switch (direction){
+    protected Cell navigateOneStepInMyDirection(Direction direction, Position position) {
+        switch (direction) {
             case NEXT:
-                return  Navigation.next(position, getDirectionOfAttack());
+                return Navigation.next(position, getDirectionOfAttack());
             case LEFT:
-                return  Navigation.left(position, getDirectionOfAttack());
+                return Navigation.left(position, getDirectionOfAttack());
             case RIGHT:
-                return  Navigation.right(position, getDirectionOfAttack());
+                return Navigation.right(position, getDirectionOfAttack());
             case PREVIOUS:
-                return  Navigation.previous(position, getDirectionOfAttack());
+                return Navigation.previous(position, getDirectionOfAttack());
             case DIAGONAL_LEFT:
                 return Navigation.diagonalLeft(position, getDirectionOfAttack());
             case DIAGONAL_RIGHT:
@@ -82,17 +90,17 @@ public abstract class Piece {
             case JUMP_DOWN_RIGHT:
                 return Navigation.jumpDownRightPosition(position, getDirectionOfAttack());
             default:
-                System.out.println("Unknown navigation direction: "+direction);
+                System.out.println("Unknown navigation direction: " + direction);
                 return null;
         }
     }
 
-    protected void logUpdatedPosition(Cell updatedCell){
+    public void logUpdatedPosition(Cell updatedCell) {
         Board.getCell(getCurrentPosition()).setAvailable(true);
         updatedCell.setAvailable(false);
         updatedCell.setPiecePlaced(this);
         setCurrentPosition(updatedCell.getPosition());
-        System.out.print("to "+updatedCell.getPosition());
+        System.out.print("to " + updatedCell.getPosition());
     }
 
     public void move() {
@@ -102,9 +110,9 @@ public abstract class Piece {
         Cell updatedCell = null;
 
 
-        for(int i=0; i<myMoveOrder().length; i++){
+        for (int i = 0; i < myMoveOrder().length; i++) {
             tempCell = navigateOneStepInMyDirection(myMoveOrder()[i], getCurrentPosition());
-            if(tempCell != null) {
+            if (tempCell != null) {
                 while (tempCell != null && !canCapture(tempCell)) {
                     if (tempCell.isAvailable()) {
                         updatedCell = tempCell;
@@ -119,21 +127,17 @@ public abstract class Piece {
                     logUpdatedPosition(tempCell);
                     logPieceStatus(capturedPiece);
                     break;
-                }
-                else{
-                    if(i == myMoveOrder().length -1 && updatedCell!= null){
+                } else {
+                    if (i == myMoveOrder().length - 1 && updatedCell != null) {
                         logUpdatedPosition(updatedCell);
-                    }
-                    else {
+                    } else {
                         System.out.println("Should capture last known position which was different from my current position");
                     }
                 }
-            }
-            else {
-                if(i == myMoveOrder().length -1 && updatedCell != null){
+            } else {
+                if (i == myMoveOrder().length - 1 && updatedCell != null) {
                     logUpdatedPosition(updatedCell);
-                }
-                else {
+                } else {
                     System.out.println("Location not found on board");
                 }
             }
@@ -141,10 +145,29 @@ public abstract class Piece {
     }
 
     @Override
-    public boolean equals(Object piece){
-        if(this.id == ((Piece)piece).getId()){
+    public boolean equals(Object piece) {
+        if (this.id == ((Piece) piece).getId()) {
             return true;
         }
         return false;
+    }
+
+
+    public List<Cell> getPossibleMoves() {
+
+        List<Cell> possibleMoves = new ArrayList<>();
+        Cell tempCell = null;
+
+        for (int i = 0; i < myMoveOrder().length; i++) {
+            tempCell = navigateOneStepInMyDirection(myMoveOrder()[i], getCurrentPosition());
+            while (tempCell != null && (canCapture(tempCell) || tempCell.isAvailable())) {
+                possibleMoves.add(tempCell);
+                if(!tempCell.isAvailable()) {
+                    break;
+                }
+                tempCell = navigateOneStepInMyDirection(myMoveOrder()[i], tempCell.getPosition());
+            }
+        }
+        return possibleMoves;
     }
 }

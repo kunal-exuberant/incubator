@@ -4,13 +4,15 @@ Algorithm to implement checkmate -
  Get the Kings position
  Check each of the opponents pieces - can they move to this position in a single step (including opponents king)
  if it is true for any of the pieces then -
-    check what all positions the king can move to
-        check if moving to all of these possible king's positions, the king would still be under attack from the opponent
-            if no - move the king to this safe position
-            if yes - that means there are no positions left where king can move to safely on its own.
-        check by moving any of my pieces, can I protect the king
-            if yes - move that piece
-            if no - declare checkmate
+    check by moving any of my pieces, can I protect the king
+        if yes - move that piece
+        else
+            check what all positions the king can move to
+                check if moving to all of these possible king's positions, the king would still be under attack from the opponent
+                    if no - move the king to this safe position
+                    if yes - that means there are no positions left where king can move to safely on its own.
+                             Declare checkmate
+
 
 
 

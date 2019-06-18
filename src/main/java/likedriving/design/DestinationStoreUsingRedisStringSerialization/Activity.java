@@ -1,4 +1,4 @@
-package likedriving.design.DestinationStore;
+package likedriving.design.DestinationStoreUsingRedisStringSerialization;
 
 import java.io.IOException;
 import java.util.Scanner;

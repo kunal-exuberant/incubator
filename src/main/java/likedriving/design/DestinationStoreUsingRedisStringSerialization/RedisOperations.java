@@ -1,4 +1,4 @@
-package likedriving.design.DestinationStore;
+package likedriving.design.DestinationStoreUsingRedisStringSerialization;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;

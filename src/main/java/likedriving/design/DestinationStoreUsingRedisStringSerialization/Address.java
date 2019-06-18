@@ -1,4 +1,4 @@
-package likedriving.design.DestinationStore;
+package likedriving.design.DestinationStoreUsingRedisStringSerialization;
 
 public class Address {
     private String city;

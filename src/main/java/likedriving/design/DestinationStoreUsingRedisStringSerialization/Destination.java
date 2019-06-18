@@ -1,4 +1,4 @@
-package likedriving.design.DestinationStore;
+package likedriving.design.DestinationStoreUsingRedisStringSerialization;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

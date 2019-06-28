@@ -85,5 +85,6 @@ public class PiecePosition {
         System.out.println(piecePosition.get(new PieceKey(Color.WHITE, PieceType.KING)));
         System.out.println(piecePosition.get(new PieceKey(Color.BLACK, PieceType.QUEEN)));
         System.out.println(piecePosition.get(new PieceKey(Color.WHITE, PieceType.BISHOP)));
+        System.out.println(piecePosition.get(new PieceKey(Color.WHITE, PieceType.KNIGHT)));
     }
 }

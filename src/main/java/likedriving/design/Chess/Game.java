@@ -1,42 +1,48 @@
 package likedriving.design.Chess;
 
-import org.junit.Test;
+import java.util.Arrays;
 
 public class Game {
 
-    void start(){
+    void start() throws InterruptedException{
         Board.initializeTheBoard();
         Board.deployPieces();
         Board.printBoard();
 
         Player [] players = Players.getPlayers();
-        players[0].play();
 
-/*      while(!checkTerminalCondition()){
-            players[0].play();
-            System.out.println("Next move");
+        Player player;
+        int moveCounter = 1;
 
-        }*/
+        do {
+            player = players[(moveCounter + 1) % 2];
+            player.play();
+            if (moveCounter % 2 == 0) {
+                Thread.sleep(500);
+            }
+            moveCounter++;
+        }while(!hasTerminalConditionOccurred(player));
     }
 
-
-    @Test
-    public void startTest(){
-        start();
+    public static void main(String[] args) {
+        try {
+            new Game().start();
+        }catch (InterruptedException e){
+            System.out.println("Game thread interrupted "+ e);
+        }
     }
 
-    boolean checkTerminalCondition(Player player){
-
-     /*   switch (){
-            case CHECK_MATE:
-
-                break;
-
-            case DRAW:
-                break;
-
-            default:
-        }*/
+    boolean hasTerminalConditionOccurred(Player player){
+        if(player.isCheckMate(getOpponent(player))){
+            System.out.println("CHECK MATE");
+            System.out.println(player +" won the game");
+            return true;
+        }
         return false;
+    }
+
+    public static Player getOpponent(Player player){
+        return Arrays.stream(Players.getPlayers())
+              .filter(p -> !p.equals(player)).findFirst().get();
     }
 }

@@ -27,11 +27,11 @@ public final class PieceFactory {
             case ROOK:
                 return new Rook(color);
             case KNIGHT:
-                return new King(color);
+                return new Knight(color);
             case QUEEN:
                 return new Queen(color);
             case KING:
-                return new Knight(color);
+                return new King(color);
             default:
                 throw new IllegalArgumentException("Unknown piece type");
         }

@@ -1,0 +1,10 @@
+A small app which used redis.
+Figures out redis string serialization.
+Uses object mapper for serialization and deserialization.
+
+Drawback -
+Uses redis string value to store destination store list which makes it difficult
+to search on name, and address.
+
+Next APP -
+Shall create a similar app which uses redis hashes to store destination list.

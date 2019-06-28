@@ -10,10 +10,13 @@ import lombok.Data;
 import org.junit.Test;
 
 import java.util.Iterator;
+import java.util.List;
 
 @Data
 @Singleton
 public class Board {
+
+    private static Cell [][] lastState;
 
     private static Cell [][] board = new Cell[Constants.EIGHT][Constants.EIGHT];
 
@@ -21,14 +24,33 @@ public class Board {
         return board[position.getX()][position.getY()];
     }
 
+    public static void undoLastMove(){
+        if(lastState == null){
+            System.out.println("Last state not available");
+            return;
+        }
+        board = lastState;
+        lastState = null;
+    }
+
+    public static void storeLastState(){
+        lastState = board;
+    }
+
     public static boolean exists(int x, int y){
         return x >=0 && x < Constants.EIGHT && y >=0 && y<Constants.EIGHT;
     };
 
     public static Cell getCell(int x, int y){
-        System.out.println(x+" "+y);
-        if(exists(x,y)) return board[x][y];
-        throw new IllegalArgumentException("This position does not exist on the board");
+        try{
+            if(exists(x,y)){
+                return board[x][y];
+            }
+            throw new IllegalArgumentException("which does not exist on the board");
+        }catch (IllegalArgumentException e) {
+            //System.out.println("Position is at: "+x+" "+y+" "+e.getMessage());
+            return null;
+        }
     }
 
     public static Piece getPiece(byte x, byte y){
@@ -48,14 +70,25 @@ public class Board {
     }
 
     public static void deployPieces(){
-        for(Color color: Color.values()){
-            for(PieceType pieceType: PieceType.values()){
-                for(Piece piece: PieceStore.get(color, pieceType)){
-                    for(Position position : PiecePosition.get(piece)) {
-                        piece.setCurrentPosition(position);
-                        board[position.getX()][position.getY()].setPiecePlaced(piece);
-                    }
-                }
+        List<Position> piecePositionList = null;
+        for(Color color: Color.values()) {
+            for (PieceType pieceType : PieceType.values()) {
+                List<Piece> pieces = PieceStore.get(color, pieceType);
+                piecePositionList = PiecePosition.get(pieces.get(0));
+                    setPosition(pieces, piecePositionList);
+            }
+        }
+    }
+
+    private static void setPosition(List<Piece> pieceList, List<Position> positionList){
+
+        for(int i=0; i<pieceList.size(); i++){
+            for(int j=i; j<positionList.size(); j++){
+                System.out.println("^^^"+pieceList.get(i));
+                pieceList.get(i).setCurrentPosition(positionList.get(j));
+                board[positionList.get(j).getX()][positionList.get(j).getY()].setPiecePlaced(pieceList.get(i));
+                board[positionList.get(j).getX()][positionList.get(j).getY()].setAvailable(false);
+                break;
             }
         }
     }
@@ -73,7 +106,10 @@ public class Board {
         initializeTheBoard();
         printBoard();
         deployPieces();
-        System.out.println("piece placed at this location: "+getPiece((byte)0,(byte)5));
+        System.out.println("piece placed at this location: "+getPiece((byte)0,(byte)6));
+        System.out.println("piece placed at this location: "+getPiece((byte)0,(byte)1));
+        System.out.println("piece placed at this location: "+getPiece((byte)7,(byte)6));
+        System.out.println("piece placed at this location: "+getPiece((byte)7,(byte)1));
         System.out.println("Color of this cell "+getCell((byte)0,(byte)0).getColor());
         System.out.println("Color of this cell "+getCell((byte)0,(byte)1).getColor());
     }

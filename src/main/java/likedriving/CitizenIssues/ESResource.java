@@ -139,7 +139,7 @@ public class ESResource {
             ESResource esResource = new ESResource();
             TransportClient client = getClient();
             //esResource.esDeepSearch(client);
-
+             searchDocument(client, "abc", "xyz", "greet", "hello");
 
             //deleteDocument(client, "kodcucom", "article", "1");
             // updateDocument(client, "kodcucom", "article", "1", "tags", "big-data");

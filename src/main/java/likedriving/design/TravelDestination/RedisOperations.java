@@ -25,7 +25,7 @@ public class RedisOperations {
     }
 
     public static void saveDestinationId(){
-            jedis.set(idKey, String.valueOf(Destination.DESTINATION_ID));
+        jedis.set(idKey, String.valueOf(Destination.DESTINATION_ID));
     }
 
     public static void commit() throws JsonProcessingException, IOException {
@@ -57,7 +57,6 @@ public class RedisOperations {
             }
         }
     }
-
 
     @Test
     public void test() throws JsonProcessingException, IOException {

@@ -1,8 +1,8 @@
-package likedriving.design.TravelDestination;
+package likedriving.design.Glimpse;
 
-import likedriving.design.TravelDestination.models.Address;
-import likedriving.design.TravelDestination.models.Destination;
-import likedriving.design.TravelDestination.models.Type;
+import likedriving.design.Glimpse.models.Address;
+import likedriving.design.Glimpse.models.Destination;
+import likedriving.design.Glimpse.models.Type;
 import org.elasticsearch.action.ActionFuture;
 import org.elasticsearch.action.admin.indices.create.CreateIndexRequest;
 import org.elasticsearch.action.admin.indices.create.CreateIndexResponse;

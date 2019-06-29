@@ -1,11 +1,11 @@
-package likedriving.design.TravelDestination;
+package likedriving.design.Glimpse;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.base.Charsets;
 import com.google.common.io.Files;
-import likedriving.design.TravelDestination.models.Address;
-import likedriving.design.TravelDestination.models.Destination;
-import likedriving.design.TravelDestination.models.Type;
+import likedriving.design.Glimpse.models.Address;
+import likedriving.design.Glimpse.models.Destination;
+import likedriving.design.Glimpse.models.Type;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.junit.Test;
@@ -18,7 +18,7 @@ import java.util.Map;
 public class DataCrawler {
 
     private static String baseDocumentDirectory
-            = "/Users/kunalsingh.k/likedriving/src/main/java/likedriving/design/TravelDestination/documents";
+            = "/Users/kunalsingh.k/likedriving/src/main/java/likedriving/design/Glimpse/documents";
 
     private static String url = "http://www.bangaloreorbit.com/trekking-in-karnataka/index.html";
     private static String baseUrl = "http://www.bangaloreorbit.com/trekking-in-karnataka/";
@@ -71,7 +71,7 @@ public class DataCrawler {
     @Test
     public void createFile() throws IOException{
         System.out.println("trying to create a new file");
-        File directory = new File("/Users/kunalsingh.k/likedriving/src/main/java/likedriving/design/TravelDestination/documents");
+        File directory = new File("/Users/kunalsingh.k/likedriving/src/main/java/likedriving/design/Glimpse/documents");
         if(directory.exists()){
             System.out.println("directory exists");
             File newFile = new File(directory, "web-Content");

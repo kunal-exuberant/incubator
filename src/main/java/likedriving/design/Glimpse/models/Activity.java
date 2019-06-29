@@ -1,4 +1,4 @@
-package likedriving.design.TravelDestination.models;
+package likedriving.design.Glimpse.models;
 
 public enum Activity {
     RIVER_RAFTING,

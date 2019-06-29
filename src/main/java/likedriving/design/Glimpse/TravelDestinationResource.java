@@ -1,10 +1,10 @@
-package likedriving.design.TravelDestination;
+package likedriving.design.Glimpse;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.google.inject.Inject;
-import likedriving.design.TravelDestination.models.Destination;
-import likedriving.design.TravelDestination.models.Duration;
-import likedriving.design.TravelDestination.models.Type;
+import likedriving.design.Glimpse.models.Destination;
+import likedriving.design.Glimpse.models.Duration;
+import likedriving.design.Glimpse.models.Type;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;

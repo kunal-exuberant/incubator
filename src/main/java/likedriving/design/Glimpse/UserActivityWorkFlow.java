@@ -1,9 +1,9 @@
-package likedriving.design.TravelDestination;
+package likedriving.design.Glimpse;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import likedriving.design.RotatingMenu.MenuItemValidator;
-import likedriving.design.TravelDestination.models.Address;
-import likedriving.design.TravelDestination.models.Destination;
+import likedriving.design.Glimpse.models.Address;
+import likedriving.design.Glimpse.models.Destination;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.Client;
 import org.elasticsearch.search.SearchHit;

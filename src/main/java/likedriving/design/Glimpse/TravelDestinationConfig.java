@@ -1,4 +1,4 @@
-package likedriving.design.TravelDestination;
+package likedriving.design.Glimpse;
 
 import io.dropwizard.Configuration;
 

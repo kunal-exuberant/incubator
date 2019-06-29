@@ -1,6 +1,6 @@
-package likedriving.design.TravelDestination;
+package likedriving.design.Glimpse;
 
-import likedriving.design.TravelDestination.models.Destination;
+import likedriving.design.Glimpse.models.Destination;
 import lombok.Data;
 
 import java.io.Serializable;

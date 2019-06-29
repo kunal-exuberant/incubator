@@ -1,10 +1,10 @@
-package likedriving.design.TravelDestination;
+package likedriving.design.Glimpse;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.inject.Inject;
-import likedriving.design.TravelDestination.models.Destination;
-import likedriving.design.TravelDestination.models.Duration;
-import likedriving.design.TravelDestination.models.Type;
+import likedriving.design.Glimpse.models.Destination;
+import likedriving.design.Glimpse.models.Duration;
+import likedriving.design.Glimpse.models.Type;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.search.SearchHit;
 
@@ -24,7 +24,7 @@ public class DestinationService {
 
     public Optional<Destination> getDestination(String id){
         String destinationString = ESOperations.getDocumentById(id);
-        Optional<likedriving.design.TravelDestination.models.Destination> optionalDestination = Optional.empty();
+        Optional<likedriving.design.Glimpse.models.Destination> optionalDestination = Optional.empty();
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             Destination destination = objectMapper.readValue(destinationString, Destination.class);

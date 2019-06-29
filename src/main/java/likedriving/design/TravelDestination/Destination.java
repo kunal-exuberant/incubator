@@ -13,6 +13,8 @@ public class Destination implements Serializable {
     public static int DESTINATION_ID;
     private int id;
     private String name;
+    private Type type;
+    private int distance;
     private String description;
     private Address address;
 

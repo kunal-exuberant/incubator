@@ -24,6 +24,7 @@ import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.indices.InvalidIndexNameException;
 import org.elasticsearch.search.SearchHits;
+import org.elasticsearch.search.builder.SearchSourceBuilder;
 import org.elasticsearch.transport.client.PreBuiltTransportClient;
 import org.junit.Test;
 
@@ -92,11 +93,11 @@ public class ESOperations {
         }
     }
 
-    public static void addDocument(int id, String serializedObject) {
+    public static void addDocument(String id, String serializedObject) {
         try {
             IndexResponse response =
                     client
-                    .prepareIndex(indexName, type, String.valueOf(id))
+                    .prepareIndex(indexName, type, id)
                     .setSource(serializedObject, XContentType.JSON)
                     .get();
             System.out.println(response.status());
@@ -108,6 +109,9 @@ public class ESOperations {
 
     public static SearchHits getAllDocumentsAtIndex(){
         SearchRequest searchRequest = new SearchRequest(indexName);
+        SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
+        searchSourceBuilder.size(500);
+        searchRequest.source(searchSourceBuilder);
         System.out.println(client.search(searchRequest));
         ActionFuture<SearchResponse> searchResponseActionFuture = client.search(searchRequest);
         try {
@@ -120,10 +124,11 @@ public class ESOperations {
         return null;
     }
 
-    public static void getDocumentById(){
+    public static String getDocumentById(String id){
 
-        GetResponse response = client.prepareGet(indexName, type, "100").execute().actionGet();
+        GetResponse response = client.prepareGet(indexName, type, id).execute().actionGet();
         System.out.println(response.toString());
+        return response.getSourceAsString();
     }
 
     public static SearchResponse search_usingMatchQuery(String field, String value){
@@ -195,7 +200,7 @@ public class ESOperations {
     public static void main(String[] args) {
         getClient();
         createIndex();
-        Destination destination = new Destination(100,"Munnar","Munnar is beautiful hill station with huge valley view", new Address("Munnar City", "Karnataka"));
+        Destination destination = new Destination(100,"Munnar",Type.HILL_STATION,400,"Munnar is beautiful hill station with huge valley view", new Address("Munnar City", "Karnataka"));
         //addDocument(destination);
         addBulkDocuments(Arrays.asList(destination));
         //fetchDocument();

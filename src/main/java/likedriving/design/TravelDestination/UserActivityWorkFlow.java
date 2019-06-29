@@ -60,11 +60,13 @@ public class UserActivityWorkFlow implements Activity {
             Address address = new Address(city, state);
             destination.setAddress(address);
 
+            destination.setDistance(120);
+
             ObjectMapper objectMapper = new ObjectMapper();
             String destinationString = objectMapper.writeValueAsString(destination);
 
 
-            ESOperations.addDocument(destination.getId(), destinationString);
+            ESOperations.addDocument(destination.getName(), destinationString);
             RedisOperations.saveDestinationId();
             System.out.print("\n"+destination.getName()+" added to the destination list");
         }

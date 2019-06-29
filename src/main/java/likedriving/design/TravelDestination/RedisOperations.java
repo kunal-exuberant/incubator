@@ -64,8 +64,8 @@ public class RedisOperations {
 
         ObjectMapper objectMapper = new ObjectMapper();
 
-        Destination destination1 = new Destination(1, "Ladhaak", "Lakhaak is a beautiful place", null);
-        Destination destination2 = new Destination(2, "Munnar", "Munnar is a beanutiful place", null);
+        Destination destination1 = new Destination(1, "Ladhaak",Type.TREKKING, 2000,"Lakhaak is a beautiful place", null);
+        Destination destination2 = new Destination(2, "Munnar",Type.HILL_STATION, 400, "Munnar is a beanutiful place", null);
         List<Destination> destinationList1 = Arrays.asList(destination1, destination2);
 
         String str = objectMapper.writeValueAsString(destinationList1);

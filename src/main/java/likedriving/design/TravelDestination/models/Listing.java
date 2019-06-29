@@ -1,4 +1,4 @@
-package likedriving.Glimpse.models;
+package likedriving.design.TravelDestination.models;
 
 public abstract class Listing {
     private Long id;

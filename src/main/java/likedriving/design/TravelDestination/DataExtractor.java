@@ -1,5 +1,6 @@
 package likedriving.design.TravelDestination;
 
+import likedriving.design.TravelDestination.models.Destination;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 

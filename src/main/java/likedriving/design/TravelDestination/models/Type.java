@@ -1,4 +1,4 @@
-package likedriving.design.TravelDestination;
+package likedriving.design.TravelDestination.models;
 
 public enum Type {
     HILL_STATION,

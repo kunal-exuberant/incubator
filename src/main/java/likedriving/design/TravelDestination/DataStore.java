@@ -1,4 +1,4 @@
-package likedriving.Glimpse.DataStore;
+package likedriving.design.TravelDestination;
 
 public class DataStore {
 

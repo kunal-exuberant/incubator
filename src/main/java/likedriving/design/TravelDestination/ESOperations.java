@@ -1,5 +1,8 @@
 package likedriving.design.TravelDestination;
 
+import likedriving.design.TravelDestination.models.Address;
+import likedriving.design.TravelDestination.models.Destination;
+import likedriving.design.TravelDestination.models.Type;
 import org.elasticsearch.action.ActionFuture;
 import org.elasticsearch.action.admin.indices.create.CreateIndexRequest;
 import org.elasticsearch.action.admin.indices.create.CreateIndexResponse;
@@ -200,7 +203,7 @@ public class ESOperations {
     public static void main(String[] args) {
         getClient();
         createIndex();
-        Destination destination = new Destination(100,"Munnar",Type.HILL_STATION,400,"Munnar is beautiful hill station with huge valley view", new Address("Munnar City", "Karnataka"));
+        Destination destination = new Destination(100,"Munnar", Type.HILL_STATION,400,"Munnar is beautiful hill station with huge valley view", new Address("Munnar City", "Karnataka"));
         //addDocument(destination);
         addBulkDocuments(Arrays.asList(destination));
         //fetchDocument();

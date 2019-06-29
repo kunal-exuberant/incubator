@@ -1,7 +1,5 @@
-package likedriving.Glimpse;
+package likedriving.design.TravelDestination.models;
 
-import likedriving.Glimpse.models.Duration;
-import likedriving.Glimpse.models.Type;
 import lombok.Getter;
 
 import java.util.List;

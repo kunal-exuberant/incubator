@@ -2,6 +2,8 @@ package likedriving.design.TravelDestination;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import likedriving.design.RotatingMenu.MenuItemValidator;
+import likedriving.design.TravelDestination.models.Address;
+import likedriving.design.TravelDestination.models.Destination;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.Client;
 import org.elasticsearch.search.SearchHit;
@@ -11,7 +13,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
 
-public class UserActivityWorkFlow implements Activity {
+public class UserActivityWorkFlow implements UserActivity {
 
     private DestinationStore destinationStore;
     private Client client = null;

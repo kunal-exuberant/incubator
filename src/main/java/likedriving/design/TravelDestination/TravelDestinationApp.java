@@ -30,8 +30,8 @@ public class TravelDestinationApp extends Application<TravelDestinationConfig> {
     @Override
     public void run(TravelDestinationConfig configuration, Environment environment) throws Exception {
         System.out.println("Inside run method");
-        environment.jersey().setUrlPattern("/destination/*");
-        final TravelDestinationResource travelDestinationResource = new TravelDestinationResource();
+        environment.jersey().setUrlPattern("/*");
+        final TravelDestinationResource travelDestinationResource = new TravelDestinationResource(new DestinationService(new DataStore()));
         environment.jersey().register(travelDestinationResource);
     }
 }

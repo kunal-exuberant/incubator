@@ -1,5 +1,7 @@
 package likedriving.design.TravelDestination;
 
+import likedriving.design.TravelDestination.models.Destination;
+
 import java.io.IOException;
 import java.util.Scanner;
 

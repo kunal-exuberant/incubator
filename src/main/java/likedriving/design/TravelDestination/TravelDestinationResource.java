@@ -1,68 +1,50 @@
 package likedriving.design.TravelDestination;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.elasticsearch.action.search.SearchResponse;
-import org.elasticsearch.search.SearchHit;
+import com.google.inject.Inject;
+import likedriving.design.TravelDestination.models.Destination;
+import likedriving.design.TravelDestination.models.Duration;
+import likedriving.design.TravelDestination.models.Type;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
-import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
 
-@Path("/destination")
+@Path("/")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class TravelDestinationResource {
 
-    public TravelDestinationResource(){
+    private DestinationService destinationService;
+
+    @Inject
+    public TravelDestinationResource(DestinationService destinationService){
+        this.destinationService = destinationService;
         ESOperations.getClient();
     }
 
-    @Path("/")
+    @Path("/{id}")
     @GET
-    public Destination getDestinationInfo(@QueryParam("id") String id) throws JsonProcessingException{
+    public Destination getDestinationInfo(@PathParam("id") String id) throws JsonProcessingException{
         System.out.println("I am inside get destination info");
 
-        String destinationString = ESOperations.getDocumentById(id);
-        Optional<Destination> optionalDestination = Optional.empty();
-        ObjectMapper objectMapper = new ObjectMapper();
-        try {
-            Destination destination = objectMapper.readValue(destinationString, Destination.class);
-            optionalDestination = Optional.ofNullable(destination);
-        }
-        catch (IOException e){
-            System.out.println(e);
-        }
+        Optional<Destination> optionalDestination = destinationService.getDestination(id);
         return optionalDestination.get();
     }
 
     @Path("/search/{q}")
     @GET
-    public Destination searchDestination(@PathParam("q") String q) throws JsonProcessingException{
+    public List<Destination> searchDestination(@PathParam("q") String q) throws JsonProcessingException{
         System.out.println("I am inside get destination search "+q);
-
-        SearchResponse searchResponse = ESOperations.search_usingMatchQuery("id", q);
-        String destinationString ="";
-        if(searchResponse.status().toString().equals("OK")) {
-            for (SearchHit hits : searchResponse.getHits()) {
-                destinationString = hits.getSourceAsString();
-                System.out.println(destinationString);
-            }
-        }
-
-        return deserialize(destinationString);
+        return destinationService.searchDestination(q);
     }
 
-    public Destination deserialize(String destinationString){
-        Destination destination = null;
-        ObjectMapper objectMapper = new ObjectMapper();
-        try {
-            destination = objectMapper.readValue(destinationString, Destination.class);
-        }
-        catch (Exception e){
-            System.out.println(e);
-        }
-        return destination;
+    @Path("/recommend/{duration}")
+    @GET
+    public List<Destination> getDestinations(@PathParam("duration") Duration duration){
+        System.out.println("I am inside recommend destination "+duration);
+        return destinationService.recommendDestination(duration, Arrays.asList(Type.TREKKING));
     }
 }

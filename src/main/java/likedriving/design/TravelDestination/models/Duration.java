@@ -1,4 +1,4 @@
-package likedriving.Glimpse.models;
+package likedriving.design.TravelDestination.models;
 
 public enum Duration {
     HALF_DAY,

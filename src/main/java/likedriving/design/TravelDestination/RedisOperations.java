@@ -5,6 +5,8 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import likedriving.TechStacks.Redis.RedisClient;
 import likedriving.TechStacks.Redis.RedisConfiguration;
+import likedriving.design.TravelDestination.models.Destination;
+import likedriving.design.TravelDestination.models.Type;
 import org.junit.Test;
 import redis.clients.jedis.Jedis;
 
@@ -64,7 +66,7 @@ public class RedisOperations {
 
         ObjectMapper objectMapper = new ObjectMapper();
 
-        Destination destination1 = new Destination(1, "Ladhaak",Type.TREKKING, 2000,"Lakhaak is a beautiful place", null);
+        Destination destination1 = new Destination(1, "Ladhaak", Type.TREKKING, 2000,"Lakhaak is a beautiful place", null);
         Destination destination2 = new Destination(2, "Munnar",Type.HILL_STATION, 400, "Munnar is a beanutiful place", null);
         List<Destination> destinationList1 = Arrays.asList(destination1, destination2);
 

@@ -1,8 +1,0 @@
----
-server:
-  applicationConnectors:
-  - type: http
-    port: 16000
-  adminConnectors:
-  - type: http
-    port: 16001

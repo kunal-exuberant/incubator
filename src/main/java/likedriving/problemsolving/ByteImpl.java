@@ -1,6 +1,6 @@
 package likedriving.problemsolving;
 
-import jdk.nashorn.internal.runtime.BitVector;
+
 
 import java.util.BitSet;
 
@@ -12,7 +12,7 @@ public class ByteImpl {
 
     public ByteImpl(){
 
-        BitVector bitVector = new BitVector();
+       // BitVector bitVector = new BitVector();
         BitSet bitSet = new BitSet();
     }
 

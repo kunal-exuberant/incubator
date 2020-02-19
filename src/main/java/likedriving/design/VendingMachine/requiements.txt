@@ -1,0 +1,55 @@
+
+
+
+Problem statement -
+
+    Design a vending machine in java
+
+Clarification Questions -
+    1. It is wall attached single vending machine? yes
+    2. What are the items you want to keep in the vm ? -  cadbury, yoga bar, haldiram, eat fit super food, thumbs up etc
+    4. how would be the payment mode ? -  Does it need to support payment gateway integration  - no ,
+    lets just keep it to inserting the money and reading the amount, the items worth same amount shall be dispathed
+    5. how would be interfacing with user - does each item needs a code to entered etc, no vending based on the money provided
+
+
+Ok so the story is -
+
+    AT  given point of time there would be certain number of items in the vending machine which will have item code, item name, and
+    price. user will provide the money worth the price of the item he choses to vend. I would expect my money counter to be error
+    free and tell me how much money the user has entered. I would vend the item worth that much price. If there is no item matching the value is
+    either out of stock then money should be returned to user saying no item matched.
+    There should a provision to keep multiple stocks of each item.
+
+    Disadvantes of the this approach-
+        only one item can be dispatched in one go
+        price of each item must be unique
+
+ Components -
+
+ 1. Stock manager -
+ 2. Currency counter -
+ 3. Vendor and user interface -
+ 4. Money Manager -
+ 5. Transaction Manager -
+
+ Transaction manager will take care of each transacation initiated by the user. Generating the transaction id and updating the stocks and
+ money manager regarding vending of the particular item. ONboarding of stock would be done by stock manager itself.
+
+ Sequence of events -
+
+ 1. Users initiates a transaction by putting some x amount of money of the vending machine inlet.
+ 2. Money is passed to the money manager.
+ 3. Money manager will verify the correctness of the amount provided and return the amount if not valid because of many reasons.
+ 4. If the amount is valid it will call stock manager to check if there any item with amount x in stocks, return if not.
+ 5. If yes, call vendor with amount x and ask for the product to be vended.
+ 6. If it is successfully vended, decrease the stock of the item by 1 and update the money on money manager.
+ 7. If unable to vend because of any reason like, machine not working properly send the money back to the user and activate for next
+ trasaction.
+
+ Onboarding of stocks -
+
+ 1. Provide an API IN stock manager which recives itemId, item name, count and price of each item.
+ 2. Reduce the total money from the money manager.
+
+

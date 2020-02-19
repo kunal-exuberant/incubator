@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2491ad18-65df-4648-a6f6-1b47b7dfacfa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/design/VendingMachine/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/design/VendingMachine/Money.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/design/VendingMachine/MoneyCounter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/design/VendingMachine/MoneyManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/design/VendingMachine/Stock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/design/VendingMachine/StockLimitExceededException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/design/VendingMachine/StockManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/design/VendingMachine/TransactionManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/design/VendingMachine/UserInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/design/VendingMachine/VendingMachine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/design/VendingMachine/VendingMachineApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/design/VendingMachine/requiements.txt" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1S0zeCl51gpKb24zN1OuUpznNnw" />
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/likedriving/design/VendingMachine" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="likedriving.design.VendingMachine" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="likedriving.design.VendingMachine" />
+      <recent name="likedriving.designpatterns.adapter" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.VendingMachineApp">
+    <configuration name="AdapterMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="likedriving.designpatterns.adapter.AdapterMain" />
+      <module name="likedriving" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="likedriving.designpatterns.adapter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParallelProcessing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="likedriving.design.ParallelProcessing.ParallelProcessing" />
+      <module name="likedriving" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="likedriving.design.ParallelProcessing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RMQWriter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="likedriving.TechStacks.rmq.RMQWriter" />
+      <module name="likedriving" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="likedriving.TechStacks.rmq.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VendingMachineApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="likedriving.design.VendingMachine.VendingMachineApp" />
+      <module name="likedriving" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="likedriving.design.VendingMachine.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.VendingMachineApp" />
+        <item itemvalue="Application.RMQWriter" />
+        <item itemvalue="Application.AdapterMain" />
+        <item itemvalue="Application.ParallelProcessing" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2491ad18-65df-4648-a6f6-1b47b7dfacfa" name="Default Changelist" comment="" />
+      <created>1570715393547</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1570715393547</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/likedriving/design/VendingMachine/VendingMachineApp.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/likedriving/design/VendingMachine/TransactionManager.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/likedriving/design/VendingMachine/TransactionManager.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/likedriving/design/VendingMachine/Stock.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/likedriving/design/VendingMachine/Stock.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/likedriving/design/VendingMachine/TransactionManager.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/likedriving/design/VendingMachine/TransactionManager.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

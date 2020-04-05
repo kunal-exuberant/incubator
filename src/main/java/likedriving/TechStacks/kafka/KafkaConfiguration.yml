@@ -1,0 +1,16 @@
+#kafkaConfiguration:
+    bootstrap.servers: localhost:9092
+    enable.auto.commit: true
+    auto.commit.interval.ms: 1000
+    session.timeout.ms: 7000
+    key.deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    value.deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    group.id: test
+    linger.ms: 1
+    retries: 0
+    key.serializer: org.apache.kafka.common.serialization.StringSerializer
+    value.serializer: org.apache.kafka.common.serialization.StringSerializer
+    group.min.session.timeout.ms: 2000
+    group.max.session.timeout.ms: 5000
+    heartbeat.interval.ms: 1000
+    topics: ["MasterKafka"]

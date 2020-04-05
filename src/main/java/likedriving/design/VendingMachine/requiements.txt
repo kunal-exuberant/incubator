@@ -9,7 +9,7 @@ Clarification Questions -
     1. It is wall attached single vending machine? yes
     2. What are the items you want to keep in the vm ? -  cadbury, yoga bar, haldiram, eat fit super food, thumbs up etc
     4. how would be the payment mode ? -  Does it need to support payment gateway integration  - no ,
-    lets just keep it to inserting the money and reading the amount, the items worth same amount shall be dispathed
+    lets just keep it to inserting the money and reading the amount, the items worth same amount shall be dispatched
     5. how would be interfacing with user - does each item needs a code to entered etc, no vending based on the money provided
 
 
@@ -21,7 +21,7 @@ Ok so the story is -
     either out of stock then money should be returned to user saying no item matched.
     There should a provision to keep multiple stocks of each item.
 
-    Disadvantes of the this approach-
+    Disadvantages of the this approach-
         only one item can be dispatched in one go
         price of each item must be unique
 
@@ -33,8 +33,8 @@ Ok so the story is -
  4. Money Manager -
  5. Transaction Manager -
 
- Transaction manager will take care of each transacation initiated by the user. Generating the transaction id and updating the stocks and
- money manager regarding vending of the particular item. ONboarding of stock would be done by stock manager itself.
+ Transaction manager will take care of each transaction initiated by the user. Generating the transaction id and updating the stocks and
+ money manager regarding vending of the particular item. On-boarding of stock would be done by stock manager itself.
 
  Sequence of events -
 
@@ -45,11 +45,11 @@ Ok so the story is -
  5. If yes, call vendor with amount x and ask for the product to be vended.
  6. If it is successfully vended, decrease the stock of the item by 1 and update the money on money manager.
  7. If unable to vend because of any reason like, machine not working properly send the money back to the user and activate for next
- trasaction.
+ transaction.
 
- Onboarding of stocks -
+ On-boarding of stocks -
 
- 1. Provide an API IN stock manager which recives itemId, item name, count and price of each item.
+ 1. Provide an API IN stock manager which receives itemId, item name, count and price of each item.
  2. Reduce the total money from the money manager.
 
 

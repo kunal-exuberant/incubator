@@ -1,13 +1,16 @@
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/TravelDestination/ESOperations.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/ProblemSolvingPlatform/impact/BetterLifeImpact.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/LibraryManagementSystem/models/OrderProcessing.java
+/Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/VendingMachine/MoneyManager.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/CitizenIssues/CitizenIssuesConfig.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/RotatingMenu/CookedItemStore.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/CitizenIssues/models/ElectoralUnit.java
+/Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/VendingMachine/VendingMachine.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/CallCenterSimulation/Respondent.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/ProblemSolvingPlatform/UserActivityWorkflowInterface.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/ComboOffer/models/FinalPriceCohort.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/BiddingEngine/BidParticipants.java
+/Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/VendingMachine/Money.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/HomeInventoryManagement/models/Consumption.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/WebCrawler/ExtractedText.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/CourtPiece/CardId.java
@@ -30,11 +33,14 @@
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/problemsolving/String/CompressString.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/problemsolving/WaysToRepresentAmountInVariousDenominations.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/RotatingMenu/MenuItemStore.java
+/Users/kunal.singh1/projects/incubator/src/main/java/likedriving/designpatterns/adapter/AdapterMain.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/DestinationStoreUsingRedisStringSerialization/Address.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/JavaFundamentals/IteratorImplementation.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/CitizenIssues/models/ElectoralIssue.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/problemsolving/String/ReverseWordsInGivenString.java
+/Users/kunal.singh1/projects/incubator/src/main/java/likedriving/TechStacks/rmq/RMQWriter.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/Glimpse/models/Listing.java
+/Users/kunal.singh1/projects/incubator/src/main/java/likedriving/designpatterns/adapter/IndianPlugToEuropeanSocketAdapter.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/ParallelProcessing/ParallelProcessing.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/QuizApp/models/Answer.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/ComboOffer/models/IOffer.java
@@ -49,6 +55,7 @@
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/CourtPiece/CardType.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/designpatterns/Singleton.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/ExpenseSharing/User.java
+/Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/VendingMachine/StockManager.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/RotatingMenu/RotatingMenuService.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/NewsFeed/NewsFeed.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/ExpenseSharing/IGroup.java
@@ -68,6 +75,7 @@
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/problemsolving/String/SubsequenceCheck.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/LibraryManagementSystem/models/UserCommands.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/TravelDestination/DestinationStore.java
+/Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/VendingMachine/MoneyCounter.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/CourtPiece/Round.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/problemsolving/WaterCollected.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/problemsolving/Array/AddingOnes.java
@@ -77,8 +85,10 @@
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/RotatingMenu/MenuItem.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/BiddingEngine/Action.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/QuizApp/models/AttemptedQuestion.java
+/Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/VendingMachine/UserInterface.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/LibraryManagementSystem/OrderProcessingImpl.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/LibraryManagementSystem/dataStores/UserStore.java
+/Users/kunal.singh1/projects/incubator/src/main/java/likedriving/statemachine/StateMachine.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/ComboOffer/models/Zulu.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/BiddingEngine/UserStake.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/RotatingMenu/FileActions.java
@@ -95,6 +105,7 @@
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/ComboOffer/models/DisbursalType.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/ExpenseSharing/IBill.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/NewsFeed/PostMethods.java
+/Users/kunal.singh1/projects/incubator/src/main/java/likedriving/designpatterns/adapter/IndianSocket.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/TravelDestination/DestinationStoreApp.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/Glimpse/Resources/DestinationResource.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/HomeInventoryManagement/models/IConsumption.java
@@ -104,8 +115,10 @@
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/Glimpse/models/Activity.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/BiddingEngine/BiddingInterface.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/JavaFundamentals/NPE.java
+/Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/VendingMachine/VendingMachineApp.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/ExpenseSharing/Bill.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/CourtPiece/Game.java
+/Users/kunal.singh1/projects/incubator/src/main/java/likedriving/designpatterns/adapter/EuropeanPlug.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/JavaFundamentals/ComparableImplementation.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/QuizApp/models/Question.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/LibraryManagementSystem/dataStores/BookToUserStore.java
@@ -128,6 +141,7 @@
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/QuizApp/models/Score.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/RotatingMenu/Activity.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/Glimpse/DataStore/DataStore.java
+/Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/VendingMachine/Stock.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/LibraryManagementSystem/dataStores/BookStore.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/TravelDestination/UserActivityWorkFlow.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/QuizApp/QuizService.java
@@ -138,6 +152,7 @@
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/problemsolving/Array/LargestFibonacci.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/TravelDestination/DataCrawler.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/problemsolving/ByteImpl.java
+/Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/VendingMachine/StockLimitExceededException.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/HomeInventoryManagement/models/IStock.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/TravelDestination/DataExtractor.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/JavaFundamentals/InitializerBlock.java
@@ -169,6 +184,7 @@
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/TechStacks/Redis/RedisConfiguration.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/ProblemSolvingPlatform/impact/EconomicImpact.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/problemsolving/String/SwapFirstLastCharacter.java
+/Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/VendingMachine/Item.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/ComboOffer/models/Cart.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/problemsolving/PowerSet.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/ComboOffer/models/IWorkflow.java
@@ -177,6 +193,7 @@
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/RotatingMenu/UserActivityWorkFlow.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/JavaFundamentals/SentenceAnagrams.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/ComboOffer/models/ListingId.java
+/Users/kunal.singh1/projects/incubator/src/main/java/likedriving/TechStacks/lucene/LuceneIndexWriter.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/TravelDestination/Destination.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/JavaFundamentals/TreeMapImplementation.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/QuizApp/models/Option.java
@@ -215,10 +232,12 @@
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/ExpenseSharing/ExpenseSharingApp.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/CitizenIssues/CitizenIssuesService.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/DestinationStoreUsingRedisStringSerialization/DestinationStore.java
+/Users/kunal.singh1/projects/incubator/src/main/java/likedriving/TechStacks/kafka/KafkaProducerDemo.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/problemsolving/Array/SmallestSum.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/LibraryManagementSystem/dataStores/OrderStore.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/CallCenterSimulation/CallOrchestrator.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/QuizApp/models/IQuestion.java
+/Users/kunal.singh1/projects/incubator/src/main/java/likedriving/TechStacks/kafka/IKafkaConstants.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/HomeInventoryManagement/models/Item.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/JavaFundamentals/MethodCall.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/ComboOffer/models/PriceType.java
@@ -227,6 +246,7 @@
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/NewsFeed/PostType.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/ProblemSolvingPlatform/impact/AbstractImpact.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/problemsolving/String/LongestSequenceWithOneFlip.java
+/Users/kunal.singh1/projects/incubator/src/main/java/likedriving/designpatterns/adapter/EuropeanSocket.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/BiddingEngine/Option.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/HomeInventoryManagement/models/Stock.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/DestinationStoreUsingRedisStringSerialization/UserActivityWorkFlow.java
@@ -241,6 +261,8 @@
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/CitizenIssues/CitizenIssuesModule.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/ProblemSolvingPlatform/impact/EnvironmentImpact.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/CitizenIssues/models/Place.java
+/Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/VendingMachine/TransactionManager.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/designpatterns/CommandPattern.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/design/DestinationStoreUsingRedisStringSerialization/DestinationStoreApp.java
+/Users/kunal.singh1/projects/incubator/src/main/java/likedriving/designpatterns/adapter/IndianPlug.java
 /Users/kunal.singh1/projects/incubator/src/main/java/likedriving/CitizenIssues/ElasticSearchConfig.java

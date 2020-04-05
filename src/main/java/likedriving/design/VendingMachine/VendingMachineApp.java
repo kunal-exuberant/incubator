@@ -4,11 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class VendingMachineApp {
-
     public static void main(String[] args) {
-
         MoneyCounter moneyCounter = new MoneyCounter();
-
         MoneyManager moneyManager = new MoneyManager();
         Item item = Item.builder().itemId(1).itemName("Cadbury").build();
         Stock stock = Stock.builder()

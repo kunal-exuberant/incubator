@@ -2,41 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2491ad18-65df-4648-a6f6-1b47b7dfacfa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_101tec_zkclient_0_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_typesafe_scala_logging_scala_logging_2_12_3_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_yammer_metrics_metrics_core_2_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_kafka_2_12_2_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_kafka_clients_2_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_yetus_audience_annotations_0_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_4_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lz4_lz4_java_1_4_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_scala_library_2_12_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_scala_reflect_2_12_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_snappy_snappy_java_1_1_7_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/TechStacks/kafka/IKafkaConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/TechStacks/kafka/KafkaConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/TechStacks/kafka/KafkaConfiguration.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/TechStacks/kafka/KafkaConsumerDemo1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/TechStacks/kafka/KafkaProducerDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/TechStacks/kafka/KafkaProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/TechStacks/lucene/LuceneIndexWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_rc_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_jopt_simple_jopt_simple_5_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_jopt_simple_jopt_simple_5_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/threads/BlockingQueueApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/threads/ConcurrentMapApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/threads/ExecutorServiceDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/threads/LatchDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/threads/ProcessorDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/threads/Producer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/threads/diningphilosopher/Activity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/threads/diningphilosopher/Chopstick.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/threads/diningphilosopher/DiningPhilosopherApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/threads/diningphilosopher/Philosopher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/threads/diningphilosopher/plan" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_101tec_zkclient_0_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_typesafe_scala_logging_scala_logging_2_12_3_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_yammer_metrics_metrics_core_2_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_jopt_simple_jopt_simple_5_0_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_jopt_simple_jopt_simple_5_0_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_kafka_2_12_2_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_kafka_clients_2_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_yetus_audience_annotations_0_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_4_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_lz4_lz4_java_1_4_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_scala_library_2_12_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_scala_reflect_2_12_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_snappy_snappy_java_1_1_7_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/likedriving.iml" beforeDir="false" afterPath="$PROJECT_DIR$/likedriving.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/likedriving/design/VendingMachine/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likedriving/design/VendingMachine/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/likedriving/design/VendingMachine/Money.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likedriving/design/VendingMachine/Money.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/likedriving/design/VendingMachine/MoneyCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likedriving/design/VendingMachine/MoneyCounter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/likedriving/design/VendingMachine/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likedriving/design/VendingMachine/Stock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/likedriving/design/VendingMachine/StockManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likedriving/design/VendingMachine/StockManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/likedriving/design/VendingMachine/VendingMachineApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likedriving/design/VendingMachine/VendingMachineApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/likedriving/design/VendingMachine/requiements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likedriving/design/VendingMachine/requiements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/likedriving-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/likedriving-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/likedriving/TechStacks/kafka/KafkaConsumerDemo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likedriving/TechStacks/kafka/KafkaConsumerDemo1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/likedriving/TechStacks/kafka/KafkaProducerDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likedriving/TechStacks/kafka/KafkaProducerDemo.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -103,13 +96,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.KafkaProducerDemo">
-    <configuration name="KafkaConsumerDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="likedriving.TechStacks.kafka.KafkaConsumerDemo" />
+  <component name="RunManager" selected="Application.DiningPhilosopherApp">
+    <configuration name="BlockingQueueApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="likedriving.JavaFundamentals.threads.BlockingQueueApp" />
       <module name="likedriving" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="likedriving.TechStacks.kafka.*" />
+          <option name="PATTERN" value="likedriving.JavaFundamentals.threads.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -117,12 +110,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KafkaConsumerDemo1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="likedriving.TechStacks.kafka.KafkaConsumerDemo1" />
+    <configuration name="ConcurrentMapApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="likedriving.JavaFundamentals.threads.ConcurrentMapApp" />
       <module name="likedriving" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="likedriving.TechStacks.kafka.*" />
+          <option name="PATTERN" value="likedriving.JavaFundamentals.threads.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -130,12 +123,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KafkaConsumerDemo2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="likedriving.TechStacks.kafka.KafkaConsumerDemo2" />
+    <configuration name="DiningPhilosopherApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="likedriving.JavaFundamentals.threads.diningphilosopher.DiningPhilosopherApp" />
       <module name="likedriving" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="likedriving.TechStacks.kafka.*" />
+          <option name="PATTERN" value="likedriving.JavaFundamentals.threads.diningphilosopher.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -143,12 +136,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KafkaProducerDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="likedriving.TechStacks.kafka.KafkaProducerDemo" />
+    <configuration name="ExecutorServiceDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="likedriving.JavaFundamentals.threads.ExecutorServiceDemo" />
       <module name="likedriving" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="likedriving.TechStacks.kafka.*" />
+          <option name="PATTERN" value="likedriving.JavaFundamentals.threads.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -156,29 +149,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConstituencyResources.getConstituencyInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProcessorDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="likedriving.JavaFundamentals.threads.ProcessorDemo" />
       <module name="likedriving" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="likedriving.CitizenIssues.*" />
+          <option name="PATTERN" value="likedriving.JavaFundamentals.threads.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="likedriving.CitizenIssues" />
-      <option name="MAIN_CLASS_NAME" value="likedriving.CitizenIssues.ConstituencyResources" />
-      <option name="METHOD_NAME" value="getConstituencyInfo" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.KafkaProducerDemo" />
-        <item itemvalue="Application.KafkaConsumerDemo1" />
-        <item itemvalue="Application.KafkaConsumerDemo2" />
-        <item itemvalue="Application.KafkaConsumerDemo" />
-        <item itemvalue="JUnit.ConstituencyResources.getConstituencyInfo" />
+        <item itemvalue="Application.DiningPhilosopherApp" />
+        <item itemvalue="Application.ConcurrentMapApp" />
+        <item itemvalue="Application.BlockingQueueApp" />
+        <item itemvalue="Application.ProcessorDemo" />
+        <item itemvalue="Application.ExecutorServiceDemo" />
       </list>
     </recent_temporary>
   </component>

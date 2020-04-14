@@ -1,0 +1,14 @@
+
+
+
+
+Dining philosopher simulates a situation where multiple threads are completing for dependent resources to complete a task
+and since each thread is waiting for other thread to release the resource they are forever stuck.
+
+Setup -
+
+There are five philosopher who needs two chopstick to eat spaghatti. A philosopher can eat only when he has both the chopstick.
+A philosopher can be in two modes either THINKING or EATING.
+
+1. As step 1 each philosopher picks up one chopstick each
+2. And waits for the second chopstick to start eating.

@@ -1,3 +1,4 @@
+/*
 package likedriving.TechStacks.kafka;
 
 import lombok.extern.slf4j.Slf4j;
@@ -49,3 +50,4 @@ public class KafkaConsumerDemo1 {
         fetchRecords(kafkaConsumer, kafkaConfiguration);
     }
 }
+*/

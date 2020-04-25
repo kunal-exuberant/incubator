@@ -2,34 +2,235 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2491ad18-65df-4648-a6f6-1b47b7dfacfa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/threads/BlockingQueueApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/threads/ConcurrentMapApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/threads/ExecutorServiceDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/threads/LatchDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/threads/ProcessorDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/threads/Producer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/threads/diningphilosopher/Activity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/threads/diningphilosopher/Chopstick.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/threads/diningphilosopher/DiningPhilosopherApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/threads/diningphilosopher/Philosopher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/threads/diningphilosopher/plan" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_101tec_zkclient_0_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_typesafe_scala_logging_scala_logging_2_12_3_9_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_yammer_metrics_metrics_core_2_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_jopt_simple_jopt_simple_5_0_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_jopt_simple_jopt_simple_5_0_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_kafka_2_12_2_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_kafka_clients_2_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_yetus_audience_annotations_0_5_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_4_13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_lz4_lz4_java_1_4_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_scala_library_2_12_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_scala_reflect_2_12_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_snappy_snappy_java_1_1_7_1.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/HelpBharat/District.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/HelpBharat/GeoSupportFunctions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/HelpBharat/GeographicalEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/HelpBharat/GeographicalEntityType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/HelpBharat/India.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/HelpBharat/ProminentPerson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/HelpBharat/ProminentPlace.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/HelpBharat/State.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/HelpBharat/StorageManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/HelpBharat/Tehsil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/HelpBharat/UnionTerritory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/HelpBharat/Village.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/HelpBharat/YamlStorageManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/HelpBharat/datastore/geographical-entity.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/HelpBharat/datastore/india.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/HelpBharat/plan" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/HelpBharat/unittests/YamlStorageManagerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/ExecutorServices/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/ExecutorServices/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/ExecutorServices/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/ExecutorServices/bin/com/balazsholczer/threads/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/ExecutorServices/bin/com/balazsholczer/threads/Worker.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/ExecutorServices/src/com/balazsholczer/threads/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/FutureCallable/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/FutureCallable/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/FutureCallable/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/FutureCallable/bin/com/balazsholczer/threads/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/FutureCallable/bin/com/balazsholczer/threads/Processor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/FutureCallable/src/com/balazsholczer/threads/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture1/Concurrency1/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture1/Concurrency1/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture1/Concurrency1/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture1/Concurrency1/bin/com/balazsholczer/udemy/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture1/Concurrency1/bin/com/balazsholczer/udemy/Runner1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture1/Concurrency1/bin/com/balazsholczer/udemy/Runner2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture1/Concurrency1/src/com/balazsholczer/udemy/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture10/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture11/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture12/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture2/Concurrency1/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture2/Concurrency1/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture2/Concurrency1/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture2/Concurrency1/bin/com/balazsholczer/udemy/App$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture2/Concurrency1/bin/com/balazsholczer/udemy/App$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture2/Concurrency1/bin/com/balazsholczer/udemy/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture2/Concurrency1/bin/com/balazsholczer/udemy/Runner1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture2/Concurrency1/bin/com/balazsholczer/udemy/Runner2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture2/Concurrency1/src/com/balazsholczer/udemy/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture3/Concurrency1/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture3/Concurrency1/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture3/Concurrency1/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture3/Concurrency1/bin/com/balazsholczer/udemy/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture3/Concurrency1/bin/com/balazsholczer/udemy/Runner1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture3/Concurrency1/bin/com/balazsholczer/udemy/Runner2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture3/Concurrency1/src/com/balazsholczer/udemy/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture4/Concurrency1/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture4/Concurrency1/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture4/Concurrency1/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture4/Concurrency1/bin/com/balazsholczer/udemy/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture4/Concurrency1/bin/com/balazsholczer/udemy/Runner1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture4/Concurrency1/bin/com/balazsholczer/udemy/Runner2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture4/Concurrency1/src/com/balazsholczer/udemy/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture5/Concurrency1/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture5/Concurrency1/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture5/Concurrency1/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture5/Concurrency1/bin/com/balazsholczer/udemy/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture5/Concurrency1/bin/com/balazsholczer/udemy/Worker.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture5/Concurrency1/src/com/balazsholczer/udemy/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture6/Concurrency1/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture6/Concurrency1/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture6/Concurrency1/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture6/Concurrency1/bin/com/balazsholczer/udemy/App$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture6/Concurrency1/bin/com/balazsholczer/udemy/App$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture6/Concurrency1/bin/com/balazsholczer/udemy/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture6/Concurrency1/src/com/balazsholczer/udemy/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture7/Concurrency1/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture7/Concurrency1/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture7/Concurrency1/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture7/Concurrency1/bin/com/balazsholczer/udemy/App$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture7/Concurrency1/bin/com/balazsholczer/udemy/App$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture7/Concurrency1/bin/com/balazsholczer/udemy/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture7/Concurrency1/src/com/balazsholczer/udemy/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture8/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/BasicMultithreading/Lecture9/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ConcurrentLibrary/BlockingQueues.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ConcurrentLibrary/ConcurrentMaps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ConcurrentLibrary/CountDownLatches.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ConcurrentLibrary/CyclicBarriers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ConcurrentLibrary/DelayQueues.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ConcurrentLibrary/Exchangers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ConcurrentLibrary/PriorityBlockingQueues.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ForkJoinFramework/ForkJoinMax/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ForkJoinFramework/ForkJoinMax/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ForkJoinFramework/ForkJoinMax/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ForkJoinFramework/ForkJoinMax/bin/com/balazsholczer/udemy/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ForkJoinFramework/ForkJoinMax/bin/com/balazsholczer/udemy/MaximumFindTask.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ForkJoinFramework/ForkJoinMax/bin/com/balazsholczer/udemy/SequentialMaxFind.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ForkJoinFramework/ForkJoinMax/src/com/balazsholczer/udemy/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ForkJoinFramework/ForkJoinMax/src/com/balazsholczer/udemy/MaximumFindTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ForkJoinFramework/ForkJoinMax/src/com/balazsholczer/udemy/SequentialMaxFind.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ForkJoinFramework/ForkJoinMerge/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ForkJoinFramework/ForkJoinMerge/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ForkJoinFramework/ForkJoinMerge/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ForkJoinFramework/ForkJoinMerge/bin/com/balazsholczer/udemy/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ForkJoinFramework/ForkJoinMerge/bin/com/balazsholczer/udemy/MergeSortTask.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ForkJoinFramework/ForkJoinMerge/bin/com/balazsholczer/udemy/SequentialMergesort.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ForkJoinFramework/ForkJoinMerge/src/com/balazsholczer/udemy/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ForkJoinFramework/ForkJoinMerge/src/com/balazsholczer/udemy/MergeSortTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ForkJoinFramework/ForkJoinMerge/src/com/balazsholczer/udemy/SequentialMergesort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ForkJoinFramework/ForkJoinSimple1/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ForkJoinFramework/ForkJoinSimple1/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ForkJoinFramework/ForkJoinSimple1/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ForkJoinFramework/ForkJoinSimple1/bin/com/balazsholczer/udemy/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ForkJoinFramework/ForkJoinSimple1/bin/com/balazsholczer/udemy/SimpleRecursiveAction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ForkJoinFramework/ForkJoinSimple1/src/com/balazsholczer/udemy/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ForkJoinFramework/ForkJoinSimple1/src/com/balazsholczer/udemy/SimpleRecursiveAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ForkJoinFramework/ForkJoinSimple2/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ForkJoinFramework/ForkJoinSimple2/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ForkJoinFramework/ForkJoinSimple2/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ForkJoinFramework/ForkJoinSimple2/bin/com/balazsholczer/udemy/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ForkJoinFramework/ForkJoinSimple2/bin/com/balazsholczer/udemy/SimpleRecursiveAction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ForkJoinFramework/ForkJoinSimple2/src/com/balazsholczer/udemy/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ForkJoinFramework/ForkJoinSimple2/src/com/balazsholczer/udemy/SimpleRecursiveAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/LifeGameSimulation/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/LifeGameSimulation/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/LifeGameSimulation/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/LifeGameSimulation/bin/app/App$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/LifeGameSimulation/bin/app/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/LifeGameSimulation/bin/app/MainFrame$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/LifeGameSimulation/bin/app/MainFrame$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/LifeGameSimulation/bin/app/MainFrame$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/LifeGameSimulation/bin/app/MainFrame.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/LifeGameSimulation/bin/callbacks/ButtonListener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/LifeGameSimulation/bin/constants/Constants.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/LifeGameSimulation/bin/gui/Board.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/LifeGameSimulation/bin/gui/Cell$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/LifeGameSimulation/bin/gui/Cell.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/LifeGameSimulation/bin/gui/Controller.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/LifeGameSimulation/bin/gui/TimePanel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/LifeGameSimulation/bin/gui/Toolbar.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/LifeGameSimulation/src/app/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/LifeGameSimulation/src/app/MainFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/LifeGameSimulation/src/callbacks/ButtonListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/LifeGameSimulation/src/constants/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/LifeGameSimulation/src/gui/Board.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/LifeGameSimulation/src/gui/Cell.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/LifeGameSimulation/src/gui/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/LifeGameSimulation/src/gui/TimePanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/LifeGameSimulation/src/gui/Toolbar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/MineProject/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/MineProject/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/MineProject/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/MineProject/bin/com/minerapp/app/App$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/MineProject/bin/com/minerapp/app/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/MineProject/bin/com/minerapp/app/MainFrame.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/MineProject/bin/com/minerapp/constants/Constants.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/MineProject/bin/com/minerapp/constants/State.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/MineProject/bin/com/minerapp/view/Board.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/MineProject/bin/com/minerapp/view/ButtonListener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/MineProject/bin/com/minerapp/view/Cell.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/MineProject/bin/com/minerapp/view/Toolbar.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/MineProject/bin/com/minerapp/workers/MineLayer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/MineProject/bin/com/minerapp/workers/MineSweeper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/MineProject/src/com/minerapp/app/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/MineProject/src/com/minerapp/app/MainFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/MineProject/src/com/minerapp/constants/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/MineProject/src/com/minerapp/constants/State.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/MineProject/src/com/minerapp/view/Board.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/MineProject/src/com/minerapp/view/ButtonListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/MineProject/src/com/minerapp/view/Cell.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/MineProject/src/com/minerapp/view/Toolbar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/MineProject/src/com/minerapp/workers/MineLayer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/MineProject/src/com/minerapp/workers/MineSweeper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/Parallel/MergeSort/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/Parallel/MergeSort/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/Parallel/MergeSort/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/Parallel/MergeSort/bin/com/mergesort/parallel/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/Parallel/MergeSort/bin/com/mergesort/parallel/MergeSort$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/Parallel/MergeSort/bin/com/mergesort/parallel/MergeSort.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/Parallel/MergeSort/bin/com/mergesort/parallel/ParallelMergeSort$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/Parallel/MergeSort/bin/com/mergesort/parallel/ParallelMergeSort.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/Parallel/MergeSort/src/com/mergesort/parallel/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/Parallel/MergeSort/src/com/mergesort/parallel/MergeSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/Parallel/MergeSort/src/com/mergesort/parallel/ParallelMergeSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ParallelSum/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ParallelSum/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ParallelSum/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ParallelSum/bin/com/balazsholczer/udemy/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ParallelSum/bin/com/balazsholczer/udemy/ParallelSum.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ParallelSum/bin/com/balazsholczer/udemy/ParallelWorker.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ParallelSum/bin/com/balazsholczer/udemy/SequentialSum.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ParallelSum/src/com/balazsholczer/udemy/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ParallelSum/src/com/balazsholczer/udemy/ParallelSum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ParallelSum/src/com/balazsholczer/udemy/ParallelWorker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/ParallelSum/src/com/balazsholczer/udemy/SequentialSum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/PhilosopherProblem/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/PhilosopherProblem/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/PhilosopherProblem/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/PhilosopherProblem/bin/PhilosopherProblem/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/PhilosopherProblem/bin/PhilosopherProblem/ChopStick.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/PhilosopherProblem/bin/PhilosopherProblem/Constants.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/PhilosopherProblem/bin/PhilosopherProblem/Philosopher.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/PhilosopherProblem/bin/PhilosopherProblem/State.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/PhilosopherProblem/src/PhilosopherProblem/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/PhilosopherProblem/src/PhilosopherProblem/ChopStick.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/PhilosopherProblem/src/PhilosopherProblem/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/PhilosopherProblem/src/PhilosopherProblem/Philosopher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/PhilosopherProblem/src/PhilosopherProblem/State.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/Slides/threads.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/StudentLibraryProject/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/StudentLibraryProject/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/StudentLibraryProject/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/StudentLibraryProject/bin/com/librarayproject/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/StudentLibraryProject/bin/com/librarayproject/Book.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/StudentLibraryProject/bin/com/librarayproject/Constants.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/StudentLibraryProject/bin/com/librarayproject/Student.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/StudentLibraryProject/src/com/librarayproject/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/StudentLibraryProject/src/com/librarayproject/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/StudentLibraryProject/src/com/librarayproject/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading/StudentLibraryProject/src/com/librarayproject/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/threads/MaximumFind.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/threads/ParallelAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/threads/SimpleRecursiveTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/threads/SimulateRecursiveAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/likedriving.iml" beforeDir="false" afterPath="$PROJECT_DIR$/likedriving.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/likedriving/TechStacks/kafka/KafkaConsumerDemo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likedriving/TechStacks/kafka/KafkaConsumerDemo1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/likedriving/TechStacks/kafka/KafkaProducerDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likedriving/TechStacks/kafka/KafkaProducerDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/likedriving/design/TravelDestination/DataCrawler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/likedriving/design/TravelDestination/DataCrawler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/likedriving/design/TravelDestination/DataCrawler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/likedriving/design/TravelDestination/DataCrawler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/likedriving-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/likedriving-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,20 +264,31 @@
     </option>
   </component>
   <component name="ProjectId" id="1S0zeCl51gpKb24zN1OuUpznNnw" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="likedriving.HelpBharat" />
       <recent name="likedriving.design.VendingMachine" />
       <recent name="likedriving.designpatterns.adapter" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals/UdemyJavaMultithreading" />
+      <recent name="$PROJECT_DIR$/src/main/java/likedriving/JavaFundamentals" />
+      <recent name="$PROJECT_DIR$/src/main/java/likedriving/HelpBharat/datastore" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="likedriving.HelpBharat" />
       <recent name="likedriving.TechStacks.kafka" />
       <recent name="likedriving.design.VendingMachine" />
     </key>
@@ -96,9 +308,22 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.DiningPhilosopherApp">
-    <configuration name="BlockingQueueApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="likedriving.JavaFundamentals.threads.BlockingQueueApp" />
+  <component name="RunManager" selected="Application.SimpleRecursiveTask">
+    <configuration name="DataCrawler" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="likedriving.design.TravelDestination.DataCrawler" />
+      <module name="likedriving" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="likedriving.design.TravelDestination.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleRecursiveTask" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="likedriving.JavaFundamentals.threads.SimpleRecursiveTask" />
       <module name="likedriving" />
       <extension name="coverage">
         <pattern>
@@ -110,8 +335,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConcurrentMapApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="likedriving.JavaFundamentals.threads.ConcurrentMapApp" />
+    <configuration name="SimulateRecursiveAction" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="likedriving.JavaFundamentals.threads.SimulateRecursiveAction" />
       <module name="likedriving" />
       <extension name="coverage">
         <pattern>
@@ -123,52 +348,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DiningPhilosopherApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="likedriving.JavaFundamentals.threads.diningphilosopher.DiningPhilosopherApp" />
+    <configuration name="YamlStorageManagerTest.addTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="likedriving" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="likedriving.JavaFundamentals.threads.diningphilosopher.*" />
+          <option name="PATTERN" value="likedriving.HelpBharat.unittests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="likedriving.HelpBharat.unittests" />
+      <option name="MAIN_CLASS_NAME" value="likedriving.HelpBharat.unittests.YamlStorageManagerTest" />
+      <option name="METHOD_NAME" value="addTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExecutorServiceDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="likedriving.JavaFundamentals.threads.ExecutorServiceDemo" />
+    <configuration name="YamlStorageManagerTest.appendTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="likedriving" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="likedriving.JavaFundamentals.threads.*" />
+          <option name="PATTERN" value="likedriving.HelpBharat.unittests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProcessorDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="likedriving.JavaFundamentals.threads.ProcessorDemo" />
-      <module name="likedriving" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="likedriving.JavaFundamentals.threads.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="PACKAGE_NAME" value="likedriving.HelpBharat.unittests" />
+      <option name="MAIN_CLASS_NAME" value="likedriving.HelpBharat.unittests.YamlStorageManagerTest" />
+      <option name="METHOD_NAME" value="appendTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DiningPhilosopherApp" />
-        <item itemvalue="Application.ConcurrentMapApp" />
-        <item itemvalue="Application.BlockingQueueApp" />
-        <item itemvalue="Application.ProcessorDemo" />
-        <item itemvalue="Application.ExecutorServiceDemo" />
+        <item itemvalue="Application.SimpleRecursiveTask" />
+        <item itemvalue="Application.SimulateRecursiveAction" />
+        <item itemvalue="JUnit.YamlStorageManagerTest.appendTest" />
+        <item itemvalue="Application.DataCrawler" />
+        <item itemvalue="JUnit.YamlStorageManagerTest.addTest" />
       </list>
     </recent_temporary>
   </component>
@@ -197,6 +415,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

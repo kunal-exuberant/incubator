@@ -213,7 +213,6 @@ likedriving/CitizenIssues/models/Place.class
 likedriving/design/ExpenseSharing/Split.class
 likedriving/design/HomeInventoryManagement/models/Consumers.class
 likedriving/JavaFundamentals/CompareEmployees.class
-likedriving/TechStacks/kafka/KafkaProducerDemo.class
 likedriving/CitizenIssues/models/ElectedRepresentative.class
 likedriving/design/ProblemSolvingPlatform/ProblemStoreInterface.class
 likedriving/problemsolving/HashTable.class

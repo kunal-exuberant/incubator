@@ -1,0 +1,181 @@
+---
+id: 1
+name: "Bharat"
+entityType: "INDIA"
+belongsTo: "WORLD"
+states:
+- id: 1
+  name: "Andaman and Nicobar Islands"
+  entityType: "STATE"
+  belongsTo: "INDIA"
+  districts: null
+- id: 2
+  name: "Andhra Pradesh"
+  entityType: "STATE"
+  belongsTo: "INDIA"
+  districts: null
+- id: 3
+  name: "Arunachal Pradesh"
+  entityType: "STATE"
+  belongsTo: "INDIA"
+  districts: null
+- id: 4
+  name: "Assam"
+  entityType: "STATE"
+  belongsTo: "INDIA"
+  districts: null
+- id: 5
+  name: "Bihar"
+  entityType: "STATE"
+  belongsTo: "INDIA"
+  districts: null
+- id: 6
+  name: "Chandigarh"
+  entityType: "STATE"
+  belongsTo: "INDIA"
+  districts: null
+- id: 7
+  name: "Chhattisgarh"
+  entityType: "STATE"
+  belongsTo: "INDIA"
+  districts: null
+- id: 8
+  name: "Dadra & Nagar Haveli"
+  entityType: "STATE"
+  belongsTo: "INDIA"
+  districts: null
+- id: 9
+  name: "Daman & Diu"
+  entityType: "STATE"
+  belongsTo: "INDIA"
+  districts: null
+- id: 10
+  name: "Goa"
+  entityType: "STATE"
+  belongsTo: "INDIA"
+  districts: null
+- id: 11
+  name: "Gujarat"
+  entityType: "STATE"
+  belongsTo: "INDIA"
+  districts: null
+- id: 12
+  name: "Haryana"
+  entityType: "STATE"
+  belongsTo: "INDIA"
+  districts: null
+- id: 13
+  name: "Himachal Pradesh"
+  entityType: "STATE"
+  belongsTo: "INDIA"
+  districts: null
+- id: 14
+  name: "Jammu & Kashmir"
+  entityType: "STATE"
+  belongsTo: "INDIA"
+  districts: null
+- id: 15
+  name: "Jharkhand"
+  entityType: "STATE"
+  belongsTo: "INDIA"
+  districts: null
+- id: 16
+  name: "Karnataka"
+  entityType: "STATE"
+  belongsTo: "INDIA"
+  districts: null
+- id: 17
+  name: "Kerala"
+  entityType: "STATE"
+  belongsTo: "INDIA"
+  districts: null
+- id: 18
+  name: "Lakshadweep"
+  entityType: "STATE"
+  belongsTo: "INDIA"
+  districts: null
+- id: 19
+  name: "Madhya Pradesh"
+  entityType: "STATE"
+  belongsTo: "INDIA"
+  districts: null
+- id: 20
+  name: "Maharashtra"
+  entityType: "STATE"
+  belongsTo: "INDIA"
+  districts: null
+- id: 21
+  name: "Manipur"
+  entityType: "STATE"
+  belongsTo: "INDIA"
+  districts: null
+- id: 22
+  name: "Meghalaya"
+  entityType: "STATE"
+  belongsTo: "INDIA"
+  districts: null
+- id: 23
+  name: "Mizoram"
+  entityType: "STATE"
+  belongsTo: "INDIA"
+  districts: null
+- id: 24
+  name: "Nagaland"
+  entityType: "STATE"
+  belongsTo: "INDIA"
+  districts: null
+- id: 25
+  name: "NCT of Delhi"
+  entityType: "STATE"
+  belongsTo: "INDIA"
+  districts: null
+- id: 26
+  name: "Odisha"
+  entityType: "STATE"
+  belongsTo: "INDIA"
+  districts: null
+- id: 27
+  name: "Puducherry"
+  entityType: "STATE"
+  belongsTo: "INDIA"
+  districts: null
+- id: 28
+  name: "Punjab"
+  entityType: "STATE"
+  belongsTo: "INDIA"
+  districts: null
+- id: 29
+  name: "Rajasthan"
+  entityType: "STATE"
+  belongsTo: "INDIA"
+  districts: null
+- id: 30
+  name: "Sikkim"
+  entityType: "STATE"
+  belongsTo: "INDIA"
+  districts: null
+- id: 31
+  name: "Tamil Nadu"
+  entityType: "STATE"
+  belongsTo: "INDIA"
+  districts: null
+- id: 32
+  name: "Tripura"
+  entityType: "STATE"
+  belongsTo: "INDIA"
+  districts: null
+- id: 33
+  name: "Uttar Pradesh"
+  entityType: "STATE"
+  belongsTo: "INDIA"
+  districts: null
+- id: 34
+  name: "Uttarakhand"
+  entityType: "STATE"
+  belongsTo: "INDIA"
+  districts: null
+- id: 35
+  name: "West Bengal"
+  entityType: "STATE"
+  belongsTo: "INDIA"
+  districts: null

@@ -1,11 +1,17 @@
 package likedriving.design.TravelDestination;
 
+import likedriving.HelpBharat.District;
+import likedriving.HelpBharat.State;
+import likedriving.design.NewsFeed.Status;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
 
@@ -18,7 +24,96 @@ public class DataCrawler {
         return Jsoup.connect(url).get();
     }
 
-    public static void main(String[] args) throws IOException{
+    public static void main(String [] a) throws IOException {
+        url = "http://vlist.in/";
+        String remoteDocument = getRemoteDocument(url).toString();
+
+        Document document = Jsoup.parse(remoteDocument);
+        Elements elements = document.getElementsByTag("tbody");
+
+        int stateId = 1;
+        List<State> states = new ArrayList<>();
+        for(Element element: elements) {
+            for(Element tr: element.getElementsByTag("tr")){
+                for(Element td: tr.getElementsByTag("td")) {
+                    for(Element href: td.getElementsByAttribute("href")) {
+                        //System.out.println(href.text());
+                        System.out.println(href.attr("href"));
+                        for(Element dist: Jsoup.parse(getRemoteDocument(url+href.attr("href")).toString()).getElementsByAttribute("href")){
+                            System.out.println(dist.text());
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    public static List<State> extractStatesWithDistricts() throws IOException {
+        url = "http://vlist.in/";
+        String remoteDocument = getRemoteDocument(url).toString();
+
+        Document document = Jsoup.parse(remoteDocument);
+        Elements elements = document.getElementsByTag("tbody");
+
+        int stateId = 1;
+        int districtId = 40;
+        List<State> states = new ArrayList<>();
+        List<District> districts = new ArrayList<>();
+        for(Element element: elements) {
+            for(Element tr: element.getElementsByTag("tr")){
+                for(Element td: tr.getElementsByTag("td")) {
+                    for(Element href: td.getElementsByAttribute("href")) {
+                        System.out.println(href.text());
+                        states.add(State.builder()
+                                .id(stateId)
+                                .name(href.text())
+                                .districts(districts)
+                                .build());
+                        stateId++;
+                        System.out.println(href.attr("href"));
+                        for(Element dist: Jsoup.parse(getRemoteDocument(url+href.attr("href")).toString()).getElementsByAttribute("href")){
+                            System.out.println(dist.text());
+                            districts.add(District.builder()
+                                    .id(districtId)
+                                    .name(dist.text())
+                                    .build());
+                            districtId++;
+                        }
+                    }
+                }
+            }
+        }
+        return states;
+    }
+
+    public static List<State> extractStates() throws IOException {
+        url = "http://vlist.in/";
+        String remoteDocument = getRemoteDocument(url).toString();
+
+        Document document = Jsoup.parse(remoteDocument);
+        Elements elements = document.getElementsByTag("tbody");
+
+        int stateId = 1;
+        List<State> states = new ArrayList<>();
+        for(Element element: elements) {
+            for(Element tr: element.getElementsByTag("tr")){
+                for(Element td: tr.getElementsByTag("td")) {
+                    for(Element href: td.getElementsByAttribute("href")) {
+                        System.out.println(href.text());
+                        states.add(State.builder()
+                                .id(stateId)
+                                .name(href.text())
+                                .build());
+                                stateId++;
+                    }
+                }
+            }
+        }
+        return states;
+    }
+
+    public static void main1(String[] args) throws IOException{
         String remoteDocument = getRemoteDocument(url).toString();
        // System.out.println(remoteDocument);
 

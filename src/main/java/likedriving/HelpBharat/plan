@@ -1,0 +1,24 @@
+Create a help about -
+
+1. Bharart's current geography and
+2. history of her geography
+
+
+Elaborating on point 1 -
+
+Bharat a political entity today consists of
+1. 29 states and 9 UTs.
+2. 738 districts
+3. Each district is divided into tahsils and
+4. Each tahsil has various villages
+5. One major city might consist of multiple districts as well
+
+The idea is to create a database of these geographical entities and store information about them like -
+1. Prominnent people like historical giants who have been from that place
+2. Prominent places like natural or man made - river, temple, mountain etc (historical and geopgraphical places)
+
+Functionality -
+There would be some way to update info about a place and read info about a geographical entity
+
+
+

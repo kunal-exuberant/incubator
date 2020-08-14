@@ -1,4 +1,4 @@
-package com.balazsholczer.udemy;
+package likedriving.JavaFundamentals.UdemyJavaMultithreading.ConcurrentLibrary;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.DelayQueue;

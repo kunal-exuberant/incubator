@@ -1,5 +1,4 @@
-package com.balazsholczer.udemy;
-
+package likedriving.JavaFundamentals.UdemyJavaMultithreading.ConcurrentLibrary;
 import java.util.Random;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;

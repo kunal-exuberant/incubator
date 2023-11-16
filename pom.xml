@@ -28,19 +28,59 @@
 
     <repositories>
         <repository>
-            <id>org.source.repo</id>
-            <url>http://maven.orgName.com/maven2/</url>
+            <id>shared-libraries</id>
+            <url>https://pkgs.dev.azure.com/dtworld/_packaging/shared-libraries/maven/v1</url>
         </repository>
     </repositories>
 
+<!--
+    repositories {
+    mavenCentral()
+    maven {
+    url ''
+    name ''
+    credentials {
+    username "dtworld"
+    //The Azure DevOps Services build system will use the "SYSTEM_ACCESSTOKEN" to authenticate to Azure DevOps Services feeds
+    password "l4prqgvltmxxai6tyk3t4byqf2njdt5ki6w3f2bxd3yfoqexetna"
+    }
+    }
+    }
+-->
+
 
     <dependencies>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.activemq/activemq-core -->
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-core</artifactId>
+            <version>5.7.0</version>
+        </dependency>
+
         <dependency>
             <!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
                 <groupId>redis.clients</groupId>
                 <artifactId>jedis</artifactId>
                 <version>3.0.0</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.datastax.oss</groupId>
+            <artifactId>java-driver-core</artifactId>
+            <version>4.9.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.datastax.cassandra</groupId>
+            <artifactId>cassandra-driver-core</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.codahale.metrics</groupId>
+            <artifactId>metrics-core</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+
 
         <dependency>
             <groupId>org.jsoup</groupId>

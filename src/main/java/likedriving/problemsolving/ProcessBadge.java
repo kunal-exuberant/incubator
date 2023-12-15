@@ -72,20 +72,20 @@ public class ProcessBadge{
                 }
             }
             else{
-                if(enterExits.get(badge_record.get(0) == "exit")){
+/*                if(enterExits.get(badge_record.get(0) == "exit")){
                     woEntry.add(enterExits.getKey());
                     break;
-                }
+                }*/
             }
         }
 
         for(Map.Entry<String, Integer> entry: enterExits.entrySet()){
 
             if(entry.getValue() >1 ){
-                woExit.add(enterExits.getKey());
+                //woExit.add(enterExits.getKey());
             }
             else if(entry.getValue() < 0){
-                woEntry.add(enterExits.getKey());
+                //woEntry.add(enterExits.getKey());
             }
         }
 

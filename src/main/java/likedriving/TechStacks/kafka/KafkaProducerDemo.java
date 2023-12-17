@@ -1,4 +1,5 @@
-/*
+
+
 package likedriving.TechStacks.kafka;
 
 import lombok.extern.slf4j.Slf4j;
@@ -51,4 +52,5 @@ public class KafkaProducerDemo {
         sendRecords(kafkaProducer, kafkaConfiguration);
     }
 }
-*/
+
+

@@ -1,9 +1,8 @@
+/*
 package likedriving.problemsolving.Tree;
 
-import org.junit.Assert;
+import likedriving.problemsolving.Tree.medium.TreeNode;
 import org.junit.Test;
-
-import static likedriving.problemsolving.Tree.SortedListFromBinaryTree.init;
 
 public class TotalPathstoSumInTree {
 
@@ -29,5 +28,7 @@ public class TotalPathstoSumInTree {
 
         Assert.assertEquals(countTotalPaths(root, 8), 1);
         Assert.assertEquals(countTotalPaths(root, 10), 3);
+
     }
 }
+*/

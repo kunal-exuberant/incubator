@@ -2,11 +2,6 @@
 <project version="4">
   <component name="RemoteRepositoriesConfiguration">
     <remote-repository>
-      <option name="id" value="org.source.repo" />
-      <option name="name" value="org.source.repo" />
-      <option name="url" value="https://maven.orgName.com/maven2" />
-    </remote-repository>
-    <remote-repository>
       <option name="id" value="central" />
       <option name="name" value="Central Repository" />
       <option name="url" value="https://repo.maven.apache.org/maven2" />
@@ -22,19 +17,9 @@
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
     </remote-repository>
     <remote-repository>
-      <option name="id" value="org.source.repo" />
-      <option name="name" value="org.source.repo" />
-      <option name="url" value="https://maven.orgName.com/maven2/" />
-    </remote-repository>
-    <remote-repository>
       <option name="id" value="shared-libraries" />
       <option name="name" value="shared-libraries" />
       <option name="url" value="https://pkgs.dev.azure.com/dtworld/_packaging/shared-libraries/maven/v1" />
-    </remote-repository>
-    <remote-repository>
-      <option name="id" value="org.source.repo" />
-      <option name="name" value="org.source.repo" />
-      <option name="url" value="http://maven.orgName.com/maven2/" />
     </remote-repository>
   </component>
 </project>

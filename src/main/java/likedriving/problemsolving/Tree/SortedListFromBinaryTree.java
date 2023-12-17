@@ -1,16 +1,16 @@
 package likedriving.problemsolving.Tree;
 
 
-class TreeNode{
-    int data;
-    TreeNode left;
-    TreeNode right;
-    TreeNode(int data){
-        this.data = data;
-    }
-}
-
 public class SortedListFromBinaryTree {
+
+    static class TreeNode{
+        int data;
+        TreeNode left;
+        TreeNode right;
+        TreeNode(int data){
+            this.data = data;
+        }
+    }
 
      static TreeNode init(){
         TreeNode root = new TreeNode(1);

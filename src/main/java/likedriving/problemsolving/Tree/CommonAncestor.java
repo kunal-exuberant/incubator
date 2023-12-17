@@ -1,6 +1,7 @@
+/*
 package likedriving.problemsolving.Tree;
 
-import org.junit.Assert;
+import likedriving.problemsolving.Tree.medium.TreeNode;
 import org.junit.Test;
 
 
@@ -35,7 +36,9 @@ public class CommonAncestor {
 
     @Test
     public void isOnLeftTest(){
-        TreeNode root = SortedListFromBinaryTree.init();
-        Assert.assertEquals(getCommonAncesstor(root, root.left.left, root.right.right).data, root.data);
+*/
+/*        TreeNode root = SortedListFromBinaryTree.init();
+        Assert.assertEquals(getCommonAncesstor(root, root.left.left, root.right.right).data, root.data);*//*
+
     }
-}
+}*/

@@ -1,11 +1,25 @@
 package likedriving.problemsolving.Matrix;
-
+/*
+Calculate total paths to reach the end of the matrix from the first.
+ */
 public class TotalPath{
 
-    public static void main(String[] args) {
-        System.out.println(new TotalPath().calculatePath(4,4));
+    public static int totalPaths(int [] [] M, int row, int col){
+        if(row == M.length -1 && col == M[0].length-1){
+            return 1;
+        }
 
-        System.out.println(new TotalPath().calculatePathRecursive(4,4));
+            if(row > M.length-1 || col > M[0].length-1) return 0;
+
+        return totalPaths(M, row, col+1) + totalPaths(M, row+1, col);
+    }
+
+    public static void main(String[] args) {
+        int [][] M = {{1,1,1}, {1,1,1}, {1,1,1}};
+        System.out.println(totalPaths(M, 0,0));
+        //System.out.println(new TotalPath().calculatePath(3,3));
+
+        //System.out.println(new TotalPath().calculatePathRecursive(3,3));
     }
 
     private int calculatePath(int row, int col){

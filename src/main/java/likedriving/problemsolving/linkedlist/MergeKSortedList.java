@@ -3,6 +3,7 @@ package likedriving.problemsolving.linkedlist;
 public class MergeKSortedList {
 
     public static void main(String[] args) {
+
         //lists = [[1,4,5],[1,3,4],[2,6], [7]]
 
         ListNode [] lists = new ListNode[3];
